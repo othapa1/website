@@ -4,15 +4,135 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Work • LotusNex</title>
-  <meta name="description" content="Representative engineering outcomes in production AI systems, platform engineering, observability, and reliability." />
+  <meta name="description" content="Representative engineering patterns in production AI systems, retrieval infrastructure, platform modernization, and DevSecOps delivery." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Vignette card — extends base .card with structured metadata layout */
+    .vignette {
+      background: var(--panel-bg);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      box-shadow: var(--panel-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .vignette-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .vignette-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .vtag {
+      font-size: 11px;
+      font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-medium);
+      color: var(--text-muted);
+      background: #ffffff;
+      white-space: nowrap;
+    }
+
+    .vtag.discipline {
+      border-color: var(--navy-700);
+      color: var(--navy-700);
+      background: #F0F5FA;
+    }
+
+    .vignette h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .vignette-context {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .vignette-divider {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 0;
+    }
+
+    .vignette-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .vignette-detail-block h4 {
+      font-size: 11px;
+      font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 8px;
+    }
+
+    .vignette-detail-block ul {
+      margin: 0;
+      padding: 0 0 0 16px;
+    }
+
+    .vignette-detail-block li {
+      font-size: 13px;
+      margin: 5px 0;
+      color: var(--text-muted);
+    }
+
+    .vignette-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .vignette-outcome {
+      font-size: 13px;
+      color: var(--navy-700);
+      background: #F0F5FA;
+      border: 1px solid #D0DFF0;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      line-height: 1.6;
+    }
+
+    .vignette-outcome strong {
+      display: block;
+      font-size: 11px;
+      font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .vignette-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand brand-logo" href="index.html">
-        <img src="logo2.png" alt="LotusNex logo" />
+        <img src="logo.png" alt="LotusNex logo" />
         <span>LotusNex</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
@@ -26,53 +146,126 @@
   </header>
 
   <main>
+
     <section class="hero hero-compact">
       <div class="container">
         <p class="eyebrow">Production AI systems engineering</p>
-        <h1>Representative outcomes</h1>
+        <h1>Representative delivery patterns</h1>
         <p class="lede">
-          We emphasize architecture clarity, operational reliability, and measurable quality—delivered with clean handoff and long-term ownership in mind.
+          Described at the architecture level. Clients and program names are not disclosed. Each pattern reflects a real engagement—scoped, built, hardened, and handed off.
         </p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="grid-2">
-          <div class="card">
-            <h2>Modernization and reliability</h2>
-            <ul>
-              <li>Modernized core applications (.NET, Python, TypeScript) to improve maintainability and resiliency</li>
-              <li>Designed hybrid cloud patterns with Infrastructure as Code and automated pipelines</li>
-              <li>Implemented logging/monitoring patterns that support incident response and operational stability</li>
-            </ul>
+      <div class="container vignette-grid">
+
+        <!-- VIGNETTE 1: Permissioned RAG -->
+        <div class="vignette">
+          <div class="vignette-header">
+            <div class="vignette-tags">
+              <span class="vtag discipline">Retrieval Infrastructure</span>
+              <span class="vtag">B2B SaaS</span>
+              <span class="vtag">~10 weeks</span>
+            </div>
+            <h2>Permission-aware knowledge retrieval for a regulated SaaS platform</h2>
           </div>
 
-          <div class="card">
-            <h2>Delivery systems</h2>
-            <ul>
-              <li>Built CI/CD workflows and test automation to reduce release risk</li>
-              <li>Implemented secure integration patterns and governance controls</li>
-              <li>Optimized performance and scalability for production workloads</li>
-            </ul>
+          <p class="vignette-context">
+            A B2B SaaS platform serving regulated-industry clients needed internal knowledge retrieval accessible to end users across multiple tenants. The core problem was not retrieval quality — it was access control. Documents carried role and tenant-level permissions that had to be enforced at retrieval time, not post-filtered. An off-the-shelf RAG implementation would have exposed cross-tenant data under certain query patterns.
+          </p>
+
+          <hr class="vignette-divider" />
+
+          <div class="vignette-details">
+            <div class="vignette-detail-block">
+              <h4>What we built</h4>
+              <ul>
+                <li>Ingestion pipeline with document normalization and metadata extraction</li>
+                <li>Chunking strategy tuned for document structure, not fixed token windows</li>
+                <li>RBAC-aligned retrieval filtering integrated with existing SSO identity layer</li>
+                <li>Offline evaluation harness with recall/precision baselines and regression checks</li>
+              </ul>
+            </div>
+            <div class="vignette-detail-block">
+              <h4>Production requirements met</h4>
+              <ul>
+                <li>Tenant isolation enforced at index query time</li>
+                <li>Retrieval audit trail aligned to compliance requirements</li>
+                <li>Monitoring for recall drift and retrieval latency</li>
+                <li>Runbooks and ownership documentation on handoff</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vignette-outcome">
+            <strong>Delivery outcome</strong>
+            System shipped to production with evaluation baselines established, permission model verified against adversarial query patterns, and internal team equipped to maintain and extend the pipeline.
           </div>
         </div>
 
-        <div class="note">
-          <p>
-            Detailed case studies are shared in context where appropriate.
+        <!-- VIGNETTE 2: Agentic workflow -->
+        <div class="vignette">
+          <div class="vignette-header">
+            <div class="vignette-tags">
+              <span class="vtag discipline">Agent Orchestration</span>
+              <span class="vtag">B2B SaaS</span>
+              <span class="vtag">~12 weeks</span>
+            </div>
+            <h2>Agentic workflow with human approval gates for an operations team</h2>
+          </div>
+
+          <p class="vignette-context">
+            An operations team managing high-volume, multi-step workflows across several internal tools wanted to automate a class of repetitive decisions — while retaining human review for actions above a defined risk threshold. The challenge was not the automation itself but defining the boundary: what the agent could execute autonomously, what required approval, and what had to fail deterministically rather than degrade silently.
           </p>
+
+          <hr class="vignette-divider" />
+
+          <div class="vignette-details">
+            <div class="vignette-detail-block">
+              <h4>What we built</h4>
+              <ul>
+                <li>Orchestration loop with explicit tool boundary definitions and least-privilege permissioning</li>
+                <li>Risk-tiered approval flow: auto-execute, human-in-loop, and hard-stop tiers</li>
+                <li>Tool-call logging and trace spans for full auditability</li>
+                <li>Evaluation test set covering edge cases, adversarial inputs, and boundary conditions</li>
+              </ul>
+            </div>
+            <div class="vignette-detail-block">
+              <h4>Production requirements met</h4>
+              <ul>
+                <li>Deterministic fallbacks for all failure modes — no silent degradation</li>
+                <li>Cost telemetry and per-workflow token budgets</li>
+                <li>Escalation path with clear notification and override mechanics</li>
+                <li>Regression checks integrated into CI pipeline</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vignette-outcome">
+            <strong>Delivery outcome</strong>
+            Agentic system deployed with approval gates validated against real workflow data, cost controls active from day one, and operations team trained on override and monitoring procedures.
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="container">
+        <div class="note" style="margin-top: 28px;">
+          <p>Detailed architecture documentation and engagement specifics are shared directly in conversation where appropriate.</p>
         </div>
       </div>
     </section>
 
     <section class="section cta-band">
       <div class="container">
-        <h2>Discuss a delivery need</h2>
-        <p class="lede">If you have a production system that needs architectural clarity, we can help.</p>
+        <h2>Discuss a delivery pattern</h2>
+        <p class="lede">If one of these patterns maps to what you're building—or you have a different architecture problem—we can review constraints and talk through a build approach.</p>
         <a class="button primary" href="contact.html">Talk to an engineer →</a>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
