@@ -1,0 +1,1805 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 6
+/Kids [ 4 0 R 9 0 R 12 0 R 15 0 R 18 0 R 21 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Contents 5 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/Length 5077
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.980392 .972549 .956863 rg
+n 0 0 612 792 re f*
+.066667 .066667 .066667 rg
+n 0 0 5 792 re f*
+Q
+q
+1 0 0 1 57.84 631.2 cm
+Q
+q
+1 0 0 1 57.84 617.2 cm
+q
+.6 .6 .6 rg
+BT 1 0 0 1 0 4 Tm /F2 10 Tf 14 TL (LOTUSNEX) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 603.2 cm
+Q
+q
+1 0 0 1 57.84 523.2 cm
+q
+BT 1 0 0 1 0 46 Tm 40 TL /F2 34 Tf .066667 .066667 .066667 rg (Production AI) Tj  T* (Readiness Checklist) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 509.2 cm
+Q
+q
+1 0 0 1 57.84 507.8 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 459.8 cm
+q
+BT 1 0 0 1 0 22 Tm 17 TL /F1 12 Tf .333333 .333333 .333333 rg (12 architectural questions your AI system) Tj  T* (should answer before it ships to real users.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 439.8 cm
+Q
+q
+1 0 0 1 57.84 411.8 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 19 Tm /F1 9 Tf 14 TL .231 Tw (Most AI systems don't fail because the model is wrong. They fail because the surrounding system was never engineered for) Tj T* 0 Tw (production \227 no evaluation harness, no defined failure modes, no observability, no clear ownership after handoff.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 403.8 cm
+Q
+q
+1 0 0 1 57.84 361.8 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 33 Tm /F1 9 Tf 14 TL .35535 Tw (This checklist surfaces the gaps most teams discover too late: after the demo, after the launch, after the first incident. Work) Tj T* 0 Tw .546 Tw (through it before you ship. If you can answer every question with confidence, your system is production-ready. If you can't,) Tj T* 0 Tw (you know exactly where to focus.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 341.8 cm
+Q
+q
+1 0 0 1 57.84 340.4 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 289.4 cm
+q
+BT 1 0 0 1 0 30.5 Tm -0.092886 Tw 13 TL /F2 8.5 Tf .333333 .333333 .333333 rg (How to use this document:) Tj /F1 8.5 Tf ( Read each question. If you can answer it concretely \227 with a specific system, document, or process \227) Tj T* 0 Tw (check it off. If the answer is vague or 'we'll handle it later,' mark it as a gap. A pattern of gaps in any single section indicates a) Tj T* (systemic risk.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 269.4 cm
+Q
+q
+1 0 0 1 72 123.4 cm
+q
+.066667 .066667 .066667 rg
+n 0 146 468 -26 re f*
+.929412 .917647 .894118 rg
+n 0 120 468 -24 re f*
+1 1 1 rg
+n 0 96 468 -24 re f*
+.929412 .917647 .894118 rg
+n 0 72 468 -24 re f*
+1 1 1 rg
+n 0 48 468 -24 re f*
+.929412 .917647 .894118 rg
+n 0 24 468 -24 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 9 126 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 6 Tm /F2 8 Tf 14 TL (Section) Tj T* ET
+Q
+Q
+q
+1 0 0 1 167.4 126 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 6 Tm /F2 8 Tf 14 TL (Questions) Tj T* ET
+Q
+Q
+q
+1 0 0 1 228.6 126 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 6 Tm /F2 8 Tf 14 TL (Risk area) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 102 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL (01 Failure modes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 167.4 102 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (1\2263) Tj T* ET
+Q
+Q
+q
+1 0 0 1 228.6 102 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (Silent degradation, undefined behavior) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 78 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL (02 Evaluation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 167.4 78 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (4\2266) Tj T* ET
+Q
+Q
+q
+1 0 0 1 228.6 78 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (Quality drift, regression, hallucination) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 54 cm
+q
+BT 1 0 0 1 0 4 Tm 12 TL /F2 8 Tf .101961 .101961 .101961 rg (03 Security & access) Tj T* ET
+Q
+Q
+q
+1 0 0 1 167.4 54 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (7\2269) Tj T* ET
+Q
+Q
+q
+1 0 0 1 228.6 54 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (Data exposure, unauthorized access) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 30 cm
+q
+BT 1 0 0 1 0 4 Tm 12 TL /F2 8 Tf .101961 .101961 .101961 rg (04 Observability & cost) Tj T* ET
+Q
+Q
+q
+1 0 0 1 167.4 30 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (10\22611) Tj T* ET
+Q
+Q
+q
+1 0 0 1 228.6 30 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (Runaway spend, invisible failures) Tj T* ET
+Q
+Q
+q
+1 0 0 1 9 6 cm
+q
+BT 1 0 0 1 0 4 Tm 12 TL /F2 8 Tf .101961 .101961 .101961 rg (05 Ownership & handoff) Tj T* ET
+Q
+Q
+q
+1 0 0 1 167.4 6 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (12) Tj T* ET
+Q
+Q
+q
+1 0 0 1 228.6 6 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (Operational debt, team dependency) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.839216 .815686 .784314 RG
+.3 w
+n 0 146 m 468 146 l S
+n 0 0 m 468 0 l S
+n 0 0 m 0 146 l S
+n 468 0 m 468 146 l S
+n 0 120 m 468 120 l S
+n 0 96 m 468 96 l S
+n 0 72 m 468 72 l S
+n 0 48 m 468 48 l S
+n 0 24 m 468 24 l S
+n 158.4 0 m 158.4 146 l S
+n 219.6 0 m 219.6 146 l S
+Q
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.42 0.42 0.42 rg
+BT
+/F1-0 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 52 12.5 Tm
+(LotusNex \227 Production AI Checklist) Tj
+T*
+ET
+BT
+1 0 0 1 498.1115 12.5 Tm
+(lotusnex\056com \267 1) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+6 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
+/Contents 10 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 11 0 R
+/F2 8 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 7243
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.066667 .066667 .066667 rg
+n 0 787 612 5 re f*
+.839216 .815686 .784314 RG
+.4 w
+n 51.84 36 m 560.16 36 l S
+.333333 .333333 .333333 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 51.84 24 Tm (LotusNex \227 Production AI Checklist) Tj T* ET
+BT 1 0 0 1 509.193 24 Tm (lotusnex.com \267 1) Tj T* ET
+Q
+q
+1 0 0 1 57.84 714 cm
+.066667 .066667 .066667 rg
+n
+3 0 m
+142 0 l
+143.6584 0 145 1.3416 145 3 c
+145 15 l
+145 16.6584 143.6584 18 142 18 c
+3 18 l
+1.3416 18 0 16.6584 0 15 c
+0 3 l
+0 1.3416 1.3416 0 3 0 c
+h
+f*
+1 1 1 rg
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 7 5.5 Tm (SECTION 01) Tj T* ET
+Q
+q
+1 0 0 1 57.84 706 cm
+Q
+q
+1 0 0 1 57.84 681 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 5 Tm /F2 20 Tf 25 TL (Failure modes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 677 cm
+Q
+q
+1 0 0 1 57.84 649 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 19 Tm /F1 9 Tf 14 TL 1.095706 Tw (Production systems fail. The question is whether yours fails safely. These questions test whether your failure behavior is) Tj T* 0 Tw (designed, not accidental.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 643.6 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 631.6 cm
+Q
+q
+1 0 0 1 57.84 607.6 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (01) Tj T* ET
+Q
+q
+1 0 0 1 57.84 604.6 cm
+Q
+q
+1 0 0 1 57.84 590.6 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Can your system fail deterministically \227 or does it degrade silently?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 588.6 cm
+Q
+q
+1 0 0 1 57.84 561.6 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 18 Tm /F1 9 Tf 13.5 TL 1.340833 Tw (Silent failures \(a model returning a plausible but wrong answer, a retrieval pipeline returning stale results\) are harder to) Tj T* 0 Tw (detect and more damaging than explicit errors. Every failure mode should produce a defined, observable output.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 559.6 cm
+Q
+q
+1 0 0 1 57.84 554.2 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 542.2 cm
+Q
+q
+1 0 0 1 57.84 518.2 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (02) Tj T* ET
+Q
+q
+1 0 0 1 57.84 515.2 cm
+Q
+q
+1 0 0 1 57.84 501.2 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Have you defined what the system must never do \227 and verified it can't?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 499.2 cm
+Q
+q
+1 0 0 1 57.84 472.2 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 18 Tm /F1 9 Tf 13.5 TL .775 Tw (Guardrails are not a prompt engineering problem. They require explicit boundaries, test cases covering adversarial inputs,) Tj T* 0 Tw (and automated checks that run in CI. If 'don't do X' only lives in the system prompt, it is not a guardrail.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 470.2 cm
+Q
+q
+1 0 0 1 57.84 464.8 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 452.8 cm
+Q
+q
+1 0 0 1 57.84 428.8 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (03) Tj T* ET
+Q
+q
+1 0 0 1 57.84 425.8 cm
+Q
+q
+1 0 0 1 57.84 411.8 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Do you have a human-in-the-loop path for actions above a defined risk threshold?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 409.8 cm
+Q
+q
+1 0 0 1 57.84 369.3 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 31.5 Tm /F1 9 Tf 13.5 TL .757714 Tw (Fully autonomous AI actions are appropriate for low-stakes, high-volume operations. Anything that modifies external state,) Tj T* 0 Tw 2.352187 Tw (sends communications, or has financial or compliance implications should have a human approval gate with a clear) Tj T* 0 Tw (escalation path.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 367.3 cm
+Q
+q
+1 0 0 1 57.84 361.9 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 346.9 cm
+Q
+q
+1 0 0 1 57.84 328.9 cm
+.066667 .066667 .066667 rg
+n
+3 0 m
+142 0 l
+143.6584 0 145 1.3416 145 3 c
+145 15 l
+145 16.6584 143.6584 18 142 18 c
+3 18 l
+1.3416 18 0 16.6584 0 15 c
+0 3 l
+0 1.3416 1.3416 0 3 0 c
+h
+f*
+1 1 1 rg
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 7 5.5 Tm (SECTION 02) Tj T* ET
+Q
+q
+1 0 0 1 57.84 320.9 cm
+Q
+q
+1 0 0 1 57.84 295.9 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 5 Tm /F2 20 Tf 25 TL (Evaluation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 291.9 cm
+Q
+q
+1 0 0 1 57.84 263.9 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 19 Tm /F1 9 Tf 14 TL 1.118 Tw (If you can't measure whether your system is working, you can't know when it stops working. Evaluation is not QA \227 it's) Tj T* 0 Tw (structural.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 258.5 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 246.5 cm
+Q
+q
+1 0 0 1 57.84 222.5 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (04) Tj T* ET
+Q
+q
+1 0 0 1 57.84 219.5 cm
+Q
+q
+1 0 0 1 57.84 205.5 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Do you have an offline evaluation harness with a fixed test set?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 203.5 cm
+Q
+q
+1 0 0 1 57.84 176.5 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 18 Tm /F1 9 Tf 13.5 TL .433143 Tw (A test set is a collection of inputs with known correct outputs that you run against the system before every release. Without) Tj T* 0 Tw (this, you have no baseline and no way to detect regression. 'It seemed fine in testing' is not an evaluation strategy.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 174.5 cm
+Q
+q
+1 0 0 1 57.84 169.1 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 157.1 cm
+Q
+q
+1 0 0 1 57.84 133.1 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (05) Tj T* ET
+Q
+q
+1 0 0 1 57.84 130.1 cm
+Q
+q
+1 0 0 1 57.84 116.1 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Can you detect quality drift between deployments?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 114.1 cm
+Q
+q
+1 0 0 1 57.84 87.1 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 18 Tm /F1 9 Tf 13.5 TL 2.7424 Tw (Model providers update underlying models. Prompts that worked in January may behave differently in March. Your) Tj T* 0 Tw (evaluation harness should run on every deployment and alert when output quality drops below a defined threshold.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 85.1 cm
+Q
+q
+1 0 0 1 57.84 79.7 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+0 0 612 44 re
+f*
+0.42 0.42 0.42 rg
+BT
+/F1-0 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 52 12.5 Tm
+(LotusNex \227 Production AI Checklist) Tj
+T*
+ET
+BT
+1 0 0 1 498.1115 12.5 Tm
+(lotusnex\056com \267 2) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+11 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+12 0 obj
+<<
+/Contents 13 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 14 0 R
+/F2 8 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+13 0 obj
+<<
+/Length 1594
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.066667 .066667 .066667 rg
+n 0 787 612 5 re f*
+.839216 .815686 .784314 RG
+.4 w
+n 51.84 36 m 560.16 36 l S
+.333333 .333333 .333333 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 51.84 24 Tm (LotusNex \227 Production AI Checklist) Tj T* ET
+BT 1 0 0 1 509.193 24 Tm (lotusnex.com \267 2) Tj T* ET
+Q
+q
+1 0 0 1 57.84 725 cm
+Q
+q
+1 0 0 1 57.84 701 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (06) Tj T* ET
+Q
+q
+1 0 0 1 57.84 698 cm
+Q
+q
+1 0 0 1 57.84 684 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Have you measured retrieval quality \227 not just retrieval speed?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 682 cm
+Q
+q
+1 0 0 1 57.84 655 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 18 Tm /F1 9 Tf 13.5 TL 1.212706 Tw (Most RAG implementations are tuned for latency, not accuracy. You should have precision and recall baselines for your) Tj T* 0 Tw (retrieval pipeline, and regression checks that run when the index is updated. 'It returns results' is not a quality metric.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 653 cm
+Q
+q
+1 0 0 1 57.84 647.6 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+0 0 612 44 re
+f*
+0.42 0.42 0.42 rg
+BT
+/F1-0 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 52 12.5 Tm
+(LotusNex \227 Production AI Checklist) Tj
+T*
+ET
+BT
+1 0 0 1 498.1115 12.5 Tm
+(lotusnex\056com \267 3) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+14 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+15 0 obj
+<<
+/Contents 16 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 17 0 R
+/F2 8 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 6644
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.066667 .066667 .066667 rg
+n 0 787 612 5 re f*
+.839216 .815686 .784314 RG
+.4 w
+n 51.84 36 m 560.16 36 l S
+.333333 .333333 .333333 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 51.84 24 Tm (LotusNex \227 Production AI Checklist) Tj T* ET
+BT 1 0 0 1 509.193 24 Tm (lotusnex.com \267 3) Tj T* ET
+Q
+q
+1 0 0 1 57.84 714 cm
+.066667 .066667 .066667 rg
+n
+3 0 m
+142 0 l
+143.6584 0 145 1.3416 145 3 c
+145 15 l
+145 16.6584 143.6584 18 142 18 c
+3 18 l
+1.3416 18 0 16.6584 0 15 c
+0 3 l
+0 1.3416 1.3416 0 3 0 c
+h
+f*
+1 1 1 rg
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 7 5.5 Tm (SECTION 03) Tj T* ET
+Q
+q
+1 0 0 1 57.84 706 cm
+Q
+q
+1 0 0 1 57.84 681 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 5 Tm /F2 20 Tf 25 TL (Security and access control) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 677 cm
+Q
+q
+1 0 0 1 57.84 649 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 19 Tm /F1 9 Tf 14 TL 1.05555 Tw (AI systems that touch real data carry real access control requirements. These are not features you add later \227 they are) Tj T* 0 Tw (architectural decisions that must be made before you build the retrieval or agent layer.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 643.6 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 631.6 cm
+Q
+q
+1 0 0 1 57.84 607.6 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (07) Tj T* ET
+Q
+q
+1 0 0 1 57.84 604.6 cm
+Q
+q
+1 0 0 1 57.84 590.6 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Is access control enforced at retrieval time \227 or only applied after the fact?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 588.6 cm
+Q
+q
+1 0 0 1 57.84 548.1 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 31.5 Tm /F1 9 Tf 13.5 TL .2422 Tw (Post-filtering \(retrieving everything and then hiding results\) is not secure. Under certain query patterns, post-filtered systems) Tj T* 0 Tw .837833 Tw (expose content to users who should not have access. Permission enforcement must happen at the index query layer, not) Tj T* 0 Tw (downstream.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 546.1 cm
+Q
+q
+1 0 0 1 57.84 540.7 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 528.7 cm
+Q
+q
+1 0 0 1 57.84 504.7 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (08) Tj T* ET
+Q
+q
+1 0 0 1 57.84 501.7 cm
+Q
+q
+1 0 0 1 57.84 487.7 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Do you have an audit trail for every action the system takes on behalf of a user?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 485.7 cm
+Q
+q
+1 0 0 1 57.84 445.2 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 31.5 Tm /F1 9 Tf 13.5 TL -0.09555 Tw (For any AI system operating in a regulated industry or handling sensitive data, audit logs are a compliance requirement, not a) Tj T* 0 Tw .753833 Tw (nice-to-have. Logs should capture: who made the request, what data was accessed, what action was taken, and what the) Tj T* 0 Tw (outcome was.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 443.2 cm
+Q
+q
+1 0 0 1 57.84 437.8 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 425.8 cm
+Q
+q
+1 0 0 1 57.84 401.8 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (09) Tj T* ET
+Q
+q
+1 0 0 1 57.84 398.8 cm
+Q
+q
+1 0 0 1 57.84 384.8 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Has your tool permission model been reviewed for least-privilege access?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 382.8 cm
+Q
+q
+1 0 0 1 57.84 342.3 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 31.5 Tm /F1 9 Tf 13.5 TL 1.330765 Tw (Agent systems with broad tool access are a significant security surface. Each tool integration should have the minimum) Tj T* 0 Tw .070304 Tw (permissions required for its function. If your agent can read and write to a system, ask whether it needs write access at all \227) Tj T* 0 Tw (and whether that access should require human approval.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 340.3 cm
+Q
+q
+1 0 0 1 57.84 334.9 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 319.9 cm
+Q
+q
+1 0 0 1 57.84 301.9 cm
+.066667 .066667 .066667 rg
+n
+3 0 m
+142 0 l
+143.6584 0 145 1.3416 145 3 c
+145 15 l
+145 16.6584 143.6584 18 142 18 c
+3 18 l
+1.3416 18 0 16.6584 0 15 c
+0 3 l
+0 1.3416 1.3416 0 3 0 c
+h
+f*
+1 1 1 rg
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 7 5.5 Tm (SECTION 04) Tj T* ET
+Q
+q
+1 0 0 1 57.84 293.9 cm
+Q
+q
+1 0 0 1 57.84 268.9 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 5 Tm /F2 20 Tf 25 TL (Observability and cost) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 264.9 cm
+Q
+q
+1 0 0 1 57.84 236.9 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 19 Tm /F1 9 Tf 14 TL .947833 Tw (You cannot operate what you cannot see. These questions test whether you have the instrumentation to know what your) Tj T* 0 Tw (system is doing, what it costs, and when something goes wrong.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 231.5 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 219.5 cm
+Q
+q
+1 0 0 1 57.84 195.5 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (10) Tj T* ET
+Q
+q
+1 0 0 1 57.84 192.5 cm
+Q
+q
+1 0 0 1 57.84 178.5 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Do you have cost telemetry \227 per request, per user, or per workflow?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 176.5 cm
+Q
+q
+1 0 0 1 57.84 136 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 31.5 Tm /F1 9 Tf 13.5 TL .575429 Tw (Token costs compound at scale in ways that are not intuitive. A system that costs $0.02 per request may be acceptable at) Tj T* 0 Tw .002833 Tw (100 requests per day and catastrophic at 10,000. You need per-request cost visibility, token budgets, and alerting before you) Tj T* 0 Tw (hit a threshold \227 not after.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 134 cm
+Q
+q
+1 0 0 1 57.84 128.6 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+0 0 612 44 re
+f*
+0.42 0.42 0.42 rg
+BT
+/F1-0 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 52 12.5 Tm
+(LotusNex \227 Production AI Checklist) Tj
+T*
+ET
+BT
+1 0 0 1 498.1115 12.5 Tm
+(lotusnex\056com \267 4) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+17 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+18 0 obj
+<<
+/Contents 19 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 20 0 R
+/F2 8 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+19 0 obj
+<<
+/Length 6431
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.066667 .066667 .066667 rg
+n 0 787 612 5 re f*
+.839216 .815686 .784314 RG
+.4 w
+n 51.84 36 m 560.16 36 l S
+.333333 .333333 .333333 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 51.84 24 Tm (LotusNex \227 Production AI Checklist) Tj T* ET
+BT 1 0 0 1 509.193 24 Tm (lotusnex.com \267 4) Tj T* ET
+Q
+q
+1 0 0 1 57.84 725 cm
+Q
+q
+1 0 0 1 57.84 701 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (11) Tj T* ET
+Q
+q
+1 0 0 1 57.84 698 cm
+Q
+q
+1 0 0 1 57.84 684 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Do you have traces and logs for every tool call and model invocation?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 682 cm
+Q
+q
+1 0 0 1 57.84 641.5 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 31.5 Tm /F1 9 Tf 13.5 TL .783833 Tw (When something goes wrong in a multi-step AI system, you need to reconstruct exactly what happened: which tools were) Tj T* 0 Tw -0.023167 Tw (called, in what order, with what inputs and outputs, and where the chain broke. Without trace-level logging, incident response) Tj T* 0 Tw (is guesswork.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 639.5 cm
+Q
+q
+1 0 0 1 57.84 634.1 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 619.1 cm
+Q
+q
+1 0 0 1 57.84 601.1 cm
+.066667 .066667 .066667 rg
+n
+3 0 m
+142 0 l
+143.6584 0 145 1.3416 145 3 c
+145 15 l
+145 16.6584 143.6584 18 142 18 c
+3 18 l
+1.3416 18 0 16.6584 0 15 c
+0 3 l
+0 1.3416 1.3416 0 3 0 c
+h
+f*
+1 1 1 rg
+BT /F2 7 Tf 8.4 TL ET
+BT 1 0 0 1 7 5.5 Tm (SECTION 05) Tj T* ET
+Q
+q
+1 0 0 1 57.84 593.1 cm
+Q
+q
+1 0 0 1 57.84 568.1 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 5 Tm /F2 20 Tf 25 TL (Ownership and handoff) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 564.1 cm
+Q
+q
+1 0 0 1 57.84 536.1 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 19 Tm /F1 9 Tf 14 TL .864652 Tw (A system that only the people who built it can operate is not a production system \227 it's a prototype with users. This final) Tj T* 0 Tw (question tests whether your system is built to be owned.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 530.7 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 518.7 cm
+Q
+q
+1 0 0 1 57.84 494.7 cm
+.066667 .066667 .066667 rg
+n
+24 12 m
+24 18.62742 18.62742 24 12 24 c
+5.372583 24 0 18.62742 0 12 c
+0 5.372583 5.372583 0 12 0 c
+18.62742 0 24 5.372583 24 12 c
+f*
+1 1 1 rg
+BT /F2 9 Tf 10.8 TL ET
+BT 1 0 0 1 6.996 9 Tm (12) Tj T* ET
+Q
+q
+1 0 0 1 57.84 491.7 cm
+Q
+q
+1 0 0 1 57.84 477.7 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.5 Tm /F2 9.5 Tf 14 TL (Could your team operate, debug, and extend this system without the people who built it?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 475.7 cm
+Q
+q
+1 0 0 1 57.84 421.7 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 45 Tm /F1 9 Tf 13.5 TL .035294 Tw (This is the handoff test. It requires: runbooks covering the most common failure scenarios, documentation that reflects actual) Tj T* 0 Tw -0.0255 Tw (system behavior \(not intended behavior\), clear interface contracts between components, and an on-call process for when the) Tj T* 0 Tw .1185 Tw (system behaves unexpectedly at 2am. If the answer is no, the system is not ready for production \227 regardless of how well it) Tj T* 0 Tw (performs in a demo.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 419.7 cm
+Q
+q
+1 0 0 1 57.84 414.3 cm
+q
+.4 w
+1 J
+.839216 .815686 .784314 RG
+n 0 0 m 496.32 0 l S
+Q
+Q
+q
+1 0 0 1 57.84 397.3 cm
+Q
+q
+1 0 0 1 57.84 383.3 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4 Tm /F2 10 Tf 14 TL (HOW TO INTERPRET YOUR RESULTS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 72 217.3 cm
+q
+.066667 .066667 .066667 rg
+n 0 158 468 -26 re f*
+.929412 .917647 .894118 rg
+n 0 132 468 -24 re f*
+1 1 1 rg
+n 0 108 468 -36 re f*
+.929412 .917647 .894118 rg
+n 0 72 468 -36 re f*
+1 1 1 rg
+n 0 36 468 -36 re f*
+1 1 1 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 8 138 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 6 Tm /F2 8 Tf 14 TL (Score) Tj T* ET
+Q
+Q
+q
+1 0 0 1 98 138 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 6 Tm /F2 8 Tf 14 TL (What it means) Tj T* ET
+Q
+Q
+q
+1 0 0 1 292.4 138 cm
+q
+1 1 1 rg
+BT 1 0 0 1 0 6 Tm /F2 8 Tf 14 TL (Recommended next step) Tj T* ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 8 114 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL (10\22612 checked) Tj T* ET
+Q
+Q
+q
+1 0 0 1 98 114 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (System is production-ready in these dimensions.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 292.4 114 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F1 8 Tf 12 TL (Monitor and maintain. Document baselines.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 90 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL (7\2269 checked) Tj T* ET
+Q
+Q
+q
+1 0 0 1 98 78 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 16 Tm /F1 8 Tf 12 TL (Significant gaps present. Manageable with) Tj T* (focused effort.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 292.4 78 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 16 Tm /F1 8 Tf 12 TL (Prioritize by section. Address evaluation and) Tj T* (access control first.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 54 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL (4\2266 checked) Tj T* ET
+Q
+Q
+q
+1 0 0 1 98 42 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 16 Tm /F1 8 Tf 12 TL (System is not production-ready. High operational) Tj T* (risk.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 292.4 42 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 16 Tm /F1 8 Tf 12 TL (Architecture review before any further feature) Tj T* (work.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 18 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL (0\2263 checked) Tj T* ET
+Q
+Q
+q
+1 0 0 1 98 6 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 16 Tm /F1 8 Tf 12 TL (Prototype-stage architecture with production) Tj T* (traffic.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 292.4 6 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 16 Tm /F1 8 Tf 12 TL (Stop adding features. Rebuild the production) Tj T* (layer.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.839216 .815686 .784314 RG
+.4 w
+n 0 158 m 468 158 l S
+n 0 0 m 468 0 l S
+n 0 0 m 0 158 l S
+n 468 0 m 468 158 l S
+n 0 132 m 468 132 l S
+n 0 108 m 468 108 l S
+n 0 72 m 468 72 l S
+n 0 36 m 468 36 l S
+n 90 0 m 90 158 l S
+n 284.4 0 m 284.4 158 l S
+Q
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+0 0 612 44 re
+f*
+0.42 0.42 0.42 rg
+BT
+/F1-0 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 52 12.5 Tm
+(LotusNex \227 Production AI Checklist) Tj
+T*
+ET
+BT
+1 0 0 1 498.1115 12.5 Tm
+(lotusnex\056com \267 5) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+20 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+21 0 obj
+<<
+/Contents 22 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 23 0 R
+/F2 8 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 1188
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.980392 .972549 .956863 rg
+n 0 0 612 792 re f*
+.066667 .066667 .066667 rg
+n 0 0 5 792 re f*
+.839216 .815686 .784314 RG
+.4 w
+n 51.84 36 m 560.16 36 l S
+.6 .6 .6 rg
+BT /F1 7 Tf 8.4 TL ET
+BT 1 0 0 1 51.84 24 Tm (lotusnex.com \267 contact@lotusnex.com \267 Fairfax Station, VA) Tj T* ET
+Q
+q
+1 0 0 1 57.84 616.8 cm
+Q
+q
+1 0 0 1 57.84 602.8 cm
+q
+.6 .6 .6 rg
+BT 1 0 0 1 0 4 Tm /F2 10 Tf 14 TL (LOTUSNEX) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 586.8 cm
+Q
+q
+1 0 0 1 57.84 510.8 cm
+q
+BT 1 0 0 1 0 46 Tm 38 TL /F2 30 Tf .066667 .066667 .066667 rg (Found gaps you're not) Tj  T* (sure how to close?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 494.8 cm
+Q
+q
+1 0 0 1 57.84 440.8 cm
+q
+.333333 .333333 .333333 rg
+BT 1 0 0 1 0 43 Tm /F1 11 Tf 18 TL -0.088733 Tw (We run Architecture Reviews for seed-to-Series A B2B SaaS companies building on AI. In 30 minutes,) Tj T* 0 Tw 1.243917 Tw (we'll map your current system against production requirements, identify your highest-risk gaps, and) Tj T* 0 Tw (give you a concrete path forward \227 whether you work with us or not.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.84 412.8 cm
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+Q
+
+
+endstream
+endobj
+23 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+xref
+0 24
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000147 00000 n 
+0000000196 00000 n 
+0000000429 00000 n 
+0000005558 00000 n 
+0000005665 00000 n 
+0000005772 00000 n 
+0000005884 00000 n 
+0000006119 00000 n 
+0000013415 00000 n 
+0000013523 00000 n 
+0000013759 00000 n 
+0000015406 00000 n 
+0000015514 00000 n 
+0000015750 00000 n 
+0000022447 00000 n 
+0000022555 00000 n 
+0000022791 00000 n 
+0000029275 00000 n 
+0000029383 00000 n 
+0000029619 00000 n 
+0000030860 00000 n 
+trailer
+<<
+/Size 24
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+30968
+%%EOF

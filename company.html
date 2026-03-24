@@ -1,3 +1,4 @@
+<!-- UPDATED: nav updated (Public Sector removed, CTA button text updated); "Who you'll work with" section added after "How we are structured"; footer updated (Public Sector removed from links, added under Programs label, CTA link text updated) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Company • LotusNex</title>
   <meta name="description" content="LotusNex is a production AI systems engineering firm built on deep enterprise platform engineering experience. We design and build AI systems as software infrastructure." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
@@ -19,8 +20,7 @@
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a class="active" href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
-        <a class="cta" href="contact.html">Talk to an engineer →</a>
+        <a class="cta" href="contact.html">Request an Architecture Review →</a>
       </nav>
     </div>
   </header>
@@ -33,20 +33,14 @@
         <p class="eyebrow">Who we are</p>
         <h1>Built from platform engineering.<br>Applied to AI systems.</h1>
         <p class="lede">
-          LotusNex was formed by engineers with deep backgrounds in enterprise platform delivery—cloud architecture, reliability engineering, DevSecOps, and large-scale integration—who saw a consistent pattern: AI systems failing in production not because the models were wrong, but because the surrounding systems were not engineered.
+          LotusNex comes out of a background in production software engineering — not AI experimentation.
         </p>
-      </div>
-    </section>
-
-    <!-- FOUNDING THESIS -->
-    <section class="section">
-      <div class="container">
-        <div class="pov" style="margin-bottom: 0;">
-          <h3>The problem we were built to solve.</h3>
-          <p>
-            Most AI failures are not model failures. They are architecture failures—missing evaluation harnesses, undefined tool boundaries, absent observability, no clear ownership. These are solved engineering problems in every other domain of software infrastructure. We apply that discipline to AI.
-          </p>
-        </div>
+        <p>Over more than a decade building enterprise platforms, education systems, and process control software, our founder worked on systems where reliability, observability, and failure handling were not optional. These were environments where software had to behave predictably under real constraints.</p>
+        <p>When AI systems began entering production, a gap became clear.</p>
+        <p style="text-align:center; font-weight:500; color:var(--navy-700); margin: 16px 0;">The models were advancing quickly. The systems around them were not.</p>
+        <p>What failed was rarely the model itself — it was everything required to make that model usable in a real system: evaluation, boundaries, monitoring, ownership.</p>
+        <p><strong>LotusNex was built to close that gap.</strong></p>
+        <p>We apply the same engineering discipline used in production software — architecture, reliability, and operational clarity — to AI systems that are expected to run in the real world.</p>
       </div>
     </section>
 
@@ -54,8 +48,8 @@
     <section class="section">
       <div class="container">
         <h2>How we are structured</h2>
-        <p class="lede" style="margin-bottom: 28px;">
-          We operate as a senior engineering firm, not a staffing model. Engagements are led and executed by engineers with production experience across enterprise platforms, federal programs, and B2B SaaS delivery. We keep engagements small by design—tight scope, clear interfaces, measurable outcomes.
+        <p class="lede">
+          LotusNex operates as a focused engineering studio. Every engagement is led directly by the founder — architecture through handoff. Engagements are kept small by design: tight scope, clear interfaces, measurable outcomes.
         </p>
 
         <div class="grid-2">
@@ -63,7 +57,6 @@
             <h3>What we bring</h3>
             <ul>
               <li>Years of enterprise platform and cloud architecture delivery</li>
-              <li>Hands-on experience with .NET, Python, TypeScript, Java at scale</li>
               <li>Deep DevSecOps and reliability engineering practice</li>
               <li>Production AI systems across agentic and retrieval domains</li>
             </ul>
@@ -82,29 +75,52 @@
       </div>
     </section>
 
+    <!-- WHO YOU'LL WORK WITH -->
+    <section class="section">
+      <div class="container">
+        <h2>Who you'll work with</h2>
+
+        <div class="card" style="max-width: 640px;">
+          <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+            <img src="images/om-headshot.png" alt="Om Thapa" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid #0B2E4F;flex-shrink:0;">
+            <div>
+              <h3 style="margin:0 0 4px;">Om Thapa</h3>
+              <p class="eyebrow" style="margin:0;">Founder &amp; Lead Engineer</p>
+            </div>
+          </div>
+          <p>Om has been building production software since 2011 across enterprise platforms, education systems, and process control environments — where reliability, system boundaries, and operational clarity are critical.</p>
+          <p>His background spans cloud architecture, reliability engineering, and large-scale systems integration, with a focus on systems that must perform under real-world constraints.</p>
+          <p>He founded LotusNex after consistently seeing AI systems break in production — not at the model layer, but in the surrounding architecture required to make them usable and reliable.</p>
+          <p>He works with teams that treat AI as production infrastructure — not experimentation.</p>
+          <p>Every LotusNex engagement is led directly by Om, from initial architecture review through final handoff.</p>
+          <a href="https://www.linkedin.com/in/othapa" target="_blank" rel="noopener">LinkedIn →</a>
+        </div>
+      </div>
+    </section>
+
     <!-- OPERATING PRINCIPLES -->
     <section class="section">
       <div class="container">
         <h2>Operating principles</h2>
         <div class="stack">
           <div class="pov">
-            <h3>We work on systems, not experiments.</h3>
+            <h3>We build systems, not experiments.</h3>
             <p>
-              Every engagement is scoped around production constraints: real users, real data, real operational burden. We do not build pilots that cannot be hardened. If a system cannot be evaluated, monitored, and owned, it is not ready to ship.
+              Every engagement is scoped around production constraints: real users, real data, real operational burden. If a system cannot be evaluated, monitored, and owned, it is not ready to ship.
             </p>
           </div>
 
           <div class="pov">
-            <h3>We prefer fewer, more serious engagements.</h3>
+            <h3>We take on fewer, more serious engagements.</h3>
             <p>
-              LotusNex is selective about the work we take on. We engage where there is a real architectural problem, where the team has production intent, and where rigorous delivery is valued. Volume is not our model.
+              LotusNex is selective by design. We engage where there is a real architectural problem and clear intent to ship production systems. We do not optimize for volume.
             </p>
           </div>
 
           <div class="pov">
             <h3>We build for the team that inherits the system.</h3>
             <p>
-              Clean handoff is not optional. Runbooks, interface documentation, observability baselines, and ownership clarity are part of every delivery. The measure of good systems work is what happens after we leave.
+              Clean handoff is part of the work. Runbooks, interface documentation, observability baselines, and ownership clarity are not optional. The measure of good systems work is what happens after we leave.
             </p>
           </div>
         </div>
@@ -119,32 +135,32 @@
           <div class="list-block">
             <h3>Technical rigor</h3>
             <ul>
-              <li>Clear system boundaries and data contracts</li>
+              <li>Clear system boundaries and explicit data contracts</li>
               <li>Evaluation-driven quality, not intuition-driven</li>
-              <li>Deterministic fallbacks and failure-mode design</li>
+              <li>Deterministic fallbacks and well-defined failure modes</li>
             </ul>
           </div>
           <div class="list-block">
             <h3>Operational readiness</h3>
             <ul>
               <li>Telemetry, alerting, and cost visibility from day one</li>
-              <li>Least-privilege access and audit trails</li>
+              <li>Least-privilege access and auditability</li>
               <li>Runbooks and escalation paths before go-live</li>
             </ul>
           </div>
           <div class="list-block">
             <h3>Long-term ownership</h3>
             <ul>
-              <li>Systems designed to be maintained, not managed around</li>
-              <li>Documentation that reflects actual behavior</li>
-              <li>Interfaces that internal teams can reason about</li>
+              <li>Systems designed to be maintained, not worked around</li>
+              <li>Documentation that reflects actual system behavior</li>
+              <li>Interfaces internal teams can reason about</li>
             </ul>
           </div>
           <div class="list-block">
             <h3>Client relationship</h3>
             <ul>
-              <li>Peer-level technical conversations, not vendor pitches</li>
-              <li>Transparent scope and honest constraint identification</li>
+              <li>Peer-level technical engagement, not vendor positioning</li>
+              <li>Transparent scope and explicit constraints</li>
               <li>No work we cannot stand behind in production</li>
             </ul>
           </div>
@@ -155,11 +171,14 @@
     <!-- CTA -->
     <section class="section cta-band">
       <div class="container">
-        <h2>Talk to an engineer</h2>
+        <h2>Ready to see where your system has risk?</h2>
         <p class="lede">
-          If you have a production AI system that needs architectural clarity—or a pilot that needs hardening before it can be trusted—we can review constraints and propose a concrete path forward.
+          We begin every engagement with an Architecture Review — a focused assessment of your system's data boundaries, evaluation strategy, and operational risks. You'll leave with a clear picture of where your system will fail in production — and how to fix it.
         </p>
-        <a class="button primary" href="contact.html">Discuss an architecture →</a>
+        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+        </div>
       </div>
     </section>
 
@@ -172,11 +191,10 @@
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Talk to an engineer →</a>
+        <a href="contact.html">Request an Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">
