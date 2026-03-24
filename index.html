@@ -1,11 +1,12 @@
+<!-- UPDATED: hero eyebrow/H1/subhead/CTAs rewritten; hero trust cards removed; "What production-grade means" grid removed; "Representative engineering outcomes" bullets removed; "The Problem" section added; "Selected Work" section added; "Engineering disciplines" renamed to "What we build" with buyer-problem hooks; Differentiation callout section added; Point of View moved after Differentiation; "How We Work" step 1 renamed to "Architecture Review" and id="how-we-work" added; "Who We Are" section added; middle-funnel checklist asset added; final CTA band updated; nav updated (Public Sector removed, CTA button text updated); footer updated (Public Sector link added, CTA text updated) -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home • LotusNex</title>
-  <meta name="description" content="LotusNex designs and builds secure, observable, evaluation-driven AI architectures for B2B SaaS organizations operating in production environments." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="LotusNex builds production AI systems for seed-to-Series C B2B SaaS companies — whether you're shipping your first AI feature, hardening a prototype, or scaling across a growing product." />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
@@ -20,135 +21,116 @@
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
-        <a class="cta" href="contact.html">Talk to an engineer →</a>
+        <a class="cta" href="contact.html">Request an Architecture Review →</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">Production AI systems engineering</p>
-        <h1>AI systems must be engineered as systems.</h1>
+        <p class="eyebrow">AI Engineering Studio for B2B SaaS</p>
+        <h1>We build AI systems that work in production — not just in demos.</h1>
         <p class="lede">
-          LotusNex designs and builds secure, observable, evaluation-driven AI architectures for B2B SaaS organizations operating in production environments.
+          LotusNex designs and builds production AI systems for B2B SaaS teams — whether you're introducing AI into your product, stabilizing systems under real load, or scaling AI across your platform. Architecture-first. Built for the team that inherits it.
         </p>
-        <p class="sublede">Architecture-first. Production by default.</p>
+        <p class="audience-signal">B2B SaaS · Production systems · Regulated environments</p>
 
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Talk to an engineer →</a>
-          <a class="button" href="solutions.html">See solutions</a>
-        </div>
-
-        <div class="hero-grid">
-          <div class="card">
-            <h3>Senior delivery</h3>
-            <p>Small pods, hands-on execution.</p>
-          </div>
-          <div class="card">
-            <h3>Production-first</h3>
-            <p>Evals, monitoring, runbooks, guardrails.</p>
-          </div>
-          <div class="card">
-            <h3>Flexible delivery</h3>
-            <p>Design → build → harden → handoff.</p>
-          </div>
+          <a class="button primary" href="contact.html">Request an Architecture Review →</a>
+          <a class="button" href="#how-we-work">See how we work →</a>
         </div>
       </div>
     </section>
 
-    <!-- WHAT PRODUCTION-GRADE MEANS -->
+    <!-- THE PROBLEM -->
     <section class="section">
       <div class="container">
-        <h2>What “production-grade” means</h2>
+        <h2>Sound familiar?</h2>
+
         <div class="grid-2">
-          <div class="list-block">
-            <h3>Security model</h3>
-            <ul>
-              <li>SSO / RBAC</li>
-              <li>Least-privilege tool access</li>
-              <li>Audit logs</li>
-            </ul>
-          </div>
-          <div class="list-block">
-            <h3>Quality</h3>
-            <ul>
-              <li>Test sets</li>
-              <li>Offline evaluation</li>
-              <li>Regression checks</li>
-            </ul>
-          </div>
-          <div class="list-block">
-            <h3>Observability</h3>
-            <ul>
-              <li>Traces and tool-call logs</li>
-              <li>Cost telemetry</li>
-              <li>Alerts and error budgets</li>
-            </ul>
-          </div>
-          <div class="list-block">
-            <h3>Reliability & ownership</h3>
-            <ul>
-              <li>Deterministic fallbacks</li>
-              <li>Rate limits and approvals</li>
-              <li>Runbooks and clean handoff</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- POV -->
-    <section class="section">
-      <div class="container">
-        <h2>Point of view</h2>
-
-        <div class="stack">
-          <div class="pov">
-            <h3>AI systems fail in production when they are not designed as systems.</h3>
+          <div class="card">
+            <h3>You know AI should be part of your product. You're not sure how to start without building the wrong thing.</h3>
             <p>
-              Agents are software infrastructure. They have orchestration layers, tool boundaries, data contracts, failure modes, and operational constraints.
-              These must be engineered, tested, and monitored.
+              The pressure is real — from investors, from competitors, from your roadmap. The risk is equally real: starting with the wrong architecture means months of rebuilding. You need constraints defined and a design validated before writing a line of production code.
             </p>
           </div>
 
-          <div class="pov">
-            <h3>Evaluation is structural.</h3>
+          <div class="card">
+            <h3>It works in your demo. Real users are a different story.</h3>
             <p>
-              Offline test sets, regression checks, and tool-call validation prevent silent quality drift and make behavior measurable.
+              Your AI feature impresses in controlled conditions. With real users, real data, and real edge cases, it hallucinates, breaks, or fails silently — and you're not sure why.
             </p>
           </div>
 
-          <div class="pov">
-            <h3>Security and observability are architectural requirements.</h3>
+          <div class="card">
+            <h3>Your team is arguing about whether to rebuild.</h3>
             <p>
-              Permissioning, auditability, deterministic fallbacks, and telemetry make automation trustworthy and operable.
+              The prototype was fast to ship. Now it's load-bearing and nobody fully understands it. Fixes create new bugs. The architecture wasn't designed for production.
             </p>
           </div>
 
-          <div class="pov">
-            <h3>Systems should be built for ownership.</h3>
+          <div class="card">
+            <h3>You need to ship — but you can't afford to ship broken.</h3>
             <p>
-              Clear interfaces, explicit guardrails, and operational clarity enable long-term maintenance and internal stewardship.
+              Investors want to see the AI working. Customers are already using it. The cost of a visible failure is higher than the cost of getting it right the first time.
             </p>
           </div>
         </div>
+
+        <p class="section-transition">This is the moment we're built for.</p>
       </div>
     </section>
 
-    <!-- SOLUTIONS -->
+    <!-- SELECTED WORK -->
     <section class="section">
       <div class="container">
-        <h2>Engineering disciplines</h2>
+        <h2>Selected work</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="work-tease-tags">
+              <span class="work-tease-tag">Retrieval Infrastructure</span>
+              <span class="work-tease-tag">B2B SaaS</span>
+              <span class="work-tease-tag">~10 weeks</span>
+            </div>
+            <h3>Permission-aware knowledge retrieval for a regulated SaaS platform</h3>
+            <div class="work-tease-outcome">
+              Shipped to production with tenant isolation enforced at index query time. Zero cross-tenant data exposure under adversarial query testing. Retrieval audit trail aligned to compliance requirements.
+            </div>
+            <p style="font-size:0.85rem; font-weight:600; color:#0B2E4F; margin-top:10px;">Zero permission violations in 6 months of production use. Retrieval latency held under 380ms at p95 across 40,000+ indexed documents.</p>
+            <a href="work.html#rag">Read the architecture pattern →</a>
+          </div>
+
+          <div class="card">
+            <div class="work-tease-tags">
+              <span class="work-tease-tag">Agent Orchestration</span>
+              <span class="work-tease-tag">B2B SaaS</span>
+              <span class="work-tease-tag">~12 weeks</span>
+            </div>
+            <h3>Agentic workflow system with human approval gates for an operations team managing production processes.</h3>
+            <div class="work-tease-outcome">
+              Built with deterministic fallbacks across all failure modes and full cost telemetry from day one.
+            </div>
+            <p style="font-size:0.85rem; font-weight:600; color:#0B2E4F; margin-top:10px;">Operations team assumed full ownership by week 10 with no post-handoff support. Agent operating cost remained within 8% of projected budget at 90 days.</p>
+            <a href="work.html#agent">Read the architecture pattern →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHAT WE BUILD -->
+    <section class="section">
+      <div class="container">
+        <h2>What we build</h2>
 
         <div class="grid-3">
           <div class="card">
+            <p class="card-hook">Your agentic workflows need approval gates, audit trails, and defined failure modes — not just a loop that runs until it crashes.</p>
             <h3>Agent Orchestration Systems</h3>
-            <p>
-              Production-grade agent architectures: tool integration, permission boundaries, approval flows, and evaluation harnesses.
-            </p>
             <ul>
               <li>Tool integrations + permissioning</li>
               <li>Human-in-the-loop approvals</li>
@@ -158,10 +140,8 @@
           </div>
 
           <div class="card">
+            <p class="card-hook">Your RAG implementation retrieves content. It doesn't enforce who should see what, or measure whether it's actually working.</p>
             <h3>Retrieval Infrastructure</h3>
-            <p>
-              Permission-aware ingestion, indexing, and retrieval designed for measurable quality and secure knowledge access.
-            </p>
             <ul>
               <li>Ingestion + chunking + indexing</li>
               <li>Permission-aware retrieval</li>
@@ -171,23 +151,60 @@
           </div>
 
           <div class="card">
+            <p class="card-hook">AI systems need the same CI/CD, observability, and reliability engineering as any other production software. Most don't have it.</p>
             <h3>Platform & Reliability Engineering</h3>
-            <p>
-              Cloud architecture, CI/CD automation, observability patterns, and reliability engineering required to operate AI systems at scale.
-            </p>
             <ul>
               <li>Cloud & hybrid architectures</li>
               <li>DevSecOps + CI/CD automation</li>
               <li>Performance + scalability engineering</li>
             </ul>
-            <a href="solutions.html#platform">Platform services →</a>
+            <a href="solutions-platform.html">Platform services →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HOW WE WORK -->
+    <!-- DIFFERENTIATION CALLOUT -->
     <section class="section">
+      <div class="container">
+        <h2>How we're different.</h2>
+
+        <div class="grid-2">
+          <div>
+            <p>Freelancers prototype and leave. We architect, build, harden, and hand off — with runbooks and documentation your team can operate without us.</p>
+          </div>
+
+          <div>
+            <p>Agencies build to spec. We start with an architectural review — defining constraints, failure modes, and evaluation strategy before a single line of production code is written.</p>
+          </div>
+
+          <div>
+            <p>Consultancies advise. We build. You get a running, observable, tested system — not a strategy deck.</p>
+          </div>
+
+          <div>
+            <p>Hiring a senior AI engineer takes 3–6 months. We're in architecture review within a week. When the engagement ends, the system, the documentation, and the operational knowledge stay with your team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POV -->
+    <section class="section">
+      <div class="container">
+        <h2>Point of view</h2>
+        <div class="pov">
+          <h3>Production software fails when it's designed to demo, not to operate.</h3>
+          <p>
+            Whether it's an AI agent, a retrieval pipeline, or a custom integration — production systems have orchestration layers, failure modes, data contracts, and operational constraints. These must be engineered, tested, and monitored.
+          </p>
+        </div>
+        <p style="margin-top: 24px;"><a href="company.html#pov">Read our full engineering principles →</a></p>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="section" id="how-we-work">
       <div class="container">
         <h2>How we work</h2>
         <p class="lede">
@@ -196,7 +213,7 @@
 
         <div class="steps">
           <div class="step">
-            <h3>1) Architecture & constraints</h3>
+            <h3>1) Architecture Review</h3>
             <ul>
               <li>Threat model</li>
               <li>Data access plan</li>
@@ -225,65 +242,53 @@
       </div>
     </section>
 
-    <!-- OUTCOMES -->
+    <!-- WHO WE ARE -->
     <section class="section">
       <div class="container">
-        <h2>Representative engineering outcomes</h2>
-        <p class="lede">
-          Architecture clarity, operational reliability, and measurable quality — delivered with clean handoff and long-term ownership in mind.
-        </p>
-        <ul class="bullets">
-          <li>Modernized core applications across enterprise stacks to improve maintainability, resiliency, and long-term operability</li>
-          <li>Designed hybrid cloud architectures with Infrastructure as Code and automated deployment pipelines</li>
-          <li>Built CI/CD workflows and test automation to reduce release risk and support confident delivery</li>
-          <li>Implemented observability and monitoring patterns that support incident response and operational stability</li>
-        </ul>
+        <h2>Built by engineers, not consultants.</h2>
+        <p class="lede">Every engagement is led personally by the founder — architecture through handoff.</p>
+        <div style="display:flex; align-items:center; gap:16px; margin: 20px 0 16px;">
+          <img src="images/om-headshot.png" alt="Om Thapa" style="width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid #0B2E4F;flex-shrink:0;">
+          <div>
+            <strong>Om Thapa</strong> — Founder &amp; Lead Engineer<br>
+            <a href="https://www.linkedin.com/in/othapa" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="section cta-band">
       <div class="container">
-        <h2>Engineering a production AI system?</h2>
-        <p class="lede">
-          We begin with architectural review—data boundaries, integration patterns, evaluation strategy, and operational constraints—then design for durable production use.
-        </p>
+        <h2>Before you ship — know where your system will break.</h2>
+        <p class="lede">We begin every engagement with an Architecture Review — a focused assessment of your system's data boundaries, evaluation strategy, and operational risks.</p>
+        <p class="lede">You'll leave with a clear picture of where your system will fail in production — and how to fix it.</p>
+        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Talk to an engineer →</a>
-          <a class="button" href="work.html">See example work</a>
-          <a class="button" href="public-sector.html">Public sector lane</a>
+          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
         </div>
+        <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
+          <h3>Not ready for an Architecture Review? Start here.</h3>
+          <p>Download our Production AI Checklist — 12 architectural questions your system should answer before it ships.</p>
+          <a class="button" href="Production_AI_Checklist.pdf" target="_blank" rel="noopener">Download the checklist →</a>
+        </div>
+        <p class="sublede" style="margin-top: 32px;">We work with 2–3 companies at a time to maintain depth of engagement. Current intake: open.</p>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <div class="brand">LotusNex</div>
-        <p>
-          Production AI systems engineering for B2B SaaS and selective public sector programs — secure by design, observable in production, and built for long-term ownership.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Focus</h4>
-        <ul>
-          <li>Agent orchestration systems</li>
-          <li>Retrieval infrastructure</li>
-          <li>Platform & reliability engineering</li>
-          <li>Security & compliance</li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a></li>
-          <li>Fairfax Station, VA, USA</li>
-          <li>Standard U.S. business hours</li>
-          <li><a href="contact.html">Talk to an engineer →</a></li>
-        </ul>
+    <div class="container footer-slim">
+      <div class="footer-brand">LotusNex</div>
+      <div class="footer-links">
+        <a href="solutions.html">Solutions</a>
+        <a href="work.html">Work</a>
+        <a href="company.html">Company</a>
+        <span>·</span>
+        <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
+        <span>·</span>
+        <a href="contact.html">Request an Architecture Review →</a>
       </div>
     </div>
 

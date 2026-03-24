@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Retrieval Infrastructure • LotusNex</title>
   <meta name="description" content="Permission-aware ingestion, indexing, retrieval, and evaluation-driven quality for knowledge systems." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
@@ -19,8 +19,7 @@
         <a class="active" href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
-        <a class="cta" href="contact.html">Talk to an engineer →</a>
+        <a class="cta" href="contact.html">Request an Architecture Review →</a>
       </nav>
     </div>
   </header>
@@ -31,30 +30,53 @@
         <p class="eyebrow">Engineering discipline</p>
         <h1>Retrieval Infrastructure</h1>
         <p class="lede">
-          Knowledge access systems designed for measurable accuracy and secure retrieval: ingestion, indexing, permissions, and evaluation.
+          Retrieval systems fail when access control and evaluation are treated as afterthoughts.
         </p>
+        <p>We design retrieval as a permission-aware system — not just a vector search layer.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding: 32px 0;">
+      <div class="container">
+        <div class="pov">
+          <h3>Retrieval is not just about relevance. It must enforce access boundaries, measure quality, and remain observable under real usage.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding: 32px 0;">
       <div class="container grid-2">
         <div class="card">
           <h2>What we build</h2>
           <ul>
-            <li>Ingestion pipelines and document normalization</li>
-            <li>Chunking strategy and indexing architecture</li>
-            <li>Permission-aware retrieval and filtering</li>
-            <li>Evaluation harnesses and regression testing</li>
+            <li>Ingestion pipelines with structured metadata extraction</li>
+            <li>Chunking strategies aligned to document structure</li>
+            <li>Permission-aware retrieval integrated with identity systems</li>
+            <li>Evaluation harnesses with recall/precision tracking</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Production requirements</h2>
+          <h2>Production properties</h2>
           <ul>
-            <li>Access control aligned to SSO/RBAC</li>
-            <li>Auditability and retrieval traceability</li>
-            <li>Monitoring for drift and recall/precision trends</li>
-            <li>Operational runbooks and ownership</li>
+            <li>Tenant and role-based access enforced at query time</li>
+            <li>Measurable retrieval quality with regression validation</li>
+            <li>Monitoring for latency, drift, and failure modes</li>
+            <li>Auditability aligned with compliance requirements</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding: 32px 0;">
+      <div class="container">
+        <div class="card">
+          <h2>Without this architecture</h2>
+          <ul>
+            <li>Sensitive data exposure across tenants</li>
+            <li>Retrieval quality degrades without detection</li>
+            <li>No visibility into system performance</li>
+            <li>Inability to validate or improve results</li>
           </ul>
         </div>
       </div>
@@ -62,9 +84,12 @@
 
     <section class="section cta-band">
       <div class="container">
-        <h2>Discuss your knowledge surface</h2>
-        <p class="lede">We can assess sources, permissions, and evaluation criteria before build decisions are made.</p>
-        <a class="button primary" href="contact.html">Talk to an engineer →</a>
+        <h2>If your retrieval system is already in use, the risk is not retrieval — it's access control and correctness under real conditions.</h2>
+        <p class="lede">We can assess sources, permissions, and evaluation criteria before build decisions are made. You'll leave with a clear picture of where your system will fail in production — and how to fix it.</p>
+        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+        </div>
       </div>
     </section>
   </main>
@@ -76,11 +101,10 @@
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Talk to an engineer →</a>
+        <a href="contact.html">Request an Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">

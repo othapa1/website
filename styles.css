@@ -177,6 +177,10 @@ a:focus{
   padding: 60px 0 24px 0;
 }
 
+.hero-compact + .section{
+  padding-top: 11px;
+}
+
 .eyebrow{
   font-size: 12px;
   letter-spacing: 0.16em;
@@ -189,6 +193,7 @@ a:focus{
   font-size: 18px;
   max-width: 78ch;
   color: var(--text-muted);
+  margin-bottom: 20px;
 }
 
 .sublede{
@@ -324,6 +329,7 @@ li{
   padding: 18px 20px 18px 22px;
   box-shadow: var(--panel-shadow);
   position: relative;
+  margin-bottom: 0;
 }
 
 .pov:before{
@@ -435,6 +441,98 @@ li{
   color: var(--navy-800);
   font-size: 14px;
   margin-bottom: 8px;
+}
+
+/* Audience signal line (hero) */
+.audience-signal {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-top: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* Section transition text */
+.section-transition {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 17px;
+  color: var(--navy-700);
+  font-weight: 500;
+}
+
+/* Work tease cards */
+.work-tease-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.work-tease-tag {
+  font-size: 11px;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-medium);
+  color: var(--text-muted);
+  background: #ffffff;
+  white-space: nowrap;
+}
+
+.work-tease-outcome {
+  font-size: 13px;
+  color: var(--navy-700);
+  background: #F0F5FA;
+  border: 1px solid #D0DFF0;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.work-tease-note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+/* Differentiation column labels */
+.diff-label {
+  font-size: 11px;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+/* Buyer problem hook (above card titles in What We Build) */
+.card-hook {
+  font-size: 13px;
+  color: var(--text-faint);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Mid-funnel asset (checklist CTA) */
+.mid-funnel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--panel-shadow);
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mid-funnel h3 {
+  margin-bottom: 10px;
 }
 
 /* Responsive */

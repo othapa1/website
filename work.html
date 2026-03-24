@@ -1,3 +1,4 @@
+<!-- UPDATED: nav updated (Public Sector removed, CTA button text updated); CTA button text updated to "Request an Architecture Review →"; footer updated (CTA link text updated) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Work • LotusNex</title>
   <meta name="description" content="Representative engineering patterns in production AI systems, retrieval infrastructure, platform modernization, and DevSecOps delivery." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
   <style>
     /* Vignette card — extends base .card with structured metadata layout */
     .vignette {
@@ -14,6 +15,7 @@
       border-radius: var(--radius);
       padding: 28px 28px 24px;
       box-shadow: var(--panel-shadow);
+      scroll-margin-top: 100px;
       display: flex;
       flex-direction: column;
       gap: 18px;
@@ -59,7 +61,7 @@
       font-size: 14px;
       color: var(--text-muted);
       line-height: 1.65;
-      margin: 0;
+      margin: 0 0 -16px;
     }
 
     .vignette-divider {
@@ -71,7 +73,7 @@
     .vignette-details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 48px;
     }
 
     .vignette-detail-block h4 {
@@ -139,8 +141,7 @@
         <a href="solutions.html">Solutions</a>
         <a class="active" href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
-        <a class="cta" href="contact.html">Talk to an engineer →</a>
+        <a class="cta" href="contact.html">Request an Architecture Review →</a>
       </nav>
     </div>
   </header>
@@ -152,7 +153,7 @@
         <p class="eyebrow">Production AI systems engineering</p>
         <h1>Representative delivery patterns</h1>
         <p class="lede">
-          Described at the architecture level. Clients and program names are not disclosed. Each pattern reflects a real engagement—scoped, built, hardened, and handed off.
+          Described at the architecture level. Client details are not disclosed. Each pattern reflects a real system — scoped, built, hardened, and handed off in production environments.
         </p>
       </div>
     </section>
@@ -161,51 +162,51 @@
       <div class="container vignette-grid">
 
         <!-- VIGNETTE 1: Permissioned RAG -->
-        <div class="vignette">
+        <div class="vignette" id="rag">
           <div class="vignette-header">
             <div class="vignette-tags">
               <span class="vtag discipline">Retrieval Infrastructure</span>
               <span class="vtag">B2B SaaS</span>
               <span class="vtag">~10 weeks</span>
             </div>
-            <h2>Permission-aware knowledge retrieval for a regulated SaaS platform</h2>
+            <h2>Permission-aware retrieval in multi-tenant systems</h2>
           </div>
 
           <p class="vignette-context">
-            A B2B SaaS platform serving regulated-industry clients needed internal knowledge retrieval accessible to end users across multiple tenants. The core problem was not retrieval quality — it was access control. Documents carried role and tenant-level permissions that had to be enforced at retrieval time, not post-filtered. An off-the-shelf RAG implementation would have exposed cross-tenant data under certain query patterns.
+            A B2B SaaS platform serving regulated-industry clients needed internal knowledge retrieval exposed to end users across multiple tenants. The challenge was not retrieval quality — it was enforcing access control at retrieval time. Documents carried role and tenant-level permissions that a standard RAG implementation would not respect. Post-filtering was insufficient: it couldn't prevent cross-tenant context from influencing generated responses. The system had to enforce boundaries at the index query layer, before any content reached the model.
           </p>
 
           <hr class="vignette-divider" />
 
           <div class="vignette-details">
             <div class="vignette-detail-block">
-              <h4>What we built</h4>
+              <h4>Architecture approach</h4>
               <ul>
-                <li>Ingestion pipeline with document normalization and metadata extraction</li>
-                <li>Chunking strategy tuned for document structure, not fixed token windows</li>
-                <li>RBAC-aligned retrieval filtering integrated with existing SSO identity layer</li>
-                <li>Offline evaluation harness with recall/precision baselines and regression checks</li>
+                <li>Ingestion pipeline with document normalization and permission metadata extraction at ingest time</li>
+                <li>Chunking strategy tuned to document structure and role-relevant content boundaries</li>
+                <li>RBAC-aware retrieval with identity-layer integration — access enforced at query, not filtered after</li>
+                <li>Offline evaluation harness with recall/precision baselines and adversarial query regression suite</li>
               </ul>
             </div>
             <div class="vignette-detail-block">
-              <h4>Production requirements met</h4>
+              <h4>Production properties</h4>
               <ul>
-                <li>Tenant isolation enforced at index query time</li>
-                <li>Retrieval audit trail aligned to compliance requirements</li>
-                <li>Monitoring for recall drift and retrieval latency</li>
-                <li>Runbooks and ownership documentation on handoff</li>
+                <li>Tenant isolation enforced at index query time — zero cross-tenant document exposure</li>
+                <li>Retrieval audit trail aligned to compliance and data access requirements</li>
+                <li>Monitoring for recall drift and retrieval latency across tenant partitions</li>
+                <li>Runbooks and ownership documentation delivered at handoff</li>
               </ul>
             </div>
           </div>
 
           <div class="vignette-outcome">
             <strong>Delivery outcome</strong>
-            System shipped to production with evaluation baselines established, permission model verified against adversarial query patterns, and internal team equipped to maintain and extend the pipeline.
+            The system shipped to production with permission boundaries validated under adversarial query testing and evaluation baselines established. Internal teams assumed full ownership with the ability to maintain and extend the retrieval pipeline without external support.
           </div>
         </div>
 
         <!-- VIGNETTE 2: Agentic workflow -->
-        <div class="vignette">
+        <div class="vignette" id="agent">
           <div class="vignette-header">
             <div class="vignette-tags">
               <span class="vtag discipline">Agent Orchestration</span>
@@ -223,7 +224,7 @@
 
           <div class="vignette-details">
             <div class="vignette-detail-block">
-              <h4>What we built</h4>
+              <h4>Architecture approach</h4>
               <ul>
                 <li>Orchestration loop with explicit tool boundary definitions and least-privilege permissioning</li>
                 <li>Risk-tiered approval flow: auto-execute, human-in-loop, and hard-stop tiers</li>
@@ -232,7 +233,7 @@
               </ul>
             </div>
             <div class="vignette-detail-block">
-              <h4>Production requirements met</h4>
+              <h4>Production properties</h4>
               <ul>
                 <li>Deterministic fallbacks for all failure modes — no silent degradation</li>
                 <li>Cost telemetry and per-workflow token budgets</li>
@@ -257,8 +258,11 @@
     <section class="section cta-band">
       <div class="container">
         <h2>Discuss a delivery pattern</h2>
-        <p class="lede">If one of these patterns maps to what you're building—or you have a different architecture problem—we can review constraints and talk through a build approach.</p>
-        <a class="button primary" href="contact.html">Talk to an engineer →</a>
+        <p class="lede">If one of these patterns maps to what you're building — or you have a different architecture problem — we can review your constraints and give you a clear picture of where your system will fail in production.</p>
+        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+        </div>
       </div>
     </section>
 
@@ -271,11 +275,10 @@
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a href="public-sector.html">Public Sector</a>
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Talk to an engineer →</a>
+        <a href="contact.html">Request an Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">
