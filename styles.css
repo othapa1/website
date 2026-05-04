@@ -102,7 +102,8 @@ a:focus{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
   gap: 16px;
 }
 
@@ -553,7 +554,9 @@ li{
     align-items: flex-start;
     gap: 14px;
   }
-  .site-nav{ gap: 12px; }
+  .site-nav{ gap: 12px; flex-wrap: wrap; }
+  .site-nav a.cta{ font-size: 13px; padding: 8px 14px; }
+  .grid-2{ grid-template-columns: 1fr; }
   .hero-actions{ width: 100%; }
   .button{ width: 100%; }
 }
