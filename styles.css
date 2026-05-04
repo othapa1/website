@@ -557,6 +557,8 @@ li{
   .site-nav{ gap: 12px; flex-wrap: wrap; }
   .site-nav a.cta{ font-size: 13px; padding: 8px 14px; }
   .grid-2{ grid-template-columns: 1fr; }
+  .footer-slim{ gap: 14px; }
+  .footer-slim .footer-links{ gap: 12px; }
   .hero-actions{ width: 100%; }
   .button{ width: 100%; }
 }
