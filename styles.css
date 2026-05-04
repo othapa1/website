@@ -397,7 +397,7 @@ li{
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
-  padding: 20px 0 0;
+  padding-top: 20px;
 }
 
 .footer-slim .footer-brand {
