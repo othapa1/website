@@ -5,8 +5,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Solutions • LotusNex</title>
-  <meta name="description" content="Engineering disciplines: agent orchestration systems, retrieval infrastructure, and platform & reliability engineering." />
+  <meta name="description" content="LotusNex builds workflow automation systems and production AI — agent orchestration, retrieval infrastructure, and platform & reliability engineering." />
   <link rel="stylesheet" href="styles.css?v=3" />
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/solutions.html" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Solutions • LotusNex" />
+  <meta property="og:description" content="LotusNex builds workflow automation systems and production AI — agent orchestration, retrieval infrastructure, and platform & reliability engineering." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Solutions • LotusNex" />
+  <meta name="twitter:description" content="LotusNex builds workflow automation systems and production AI — agent orchestration, retrieval infrastructure, and platform & reliability engineering." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
+  <!-- Analytics (Plausible) — uncomment after creating account at plausible.io/sites -->
+  <!-- <script defer data-domain="lotusnex.com" src="https://plausible.io/js/script.js"></script> -->
 </head>
 
 <body>
@@ -20,7 +37,7 @@
         <a class="active" href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta" href="awra.html">Run the Audit →</a>
+        <a class="cta" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
@@ -28,56 +45,70 @@
   <main>
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Production AI systems engineering</p>
-        <h1>Engineering disciplines</h1>
+        <p class="eyebrow">Workflow automation + production AI engineering</p>
+        <h1>What we build</h1>
         <p class="lede">
-          AI systems designed as production infrastructure — with security, evaluation, observability, and ownership built in from the start.
+          We identify which workflows are worth automating, then build the AI systems to run them — with security, evaluation, observability, and ownership built in from the start.
         </p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid-3">
-        <div class="card">
-          <h2>Agent Orchestration Systems</h2>
-          <p>
-            Production-grade agent systems with explicit tool boundaries, approval flows, and failure handling — designed to operate under real inputs and real constraints.
-          </p>
-          <ul>
-            <li>Tool boundaries + permissioning</li>
-            <li>Approval flows and escalation paths</li>
-            <li>Structured evaluation harnesses</li>
-            <li>Cost telemetry and controls</li>
-          </ul>
-          <a href="solutions-agentic.html">Explore →</a>
+      <div class="container">
+        <div class="pov" style="margin-bottom: 32px;">
+          <p style="margin:0;">Not sure which of these fits your situation? <a href="awra.html#start-audit" style="color:var(--navy-700); font-weight:500;">Start the Workflow Discovery →</a> — a 12-question diagnostic that identifies which workflows are ready to automate and where your architecture needs work before you commit to a build.</p>
         </div>
+      </div>
+      <div class="container">
+        <p class="lede" style="max-width: 64ch; margin-bottom: 32px;">Four capabilities. Which one you need depends on where you are — automating a manual process for the first time, or hardening AI that's already in production.</p>
+        <div class="grid-2">
+          <div class="card">
+            <p class="card-hook">Your team runs the same workflow every day — manually. That's recoverable time, but only if the automation is built on a process that's actually ready to carry it.</p>
+            <h3>Process Automation</h3>
+            <ul>
+              <li><strong>LLM extraction with confidence scoring</strong> — manual transcription eliminated, not just reduced</li>
+              <li><strong>Human review routing for edge cases</strong> — people handle exceptions, the system handles the rest</li>
+              <li><strong>End-to-end audit trail</strong> — the process is compliance-ready from day one</li>
+            </ul>
+            <div class="work-tease-outcome" style="margin-top: 14px;">5× throughput · ~38 hrs/week recovered within 60 days</div>
+            <a href="solutions-agentic.html" style="margin-top: 14px; display: inline-block;">Explore process automation →</a>
+          </div>
 
-        <div class="card">
-          <h2>Retrieval Infrastructure</h2>
-          <p>
-            Knowledge access systems built for accuracy, permission enforcement, and measurable retrieval quality in production environments.
-          </p>
-          <ul>
-            <li>Ingestion pipelines and chunking strategy</li>
-            <li>Permission-aware retrieval</li>
-            <li>Evaluation sets and regression checks</li>
-            <li>Operational monitoring</li>
-          </ul>
-          <a href="solutions-rag.html">Explore →</a>
-        </div>
+          <div class="card">
+            <p class="card-hook">Whether you're building your first automated workflow or fixing one already failing in production — agent systems need defined boundaries, approval gates, and a plan for when they fail.</p>
+            <h3>Agent Orchestration Systems</h3>
+            <ul>
+              <li><strong>Risk-tiered approval gates</strong> — agents handle routine decisions, humans approve what matters</li>
+              <li><strong>Deterministic failure handling</strong> — no task degrades silently into a bad output</li>
+              <li><strong>Per-workflow cost telemetry</strong> — token spend is predictable before you scale</li>
+            </ul>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Operating cost within 8% of budget at 90 days · Full team ownership by week 10</div>
+            <a href="solutions-agentic.html" style="margin-top: 14px; display: inline-block;">Explore agent orchestration →</a>
+          </div>
 
-        <div class="card" id="platform">
-          <h2>Platform & Reliability Engineering</h2>
-          <p>
-            Platform foundations that make AI systems deployable, observable, and maintainable — not just functional.
-          </p>
-          <ul>
-            <li>Cloud & hybrid architectures</li>
-            <li>DevSecOps + CI/CD automation</li>
-            <li>Observability + incident readiness</li>
-            <li>Performance + scalability engineering</li>
-          </ul>
-          <a href="solutions-platform.html">Explore →</a>
+          <div class="card">
+            <p class="card-hook">If your team is searching for answers across documents and systems — whether you've built something or are just starting — retrieval needs to be accurate, permission-aware, and measurable.</p>
+            <h3>Knowledge Retrieval</h3>
+            <ul>
+              <li><strong>Permission-enforced retrieval at query time</strong> — the right content reaches the right person, enforced</li>
+              <li><strong>Evaluation harnesses with recall baselines</strong> — retrieval quality is measurable, not guesswork</li>
+              <li><strong>Structured ingestion and chunking</strong> — answers come from the right source, not just the most recent</li>
+            </ul>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Zero permission violations in 6 months · p95 latency under 380ms across 40K+ documents</div>
+            <a href="solutions-rag.html" style="margin-top: 14px; display: inline-block;">Explore knowledge retrieval →</a>
+          </div>
+
+          <div class="card" id="platform">
+            <p class="card-hook">The workflows you automate are only as reliable as the platform running them. Without the right foundation, the first production incident becomes the last time users trust it.</p>
+            <h3>Platform & Reliability Engineering</h3>
+            <ul>
+              <li><strong>Full-stack observability with alerting</strong> — incidents surface in dashboards, not customer complaints</li>
+              <li><strong>CI/CD pipelines with rollback capability</strong> — deployments don't break what's already running</li>
+              <li><strong>Cost telemetry and budget controls</strong> — infrastructure spend is trackable and predictable</li>
+            </ul>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Operational from day one · No unplanned cost overruns in production</div>
+            <a href="solutions-platform.html" style="margin-top: 14px; display: inline-block;">Explore platform & reliability →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -105,8 +136,8 @@
           <div class="card">
             <h3>Business impact</h3>
             <ul>
-              <li>Reduced cycle time</li>
-              <li>Lower operational load</li>
+              <li>Recoverable hours from automated workflows</li>
+              <li>Reduced cycle time and operational load</li>
               <li>Improved release readiness / MTTR</li>
             </ul>
           </div>
@@ -124,13 +155,13 @@
 
     <section class="section cta-band">
       <div class="container">
-        <h2>Discuss an architecture</h2>
+        <h2>Start with the Workflow Discovery.</h2>
         <p class="lede">
-          We begin every engagement with an Architecture Review — a focused assessment of your system's constraints, integration patterns, and evaluation strategy. You'll leave with a clear picture of where your system will fail in production — and how to fix it.
+          The Workflow Discovery identifies which of your manual processes are ready to automate and where your AI system is fragile. Two outputs: a Workflow Readiness Score and an Efficiency Dividend. 12 questions. One 30-minute review call.
         </p>
-        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <p class="sublede">No commitment required. Findings are confidential — whether we work together or not.</p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+          <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
         </div>
       </div>
     </section>
@@ -146,7 +177,9 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">

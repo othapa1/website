@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AWRA — AI Workflow Readiness Auditor · LotusNex</title>
-  <meta name="description" content="AI adoption fails when it starts with tools instead of workflows. AWRA helps engineering and operations leaders identify which repetitive processes are worth automating — and which AI systems are ready to carry them." />
+  <title>Workflow Discovery · LotusNex</title>
+  <meta name="description" content="A 12-question diagnostic for operations and engineering leaders. Find out which workflows are worth automating and where your AI system is fragile — before you ship." />
   <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/awra.html" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Workflow Discovery · LotusNex" />
+  <meta property="og:description" content="A 12-question diagnostic for operations and engineering leaders. Find out which workflows are worth automating and where your AI system is fragile — before you ship." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Workflow Discovery · LotusNex" />
+  <meta name="twitter:description" content="A 12-question diagnostic for operations and engineering leaders. Find out which workflows are worth automating and where your AI system is fragile — before you ship." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
 </head>
 
 <body>
@@ -15,262 +27,126 @@
         <img src="logo.png" alt="LotusNex logo" />
         <span>LotusNex</span>
       </a>
-
       <nav class="site-nav" aria-label="Primary">
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta active" href="awra.html">Run the Audit →</a>
+        <a class="cta active" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero-compact">
-      <div class="container">
-        <p class="eyebrow">AI Workflow Readiness Auditor</p>
-        <h1>AI adoption fails when it starts with tools instead of workflows.</h1>
-        <p class="lede">
-          AWRA helps engineering and operations leaders identify which repetitive processes are worth automating — and which AI systems are ready to carry them.
-        </p>
-        <p class="lede" style="font-size:16px;">
-          Two outputs: a <strong>Workflow Readiness Score</strong> (process fit + production architecture) and an <strong>Efficiency Dividend</strong> (recoverable hours and operating cost). For COOs who need to reclaim capacity, and CTOs who need to ship safely.
-        </p>
-        <p class="audience-signal">COO · CTO · VP Operations · VP Engineering</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#start-audit">Run the Workflow Readiness Audit →</a>
-        </div>
-      </div>
-    </section>
+    <!-- ─── MARKETING WRAPPER (hidden when diagnostic starts) ─── -->
+    <div id="wd-marketing">
 
-    <!-- VALUE GRID — operations buyer leads per v4 -->
-    <section class="section">
-      <div class="container">
-        <div class="grid-3">
+      <!-- INTAKE FORM -->
+      <section class="section" id="start-audit" style="background:var(--blue-soft); border-top:1px solid var(--border-light);">
+        <div class="container">
+          <div class="mid-funnel" style="text-align:left; max-width:640px;">
+            <p class="eyebrow" style="margin-bottom:8px;">Workflow Discovery</p>
+            <h3 style="margin-bottom:6px; font-size:22px;">Find out which workflows are worth automating — and what it takes to run them reliably.</h3>
+            <p style="color:var(--text-muted); margin-bottom:4px;">12 questions + a brief efficiency calculator. Results immediately.</p>
+            <p style="color:var(--text-faint); font-size:13px; margin-bottom:24px;">COO · CTO · VP Operations · VP Engineering</p>
 
-          <div class="card">
-            <p class="eyebrow">For Operations Leaders</p>
-            <h3>Find the workflows worth automating.</h3>
-            <p>
-              Support triage, document review, duplicate data entry, report generation, knowledge retrieval. Quantify recoverable hours and annualized cost — and identify which workflows are actually fit for AI versus which would transfer cost rather than remove it.
-            </p>
-            <p style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy-600); margin-bottom:0; font-weight:600;">COO · VP Operations</p>
-          </div>
-
-          <div class="card">
-            <p class="eyebrow">For Engineering Leaders</p>
-            <h3>Identify production risks before they ship.</h3>
-            <p>
-              Tenant isolation, prompt injection, token gluttony, reliability gaps. Architecture-grade rigor, not vibe-checks. Know exactly where your system is fragile before those workflows depend on it.
-            </p>
-            <p style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy-600); margin-bottom:0; font-weight:600;">CTO · VP Engineering</p>
-          </div>
-
-          <div class="card">
-            <p class="eyebrow">For Both</p>
-            <h3>A single 30-minute peer review.</h3>
-            <p>
-              No pitch deck. No generic AI roadmap. No generic automation pitch. An engineer-to-engineer walkthrough of your findings with a LotusNex architect — process fit and production architecture together.
-            </p>
-            <p style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy-600); margin-bottom:0; font-weight:600;">Discovery · 30 min</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- TWO OUTPUTS -->
-    <section class="section" style="background:var(--blue-soft); border-top:1px solid var(--border-light); border-bottom:1px solid var(--border-light);">
-      <div class="container">
-        <h2>Two outputs from one diagnostic.</h2>
-        <p class="lede" style="max-width:64ch;">The same 13 questions surface both the operational cost your COO needs to recover and the architectural gaps your CTO needs to close.</p>
-
-        <div class="grid-2" style="margin-top:28px;">
-
-          <div class="card">
-            <p class="eyebrow">Efficiency Dividend</p>
-            <h3>$/year · What is your operation's recoverable cost?</h3>
-            <p>An annualized estimate of the labor hours and cost locked in repetitive, unautomated workflows — from support triage and report generation to duplicate data entry and shadow work that escapes into inboxes.</p>
-            <ul>
-              <li>Identifies workflows consuming employee hours</li>
-              <li>Evaluates process fit before estimating savings</li>
-              <li>Calculates annualized savings at 70% adoption</li>
-              <li>Surfaces High Automation Debt when warranted</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <p class="eyebrow">Workflow Readiness Score</p>
-            <h3>0–100 · Are your processes and architecture ready?</h3>
-            <p>A weighted score across four pillars — Process Fit, Security, Tokenomics, and Reliability — benchmarked against a production baseline. Includes a Liability Gap visualization showing exactly where you fall short.</p>
-            <ul>
-              <li>Process Fit &amp; Automation Leverage — 30%</li>
-              <li>Security &amp; Tenant Isolation — 25%</li>
-              <li>Tokenomics &amp; Cost Scalability — 25%</li>
-              <li>Reliability &amp; Production Architecture — 20%</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="pov" style="margin-top:28px;">
-          <p style="font-style:italic; color:var(--text-dark); margin-bottom:0;">
-            "The diagnostic identified roughly 26 hours of recoverable manual work per week across your selected workflows, representing approximately $112,400 in annualized labor capacity. Before automating these workflows, the underlying architecture should be hardened — the Workflow Readiness Score of 58 indicates that the systems intended to absorb this work are not yet reliable enough to do so without creating new risks."
-          </p>
-          <p style="font-size:12px; color:var(--text-faint); margin-top:10px; margin-bottom:0; letter-spacing:0.04em;">SAMPLE OUTPUT · FRAGILE CLASSIFICATION · COO TRACK</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOUR PILLARS — process-first order per v4 -->
-    <section class="section">
-      <div class="container">
-        <h2>What the diagnostic evaluates.</h2>
-        <p class="lede" style="max-width:64ch; margin-bottom:28px;">13 questions across four weighted pillars. Process fit leads — because automating the wrong workflow transfers cost rather than removing it.</p>
-
-        <div class="grid-2">
-
-          <div class="card">
-            <p class="eyebrow">Process Fit &amp; Automation Leverage · 30%</p>
-            <h3>Which workflows are actually ready to automate?</h3>
-            <p>Evaluates whether target workflows are repetitive, rule-bounded, measurable, and owned — fit criteria that most AI initiatives skip. Surfaces Process-Fit Mismatches, High Automation Debt, and Automation Theater before you invest in architecture.</p>
-          </div>
-
-          <div class="card">
-            <p class="eyebrow">Security &amp; Tenant Isolation · 25%</p>
-            <h3>Can user data stay isolated under real load?</h3>
-            <p>Evaluates tenant-level data separation across retrieval, tool execution, memory, and generated outputs. Surfaces gaps in prompt injection defenses and sensitive data handling before they become liability events.</p>
-          </div>
-
-          <div class="card">
-            <p class="eyebrow">Tokenomics &amp; Cost Scalability · 25%</p>
-            <h3>Will your unit economics survive 100× volume?</h3>
-            <p>Evaluates cost attribution granularity, token budgeting per tenant and workflow, and model routing strategy. Identifies Token Gluttony — using flagship models for trivial tasks — before it destroys margins at scale.</p>
-          </div>
-
-          <div class="card">
-            <p class="eyebrow">Reliability &amp; Production Architecture · 20%</p>
-            <h3>What happens when the model fails or degrades?</h3>
-            <p>Evaluates evaluation harnesses, regression testing, observability coverage, deterministic fallbacks, and incident response playbooks. AI reliability is not uptime — it includes retrieval quality, refusal rates, and policy violations.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT AWRA IS NOT -->
-    <section class="section" style="border-top:1px solid var(--border-light);">
-      <div class="container">
-        <div class="grid-2">
-          <div>
-            <h2>Built for where most companies actually are.</h2>
-            <p class="lede" style="max-width:52ch;">Most leaders judge AI readiness on the wrong axes.</p>
-            <ul style="margin-top:0;">
-              <li>"Our teams are busy shipping."</li>
-              <li>"We added an AI assistant."</li>
-              <li>"The demo works."</li>
-              <li>"We have a chatbot now."</li>
-              <li>"We connected AI to our data."</li>
-            </ul>
-            <p style="margin-top:14px;">AWRA reframes readiness around <strong>operational leverage</strong> and <strong>production engineering</strong> simultaneously — finding the right process <em>and</em> building the architecture to run it durably are the same discipline.</p>
-          </div>
-          <div>
-            <h4 style="margin-bottom:16px; color:var(--navy-800);">The questions most teams haven't asked</h4>
-            <div class="stack">
-              <div class="pov"><p style="margin:0; font-size:14px;">Which workflows are repetitive enough, valuable enough, and measurable enough to be worth automating?</p></div>
-              <div class="pov"><p style="margin:0; font-size:14px;">Where does the same data get re-entered across systems because integrations were never finished?</p></div>
-              <div class="pov"><p style="margin:0; font-size:14px;">Is AI actually replacing manual labor, or sitting on top of it as a chatbot veneer?</p></div>
-              <div class="pov"><p style="margin:0; font-size:14px;">Can unit economics survive 100× volume? Can the system degrade gracefully when a model provider fails?</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTAKE FORM -->
-    <section class="section" id="start-audit" style="background:var(--blue-soft); border-top:1px solid var(--border-light);">
-      <div class="container">
-        <div class="mid-funnel" style="text-align:left; max-width:640px;">
-          <h3 style="margin-bottom:6px;">Run the Workflow Readiness Audit</h3>
-          <p style="color:var(--text-muted); margin-bottom:24px;">Tell us about your team and workflows. We'll review your intake and send you the diagnostic link within 1 business day.</p>
-
-          <form action="#" method="POST">
-
-            <div class="form-grid">
-              <div class="form-group">
-                <label class="form-label" for="awra-name">Name</label>
-                <input class="form-input" type="text" id="awra-name" name="name" placeholder="Your name" required />
+            <form id="awra-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="awra-name">Name</label>
+                  <input class="form-input" type="text" id="awra-name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="awra-email">Work Email</label>
+                  <input class="form-input" type="email" id="awra-email" name="email" placeholder="you@company.com" required />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="awra-company">Company</label>
+                  <input class="form-input" type="text" id="awra-company" name="company" placeholder="Company name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="awra-role">Your Role</label>
+                  <select class="form-select" id="awra-role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="coo">COO</option>
+                    <option value="cto">CTO</option>
+                    <option value="vp-ops">VP Operations</option>
+                    <option value="vp-eng">VP Engineering</option>
+                    <option value="founder">Founder / CEO</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
               </div>
               <div class="form-group">
-                <label class="form-label" for="awra-email">Work Email</label>
-                <input class="form-input" type="email" id="awra-email" name="email" placeholder="you@company.com" required />
-              </div>
-            </div>
-
-            <div class="form-grid">
-              <div class="form-group">
-                <label class="form-label" for="awra-company">Company</label>
-                <input class="form-input" type="text" id="awra-company" name="company" placeholder="Company name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="awra-role">Your Role</label>
-                <select class="form-select" id="awra-role" name="role" required>
-                  <option value="" disabled selected>Select your role</option>
-                  <option value="coo">COO</option>
-                  <option value="cto">CTO</option>
-                  <option value="vp-ops">VP Operations</option>
-                  <option value="vp-eng">VP Engineering</option>
-                  <option value="founder">Founder / CEO</option>
-                  <option value="other">Other</option>
+                <label class="form-label" for="awra-interest">What are you trying to solve?</label>
+                <select class="form-select" id="awra-interest" name="primary_interest" required>
+                  <option value="" disabled selected>Select your primary challenge</option>
+                  <option value="manual-workflows">My team spends too many hours on manual, repetitive work</option>
+                  <option value="ai-reliability">Our AI system isn't reliable in production</option>
+                  <option value="both">Both — workflow inefficiency and architecture problems</option>
                 </select>
               </div>
+              <div class="form-group">
+                <label class="form-label" for="awra-stage">Where are you today?</label>
+                <select class="form-select" id="awra-stage" name="stage">
+                  <option value="" disabled selected>Select your current stage</option>
+                  <option value="no-ai">No AI yet — figuring out where to start</option>
+                  <option value="prototype">Prototype built, not in production</option>
+                  <option value="in-production">AI in production with reliability or cost issues</option>
+                  <option value="scaling">Scaling something that's already working</option>
+                </select>
+              </div>
+              <button type="submit" class="button primary" style="width:100%; margin-top:8px;">Start the Diagnostic →</button>
+            </form>
+
+            <p style="font-size:13px; color:var(--text-faint); margin-top:16px; text-align:center;">12 questions + a brief workflow calculator. Takes about 5 minutes.</p>
+            <p style="font-size:13px; color:var(--text-faint); margin-top:6px; text-align:center;">We don't share your information. Results remain confidential.</p>
+            <p style="font-size:13px; color:var(--text-faint); margin-top:6px; text-align:center;">Already know what you need? <a href="contact.html" style="color:var(--navy-700);">Request an Architecture Review →</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /wd-marketing -->
+
+    <!-- ─── DIAGNOSTIC APP (shown after intake submit) ─── -->
+    <div id="wd-app" style="display:none;">
+      <div class="container">
+        <div class="wd-card">
+
+          <!-- Meta row: step label + counter -->
+          <div class="wd-meta-row">
+            <span id="wd-step-label" class="wd-step-label"></span>
+            <span id="wd-counter" class="wd-counter"></span>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="wd-progress-wrap">
+            <div class="wd-progress-bar" id="wd-progress" style="width:0%"></div>
+          </div>
+
+          <!-- Question panel -->
+          <div id="wd-questions">
+            <p id="wd-pillar-badge" class="wd-pillar-badge"></p>
+            <p id="wd-q-text" class="wd-question-text"></p>
+            <p id="wd-multiselect-note" class="wd-multiselect-note" style="display:none;">Select all that apply.</p>
+            <div id="wd-options" class="wd-options"></div>
+            <div class="wd-nav">
+              <button id="wd-btn-prev" class="button" style="display:none;">← Previous</button>
+              <button id="wd-btn-next" class="button primary">Next →</button>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label class="form-label" for="awra-interest">Primary Interest</label>
-              <select class="form-select" id="awra-interest" name="primary_interest" required>
-                <option value="" disabled selected>What are you most focused on?</option>
-                <option value="find-workflows">Find workflows to automate</option>
-                <option value="review-architecture">Review AI architecture</option>
-                <option value="both">Both</option>
-              </select>
-            </div>
+          <!-- Calculator panel (after Q12) -->
+          <div id="wd-calculator" style="display:none;"></div>
 
-            <div class="form-group">
-              <label class="form-label" for="awra-system">AI System Type</label>
-              <select class="form-select" id="awra-system" name="ai_system_type">
-                <option value="" disabled selected>What type of AI system do you have?</option>
-                <option value="rag">RAG / Knowledge System</option>
-                <option value="agent">Agent / Workflow Automation</option>
-                <option value="both">Both</option>
-                <option value="none">No AI in production yet</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="awra-stage">Current Stage</label>
-              <select class="form-select" id="awra-stage" name="stage">
-                <option value="" disabled selected>Where are you today?</option>
-                <option value="no-ai">Identifying where AI can help</option>
-                <option value="prototype">Internal Prototype</option>
-                <option value="pilot">Pilot / Early Production</option>
-                <option value="scaled">Scaled Production</option>
-                <option value="post-incident">Post-incident Review</option>
-              </select>
-            </div>
-
-            <button type="submit" class="button primary" style="width:100%; margin-top:8px;">Request My Assessment →</button>
-
-          </form>
-
-          <p style="font-size:13px; color:var(--text-faint); margin-top:14px; text-align:center;">We don't share your information. Diagnostic findings remain confidential.</p>
-          <p style="font-size:13px; color:var(--text-faint); margin-top:6px; text-align:center;">Already know what you need? <a href="contact.html" style="color:var(--navy-700);">Request an Architecture Review →</a></p>
+          <!-- Results panel -->
+          <div id="wd-results" style="display:none;"></div>
 
         </div>
       </div>
-    </section>
+    </div><!-- /wd-app -->
 
   </main>
 
@@ -284,14 +160,655 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
-
     <div class="container footer-bottom">
       <small>© 2026 LotusNex. All rights reserved.</small>
     </div>
   </footer>
+
+  <!-- ─── DIAGNOSTIC ENGINE ─── -->
+  <script>
+  (function() {
+
+    // ── QUESTIONS ─────────────────────────────────────────────────
+    var QUESTIONS = [
+
+      // Process Fit & Automation Leverage (Q1–Q4, 30%)
+      {
+        id: 'q1', pillar: 'process',
+        pillarLabel: 'Process Fit & Automation Leverage',
+        text: 'How consistent are the workflows you want to automate?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Very consistent — nearly identical each time, minimal judgment required' },
+          { value: 75,  label: 'Mostly consistent with occasional exceptions that need human review' },
+          { value: 35,  label: 'Frequently varies — the right output depends on context and judgment' },
+          { value: 10,  label: 'Highly variable — most instances require significant human judgment' },
+          { value: 45,  label: 'Not sure', unsure: true }
+        ]
+      },
+      {
+        id: 'q2', pillar: 'process',
+        pillarLabel: 'Process Fit & Automation Leverage',
+        text: 'When a manual process produces a wrong output, how quickly does someone on your team catch it?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Same day — there\'s a clear check before the output leaves the team' },
+          { value: 70,  label: 'Within a week — someone downstream usually notices' },
+          { value: 35,  label: 'We often find out through downstream effects, days later' },
+          { value: 10,  label: 'Rarely — unless a customer or external party reports it' },
+          { value: 45,  label: 'Not sure', unsure: true }
+        ]
+      },
+      {
+        id: 'q3', pillar: 'process',
+        pillarLabel: 'Process Fit & Automation Leverage',
+        text: 'How much of the manual work you want to automate involves re-entering the same data across multiple systems?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'More than half — the same information gets entered in 2+ systems routinely' },
+          { value: 75,  label: 'A significant portion — this happens daily for our team' },
+          { value: 40,  label: 'Occasionally — maybe a few times per week' },
+          { value: 20,  label: 'Rarely — most workflows are contained in a single system' },
+          { value: 50,  label: 'Not sure', unsure: true }
+        ]
+      },
+      {
+        id: 'q4', pillar: 'process',
+        pillarLabel: 'Process Fit & Automation Leverage',
+        text: 'Which workflows are you hoping to automate?',
+        type: 'checkbox',
+        options: [
+          { value: 'documents',  label: 'Document processing — invoices, contracts, or reports' },
+          { value: 'data-entry', label: 'Data entry and cross-system re-entry' },
+          { value: 'support',    label: 'Customer support and ticket triage' },
+          { value: 'reporting',  label: 'Report generation and analytics prep' },
+          { value: 'knowledge',  label: 'Knowledge retrieval and internal Q&A' },
+          { value: 'other',      label: 'Something else — still figuring it out' }
+        ]
+      },
+
+      // Security & Tenant Isolation (Q5–Q7, 25%)
+      {
+        id: 'q5', pillar: 'security',
+        pillarLabel: 'Security & Tenant Isolation',
+        text: 'When your AI system returns information to a user, does it enforce which records that user is allowed to see?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Yes — enforced at query time with controls we\'ve tested' },
+          { value: 60,  label: 'Mostly — we filter results, but haven\'t tested edge cases formally' },
+          { value: 20,  label: 'We rely on the model to respect the context set in the system prompt' },
+          { value: 0,   label: 'No controls in place — all users can reach all content' },
+          { value: 65,  label: 'Not applicable — single-tenant or no AI in production yet', unsure: true }
+        ]
+      },
+      {
+        id: 'q6', pillar: 'security',
+        pillarLabel: 'Security & Tenant Isolation',
+        text: 'Has your AI system been tested against prompt injection — attempts by users to override its instructions?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Yes — we\'ve run adversarial testing or red-teamed it' },
+          { value: 55,  label: 'We\'ve thought about it and have some informal mitigations' },
+          { value: 20,  label: 'No — it\'s on our list but we haven\'t gotten to it' },
+          { value: 0,   label: 'No — and the system accepts external inputs we don\'t fully control' },
+          { value: 65,  label: 'Not applicable — no external users interact with the system', unsure: true }
+        ]
+      },
+      {
+        id: 'q7', pillar: 'security',
+        pillarLabel: 'Security & Tenant Isolation',
+        text: 'What types of data does your AI system access or process?',
+        type: 'checkbox',
+        options: [
+          { value: 'pii',       label: 'Customer PII — names, emails, IDs, contact details' },
+          { value: 'financial', label: 'Financial records — invoices, transactions, revenue data' },
+          { value: 'hr',        label: 'HR or employee records' },
+          { value: 'internal',  label: 'Internal documents — contracts, policies, knowledge base' },
+          { value: 'none',      label: 'None of the above — or no AI in production yet' }
+        ]
+      },
+
+      // Tokenomics & Cost Scalability (Q8–Q10, 25%)
+      {
+        id: 'q8', pillar: 'tokenomics',
+        pillarLabel: 'Tokenomics & Cost Scalability',
+        text: 'Do you know what each automated task or workflow costs in tokens or compute today?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Yes — we track cost per workflow or task with clear attribution' },
+          { value: 55,  label: 'We have overall AI spend but not per-task or per-workflow breakdowns' },
+          { value: 20,  label: 'We know the monthly bill, but not what\'s driving it' },
+          { value: 5,   label: 'No cost tracking at all yet' },
+          { value: 30,  label: 'Not sure', unsure: true }
+        ]
+      },
+      {
+        id: 'q9', pillar: 'tokenomics',
+        pillarLabel: 'Tokenomics & Cost Scalability',
+        text: 'If your usage 10×\'d tomorrow, would your current AI cost structure stay within acceptable unit economics?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Yes — we\'ve modeled cost at scale and it holds' },
+          { value: 65,  label: 'Probably — we\'ve thought about it but haven\'t formally modeled it' },
+          { value: 30,  label: 'Uncertain — we haven\'t stress-tested the economics' },
+          { value: 5,   label: 'No — costs would almost certainly spiral without architectural changes' },
+          { value: 30,  label: 'Not sure', unsure: true }
+        ]
+      },
+      {
+        id: 'q10', pillar: 'tokenomics',
+        pillarLabel: 'Tokenomics & Cost Scalability',
+        text: 'Do you have token budgets, rate limits, or model routing in place to control spend?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'All three — budget caps, rate limits, and model routing by task type' },
+          { value: 65,  label: 'Some — rate limits or model selection, but not all three' },
+          { value: 30,  label: 'Minimal — one soft control but nothing comprehensive' },
+          { value: 5,   label: 'None — spend is uncapped at the workflow level' },
+          { value: 25,  label: 'Not sure', unsure: true }
+        ]
+      },
+
+      // Reliability & Production Architecture (Q11–Q12, 20%)
+      {
+        id: 'q11', pillar: 'reliability',
+        pillarLabel: 'Reliability & Production Architecture',
+        text: 'What happens when your AI system returns a wrong or low-confidence answer?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'A guardrail catches it and routes to a human review queue' },
+          { value: 55,  label: 'We log it and handle it manually after the fact' },
+          { value: 20,  label: 'The output goes through — we usually find out later when something breaks' },
+          { value: 0,   label: 'We don\'t have a mechanism for this yet' },
+          { value: 30,  label: 'Not sure / No AI in production yet', unsure: true }
+        ]
+      },
+      {
+        id: 'q12', pillar: 'reliability',
+        pillarLabel: 'Reliability & Production Architecture',
+        text: 'Do you have observability in place — dashboards or alerts that tell you when the AI system is degrading or producing bad outputs?',
+        type: 'radio',
+        options: [
+          { value: 100, label: 'Yes — active alerting with defined response runbooks' },
+          { value: 55,  label: 'Logging in place, but no active monitoring or alerting' },
+          { value: 20,  label: 'Basic infrastructure error logging only' },
+          { value: 0,   label: 'No observability yet' },
+          { value: 30,  label: 'Not sure / No AI in production yet', unsure: true }
+        ]
+      }
+    ];
+
+    // ── STATE ─────────────────────────────────────────────────────
+    var state = {
+      intake: {},
+      currentQ: 0,
+      answers: {},
+      phase: 'questions',
+      calculator: { employees: '3', hoursPerWeek: '8', hourlyCost: '75', automationPct: 70 }
+    };
+
+    // ── SCORING ───────────────────────────────────────────────────
+    var PILLAR_WEIGHTS = { process: 0.30, security: 0.25, tokenomics: 0.25, reliability: 0.20 };
+    var UNSURE_FALLBACK = { process: 45, security: 50, tokenomics: 30, reliability: 30 };
+
+    function getQuestionScore(q) {
+      var ans = state.answers[q.id];
+      if (ans === undefined || ans === null) return null;
+      if (q.type === 'checkbox') {
+        var selected = Array.isArray(ans) ? ans : [];
+        if (selected.length === 0) return null;
+        if (selected.includes('none')) return 60;
+        // For security data types: having awareness = good, but risk assessed via flags
+        return 70;
+      }
+      if (ans === '__unsure__') return UNSURE_FALLBACK[q.pillar];
+      var opt = q.options.find(function(o) { return String(o.value) === String(ans); });
+      return opt ? Number(opt.value) : null;
+    }
+
+    function calcPillarScore(pillar) {
+      var qs = QUESTIONS.filter(function(q) { return q.pillar === pillar; });
+      var scores = qs.map(getQuestionScore).filter(function(s) { return s !== null; });
+      if (!scores.length) return 50;
+      return Math.round(scores.reduce(function(a, b) { return a + b; }, 0) / scores.length);
+    }
+
+    function calcFinalScore() {
+      var total = 0;
+      Object.keys(PILLAR_WEIGHTS).forEach(function(p) {
+        total += calcPillarScore(p) * PILLAR_WEIGHTS[p];
+      });
+      return Math.round(total);
+    }
+
+    function getConfidence() {
+      var n = Object.values(state.answers).filter(function(v) { return v === '__unsure__'; }).length;
+      if (n <= 1) return 'High';
+      if (n <= 3) return 'Medium';
+      return 'Low';
+    }
+
+    function getTier(score) {
+      if (score < 40) return { label: 'Critical Risk', cls: 'wd-tier-critical' };
+      if (score < 60) return { label: 'Fragile', cls: 'wd-tier-fragile' };
+      if (score < 75) return { label: 'Transitional', cls: 'wd-tier-transitional' };
+      if (score < 90) return { label: 'Production-Aware', cls: 'wd-tier-aware' };
+      return { label: 'Production-Ready', cls: 'wd-tier-ready' };
+    }
+
+    function calcEfficiencyDividend() {
+      var c = state.calculator;
+      var emp = parseFloat(c.employees) || 1;
+      var hrs = parseFloat(c.hoursPerWeek) || 5;
+      var cost = parseFloat(c.hourlyCost) || 65;
+      var pct = parseFloat(c.automationPct) / 100;
+      var weeklyHrs = emp * hrs * pct * 0.70;
+      var annual = weeklyHrs * cost * 52;
+      return { hoursPerWeek: Math.round(weeklyHrs), annualDollars: Math.round(annual) };
+    }
+
+    function getCriticalFlags() {
+      var flags = [];
+      var q5 = state.answers['q5'];
+      var q6 = state.answers['q6'];
+      var q7 = state.answers['q7'] || [];
+      var q8 = state.answers['q8'];
+      var q9 = state.answers['q9'];
+      var q11 = state.answers['q11'];
+      var q1 = state.answers['q1'];
+      var q2 = state.answers['q2'];
+
+      var highRisk = Array.isArray(q7) && (q7.includes('pii') || q7.includes('financial') || q7.includes('hr'));
+
+      if (q5 === '0') {
+        flags.push({ level: 'critical', text: 'No tenant data isolation: users can access records they shouldn\'t. This is a production blocker for any multi-tenant system before you automate workflows that touch user data.' });
+      } else if (q5 === '20' && highRisk) {
+        flags.push({ level: 'critical', text: 'Prompt-based access control with sensitive data: your system handles PII, financial, or HR data but relies on the model to enforce access boundaries — a common source of data leakage under adversarial conditions.' });
+      }
+
+      if (q6 === '0' && highRisk) {
+        flags.push({ level: 'critical', text: 'No prompt injection testing with sensitive data in scope: users could manipulate the system into returning restricted records or bypassing access controls.' });
+      }
+
+      var q8v = (q8 && q8 !== '__unsure__') ? parseInt(q8) : (q8 === '__unsure__' ? 30 : null);
+      var q9v = (q9 && q9 !== '__unsure__') ? parseInt(q9) : (q9 === '__unsure__' ? 30 : null);
+      if (q8v !== null && q9v !== null && q8v <= 20 && q9v <= 30) {
+        flags.push({ level: 'warning', text: 'Cost model not validated: no per-task cost attribution combined with unmodeled scale economics. Shipping automated workflows without this in place routinely causes budget overruns once volume grows.' });
+      }
+
+      if (q11 === '0') {
+        flags.push({ level: 'critical', text: 'No failure handling: wrong outputs pass through undetected. Automating workflows without a fallback mechanism transfers failure risk downstream — to customers, not to systems you control.' });
+      }
+
+      var q1v = (q1 && q1 !== '__unsure__') ? parseInt(q1) : null;
+      var q2v = (q2 && q2 !== '__unsure__') ? parseInt(q2) : null;
+      if (q1v !== null && q2v !== null && q1v <= 35 && q2v <= 35) {
+        flags.push({ level: 'warning', text: 'Automation Theater risk: the workflows you\'re targeting have high variability and low error detection. Automating them may shift cost from one place to another without recovering it.' });
+      }
+
+      return flags;
+    }
+
+    function getNarrative(score, role) {
+      var isOps = ['coo', 'vp-ops'].includes(role);
+      var isEng = ['cto', 'vp-eng'].includes(role);
+      if (score < 40) {
+        if (isOps) return 'The workflows you\'re targeting are either not ready to automate or the architecture isn\'t ready to carry them. Moving forward without addressing these gaps will transfer cost rather than remove it.';
+        if (isEng) return 'Multiple production-critical gaps exist across security, reliability, and cost controls. Addressing these before building will prevent operational incidents and significant rework.';
+        return 'Critical gaps exist in process fit and architecture. Addressing these first will determine whether automation creates leverage or creates new problems.';
+      }
+      if (score < 60) {
+        if (isOps) return 'Some workflows have automation potential, but the architecture needs hardening first. Selective automation is possible — on the workflows with the clearest process fit and the lowest risk profile.';
+        if (isEng) return 'The system has foundational gaps that will compound under real load. Targeted hardening before scale will reduce incident risk significantly — the Reliability and Security pillars should be prioritised.';
+        return 'The foundation is partially in place but has gaps that will matter under production load. The flags below indicate where to focus before committing to a full build.';
+      }
+      if (score < 75) {
+        if (isOps) return 'Your team is ready to start automating selectively. The Efficiency Dividend below reflects what\'s realistically recoverable once the architecture guardrails in the flags are closed.';
+        if (isEng) return 'Solid architecture in most dimensions. Closing the flagged gaps now is lower-cost than addressing them as production incidents later.';
+        return 'A reasonable baseline exists. Selective automation is viable — the flags below are the gaps most likely to matter first.';
+      }
+      if (score < 90) {
+        if (isOps) return 'Operationally ready to automate at meaningful scale. The workflows with the clearest process fit are strong candidates for immediate production deployment.';
+        if (isEng) return 'Production-grade in most dimensions. The remaining gaps are worth closing before your next scale milestone — but they\'re not blockers to starting.';
+        return 'Strong baseline. The Efficiency Dividend is realistically achievable with your current architecture — the remaining flags are optimisations, not blockers.';
+      }
+      return 'Operating at production standards across all four pillars. The Efficiency Dividend below is achievable with your current architecture. Focus on the highest-value workflow first.';
+    }
+
+    // ── RENDER: QUESTION ──────────────────────────────────────────
+    function updateMeta() {
+      var pillarNames = { process: 'Process Fit', security: 'Security', tokenomics: 'Tokenomics', reliability: 'Reliability' };
+      var q = QUESTIONS[state.currentQ];
+      document.getElementById('wd-step-label').textContent = pillarNames[q.pillar];
+      document.getElementById('wd-counter').textContent = 'Question ' + (state.currentQ + 1) + ' of ' + QUESTIONS.length;
+      var pct = (state.currentQ / QUESTIONS.length) * 100;
+      document.getElementById('wd-progress').style.width = pct + '%';
+    }
+
+    function renderQuestion() {
+      var q = QUESTIONS[state.currentQ];
+      document.getElementById('wd-pillar-badge').textContent = q.pillarLabel;
+      document.getElementById('wd-q-text').textContent = q.text;
+
+      var multiNote = document.getElementById('wd-multiselect-note');
+      multiNote.style.display = q.type === 'checkbox' ? '' : 'none';
+
+      var container = document.getElementById('wd-options');
+      container.innerHTML = '';
+      var currentAns = state.answers[q.id];
+
+      q.options.forEach(function(opt) {
+        var isSelected = q.type === 'checkbox'
+          ? (Array.isArray(currentAns) && currentAns.includes(String(opt.value)))
+          : (currentAns === (opt.unsure ? '__unsure__' : String(opt.value)));
+
+        var div = document.createElement('div');
+        div.className = 'wd-option' + (isSelected ? ' selected' : '');
+
+        var input = document.createElement('input');
+        input.type = q.type;
+        input.name = q.id;
+        input.value = opt.unsure ? '__unsure__' : String(opt.value);
+        input.checked = isSelected;
+
+        var lbl = document.createElement('span');
+        lbl.className = 'wd-option-label';
+        lbl.textContent = opt.label;
+
+        div.appendChild(input);
+        div.appendChild(lbl);
+
+        div.addEventListener('click', function() {
+          if (q.type === 'radio') {
+            state.answers[q.id] = opt.unsure ? '__unsure__' : String(opt.value);
+            container.querySelectorAll('.wd-option').forEach(function(el) { el.classList.remove('selected'); el.querySelector('input').checked = false; });
+            div.classList.add('selected');
+            input.checked = true;
+          } else {
+            var arr = Array.isArray(state.answers[q.id]) ? state.answers[q.id].slice() : [];
+            var val = String(opt.value);
+            if (arr.includes(val)) {
+              arr = arr.filter(function(v) { return v !== val; });
+              div.classList.remove('selected');
+              input.checked = false;
+            } else {
+              arr.push(val);
+              div.classList.add('selected');
+              input.checked = true;
+            }
+            state.answers[q.id] = arr;
+          }
+        });
+
+        container.appendChild(div);
+      });
+
+      document.getElementById('wd-btn-prev').style.display = state.currentQ > 0 ? '' : 'none';
+      var nextBtn = document.getElementById('wd-btn-next');
+      nextBtn.textContent = state.currentQ === QUESTIONS.length - 1 ? 'Continue →' : 'Next →';
+
+      updateMeta();
+    }
+
+    function nextQuestion() {
+      var q = QUESTIONS[state.currentQ];
+      if (q.type === 'radio' && !state.answers[q.id]) {
+        // Shake to indicate required
+        var c = document.getElementById('wd-options');
+        c.style.transform = 'translateX(6px)';
+        setTimeout(function() { c.style.transform = 'translateX(-6px)'; }, 100);
+        setTimeout(function() { c.style.transform = ''; }, 200);
+        return;
+      }
+      if (state.currentQ < QUESTIONS.length - 1) {
+        state.currentQ++;
+        renderQuestion();
+        document.getElementById('wd-app').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        showCalculator();
+      }
+    }
+
+    function prevQuestion() {
+      if (state.currentQ > 0) {
+        state.currentQ--;
+        renderQuestion();
+      }
+    }
+
+    // ── RENDER: CALCULATOR ────────────────────────────────────────
+    function showCalculator() {
+      state.phase = 'calculator';
+      document.getElementById('wd-questions').style.display = 'none';
+
+      document.getElementById('wd-step-label').textContent = 'Efficiency Calculator';
+      document.getElementById('wd-counter').textContent = 'Almost done';
+      document.getElementById('wd-progress').style.width = '92%';
+
+      var q4ans = state.answers['q4'] || [];
+      var wfMap = { documents: 'document processing', 'data-entry': 'data entry', support: 'support triage', reporting: 'report generation', knowledge: 'knowledge retrieval' };
+      var wfList = q4ans.filter(function(v) { return v !== 'other' && wfMap[v]; }).map(function(v) { return wfMap[v]; });
+      var wfStr = wfList.length ? wfList.join(', ') : 'your target workflows';
+
+      var calc = document.getElementById('wd-calculator');
+      calc.innerHTML =
+        '<div class="wd-calc-wrap">' +
+          '<p class="eyebrow" style="margin-bottom:8px;">Efficiency Calculator</p>' +
+          '<h3 style="margin-bottom:6px;">Quantify the recoverable cost.</h3>' +
+          '<p style="color:var(--text-muted); margin-bottom:24px; font-size:14px;">We\'ll use this to calculate the Efficiency Dividend for ' + wfStr + '. Takes 30 seconds.</p>' +
+
+          '<div class="form-group">' +
+            '<label class="form-label" for="calc-employees">How many people do this manual work regularly?</label>' +
+            '<input class="form-input" type="number" id="calc-employees" min="1" max="9999" value="' + state.calculator.employees + '" placeholder="e.g. 3" />' +
+          '</div>' +
+
+          '<div class="form-group">' +
+            '<label class="form-label" for="calc-hours">Roughly how many hours per person per week does this work take?</label>' +
+            '<input class="form-input" type="number" id="calc-hours" min="0.5" max="80" step="0.5" value="' + state.calculator.hoursPerWeek + '" placeholder="e.g. 8" />' +
+          '</div>' +
+
+          '<div class="form-group">' +
+            '<label class="form-label" for="calc-cost">Approximate fully-loaded hourly cost per person ($)?</label>' +
+            '<input class="form-input" type="number" id="calc-cost" min="10" max="500" value="' + state.calculator.hourlyCost + '" placeholder="e.g. 75" />' +
+            '<p style="font-size:12px; color:var(--text-faint); margin-top:4px;">Typical range: $40–$100/hr ops staff, $80–$160/hr engineers. A rough estimate is fine.</p>' +
+          '</div>' +
+
+          '<div class="form-group">' +
+            '<label class="form-label">What % of this work could realistically be automated? &nbsp;<span id="calc-pct-val" style="color:var(--navy-700); font-weight:600;">' + state.calculator.automationPct + '%</span></label>' +
+            '<div class="wd-range-wrap">' +
+              '<span class="wd-range-end">0%</span>' +
+              '<input type="range" id="calc-pct" min="0" max="100" step="5" value="' + state.calculator.automationPct + '" />' +
+              '<span class="wd-range-end">100%</span>' +
+            '</div>' +
+            '<p style="font-size:12px; color:var(--text-faint); margin-top:6px;">We apply a 70% realisation factor — practical automation rarely captures 100% of theoretical potential.</p>' +
+          '</div>' +
+
+          '<div class="wd-nav" style="margin-top:24px;">' +
+            '<button id="calc-btn-back" class="button">← Back</button>' +
+            '<button id="calc-btn-submit" class="button primary">Calculate My Score →</button>' +
+          '</div>' +
+        '</div>';
+
+      calc.style.display = '';
+      document.getElementById('wd-app').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      document.getElementById('calc-pct').addEventListener('input', function() {
+        state.calculator.automationPct = this.value;
+        document.getElementById('calc-pct-val').textContent = this.value + '%';
+      });
+
+      document.getElementById('calc-btn-back').addEventListener('click', function() {
+        calc.style.display = 'none';
+        state.currentQ = QUESTIONS.length - 1;
+        state.phase = 'questions';
+        document.getElementById('wd-questions').style.display = '';
+        renderQuestion();
+      });
+
+      document.getElementById('calc-btn-submit').addEventListener('click', function() {
+        state.calculator.employees   = document.getElementById('calc-employees').value || '3';
+        state.calculator.hoursPerWeek = document.getElementById('calc-hours').value || '8';
+        state.calculator.hourlyCost  = document.getElementById('calc-cost').value || '75';
+        state.calculator.automationPct = document.getElementById('calc-pct').value;
+        showResults();
+      });
+    }
+
+    // ── RENDER: RESULTS ───────────────────────────────────────────
+    function showResults() {
+      state.phase = 'results';
+      document.getElementById('wd-calculator').style.display = 'none';
+
+      document.getElementById('wd-step-label').textContent = 'Your Results';
+      document.getElementById('wd-counter').textContent = 'Workflow Readiness Score';
+      document.getElementById('wd-progress').style.width = '100%';
+
+      var score = calcFinalScore();
+      var tier = getTier(score);
+      var dividend = calcEfficiencyDividend();
+      var confidence = getConfidence();
+      var flags = getCriticalFlags();
+      var role = state.intake.role || 'founder';
+      var narrative = getNarrative(score, role);
+
+      var pillarScores = {
+        process:     calcPillarScore('process'),
+        security:    calcPillarScore('security'),
+        tokenomics:  calcPillarScore('tokenomics'),
+        reliability: calcPillarScore('reliability')
+      };
+
+      var pillarLabels = {
+        process:     'Process Fit & Automation Leverage',
+        security:    'Security & Tenant Isolation',
+        tokenomics:  'Tokenomics & Cost Scalability',
+        reliability: 'Reliability & Architecture'
+      };
+
+      function fmtCurrency(n) {
+        if (n >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
+        if (n >= 1000)    return '$' + Math.round(n / 1000) + 'K';
+        return '$' + n;
+      }
+
+      function barColor(v) {
+        if (v < 40) return '#EF4444';
+        if (v < 60) return '#F59E0B';
+        return '#1E4E7A';
+      }
+
+      var pillarHTML = Object.keys(pillarScores).map(function(k) {
+        var v = pillarScores[k];
+        return '<div class="wd-pillar-row">' +
+          '<span class="wd-pillar-name">' + pillarLabels[k] + '</span>' +
+          '<div class="wd-pillar-track"><div class="wd-pillar-fill" style="width:' + v + '%; background:' + barColor(v) + ';"></div></div>' +
+          '<span class="wd-pillar-score">' + v + '</span>' +
+        '</div>';
+      }).join('');
+
+      var flagsHTML = flags.length
+        ? '<h4 style="margin:24px 0 12px;">Flags</h4>' + flags.map(function(f) {
+            return '<div class="wd-flag ' + f.level + '">' +
+              '<span class="wd-flag-icon">' + (f.level === 'critical' ? '⚠' : '◆') + '</span>' +
+              '<p>' + f.text + '</p>' +
+            '</div>';
+          }).join('')
+        : '<p style="color:var(--text-faint); font-size:14px; margin-top:20px;">No critical flags detected.</p>';
+
+      var results = document.getElementById('wd-results');
+      results.innerHTML =
+        '<div class="wd-score-hero">' +
+          '<div class="wd-score-number">' + score + '</div>' +
+          '<div class="wd-score-label">Workflow Readiness Score</div>' +
+          '<div class="wd-tier-badge ' + tier.cls + '">' + tier.label + '</div>' +
+          '<p style="font-size:13px; color:var(--text-faint); margin-top:10px; margin-bottom:0;">Assessment confidence: ' + confidence + '</p>' +
+        '</div>' +
+
+        '<div class="wd-dividend">' +
+          '<div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy-600); font-weight:600; margin-bottom:8px;">Efficiency Dividend</div>' +
+          '<div class="wd-dividend-amount">' + fmtCurrency(dividend.annualDollars) + '/yr</div>' +
+          '<p class="wd-dividend-sub">' + dividend.hoursPerWeek + ' hours/week recoverable across selected workflows</p>' +
+          '<p style="font-size:12px; color:var(--text-faint); margin-top:8px; margin-bottom:0;">At 70% realisation rate. Assumes process fit score holds at current level.</p>' +
+        '</div>' +
+
+        '<p style="color:var(--text-muted); margin-bottom:24px; font-size:15px; line-height:1.6;">' + narrative + '</p>' +
+
+        '<h4 style="margin-bottom:16px;">Pillar Breakdown</h4>' +
+        pillarHTML +
+
+        flagsHTML +
+
+        '<div style="margin-top:32px; padding-top:24px; border-top:1px solid var(--border-light); text-align:center;">' +
+          '<h3 style="margin-bottom:8px;">Get a walkthrough of your results.</h3>' +
+          '<p style="color:var(--text-muted); font-size:14px; max-width:44ch; margin:0 auto 20px;">A 30-minute engineer-to-engineer review of your Workflow Readiness Score and Efficiency Dividend — no pitch deck.</p>' +
+          '<div class="hero-actions" style="justify-content:center;">' +
+            '<a class="button primary" href="contact.html">Request the Review →</a>' +
+            '<button class="button wd-print-hide" onclick="window.print()">Save as PDF</button>' +
+          '</div>' +
+          '<p style="font-size:13px; color:var(--text-faint); margin-top:16px;">Results are confidential. <a href="mailto:contact@lotusnex.com" style="color:var(--navy-700);">contact@lotusnex.com</a></p>' +
+        '</div>';
+
+      results.style.display = '';
+      document.getElementById('wd-app').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ── INIT ──────────────────────────────────────────────────────
+    function startDiagnostic(intakeData) {
+      state.intake = intakeData;
+      state.currentQ = 0;
+      state.answers = {};
+      state.phase = 'questions';
+
+      document.getElementById('wd-marketing').style.display = 'none';
+      var app = document.getElementById('wd-app');
+      app.style.display = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      renderQuestion();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('awra-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var valid = true;
+          form.querySelectorAll('[required]').forEach(function(el) { if (!el.value.trim()) valid = false; });
+          if (!valid) {
+            var msg = form.querySelector('.form-error-msg');
+            if (!msg) {
+              msg = document.createElement('p');
+              msg.className = 'form-error-msg';
+              msg.style.cssText = 'color:#c0392b; font-size:13px; margin-top:10px;';
+              msg.textContent = 'Please fill in all required fields.';
+              form.appendChild(msg);
+            }
+            return;
+          }
+          startDiagnostic({
+            name:    document.getElementById('awra-name').value,
+            email:   document.getElementById('awra-email').value,
+            company: document.getElementById('awra-company').value,
+            role:    document.getElementById('awra-role').value,
+            interest: document.getElementById('awra-interest').value,
+            stage:   document.getElementById('awra-stage').value
+          });
+        });
+      }
+
+      var nextBtn = document.getElementById('wd-btn-next');
+      var prevBtn = document.getElementById('wd-btn-prev');
+      if (nextBtn) nextBtn.addEventListener('click', nextQuestion);
+      if (prevBtn) prevBtn.addEventListener('click', prevQuestion);
+    });
+
+  })();
+  </script>
 
 </body>
 </html>
