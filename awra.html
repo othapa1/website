@@ -97,6 +97,8 @@
                   <option value="scaling">Scaling something that's already working</option>
                 </select>
               </div>
+              <!-- Honeypot — must stay empty; bots fill it, humans don't see it -->
+              <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
               <button type="submit" class="button primary" style="width:100%; margin-top:8px;">Start the Diagnostic →</button>
             </form>
 
@@ -718,6 +720,44 @@
             '</div>';
           }).join('')
         : '<p style="color:var(--text-faint); font-size:14px; margin-top:20px;">No critical flags detected.</p>';
+
+      // ── SUBMIT RESULTS TO WEB3FORMS ───────────────────────────────
+      (function() {
+        var flagTexts = flags.map(function(f) {
+          return '[' + f.level.toUpperCase() + '] ' + f.text;
+        }).join('\n\n');
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key:          '958ccf05-92c0-4596-bf7d-7a1be7b37533',
+            subject:             'Workflow Discovery: ' + (state.intake.name || 'Unknown') + ' from ' + (state.intake.company || 'Unknown') + ' — Score ' + score + '/100 (' + tier.label + ')',
+            from_name:           state.intake.name || 'LotusNex Diagnostic',
+            name:                state.intake.name,
+            email:               state.intake.email,
+            replyto:             state.intake.email,
+            company:             state.intake.company,
+            role:                state.intake.role,
+            interest:            state.intake.interest,
+            stage:               state.intake.stage,
+            score:               score + '/100',
+            tier:                tier.label,
+            confidence:          confidence,
+            process_fit:         pillarScores.process + '/100',
+            security:            pillarScores.security + '/100',
+            tokenomics:          pillarScores.tokenomics + '/100',
+            reliability:         pillarScores.reliability + '/100',
+            efficiency_annual:   fmtCurrency(dividend.annualDollars) + '/yr',
+            efficiency_weekly:   dividend.hoursPerWeek + ' hrs/week recoverable',
+            calc_employees:      state.calculator.employees,
+            calc_hours_per_week: state.calculator.hoursPerWeek,
+            calc_hourly_cost:    '$' + state.calculator.hourlyCost,
+            calc_automation_pct: state.calculator.automationPct + '%',
+            flags:               flags.length ? flagTexts : 'None',
+            botcheck:            false
+          })
+        }).catch(function() {}); // silent fail — diagnostic display is unaffected
+      })();
 
       var results = document.getElementById('wd-results');
       results.innerHTML =
