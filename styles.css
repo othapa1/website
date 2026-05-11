@@ -806,11 +806,17 @@ li{
 }
 
 /* Pillar bars */
+/* Pillar breakdown rows */
 .wd-pillar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.wd-pillar-row-top {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 11px;
 }
 .wd-pillar-name {
   font-size: 13px;
@@ -832,29 +838,95 @@ li{
   border-radius: 4px;
   transition: width 0.6s ease;
 }
+.wd-pillar-score-group {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  flex-shrink: 0;
+}
 .wd-pillar-score {
   font-size: 13px;
   font-weight: 600;
   color: var(--navy-700);
   width: 28px;
   text-align: right;
-  flex-shrink: 0;
+}
+.wd-pillar-gap {
+  font-size: 11px;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  white-space: nowrap;
+}
+.wd-pillar-gap.positive { color: #059669; }
+.wd-pillar-gap.negative { color: #DC2626; }
+.wd-pillar-rationale {
+  font-size: 12px;
+  color: var(--text-faint);
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 2px;
+}
+
+/* Narrative block */
+.wd-narrative {
+  border-left: 3px solid var(--navy-700);
+  background: var(--blue-soft);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 24px;
+}
+.wd-narrative p {
+  color: var(--navy-900);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+  font-style: italic;
 }
 
 /* Flags */
 .wd-flag {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 11px 14px;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 16px;
   border-radius: var(--radius-sm);
-  background: #FEF3C7;
   border: 1px solid #F59E0B;
-  margin-bottom: 10px;
+  border-left-width: 3px;
+  background: #FFFBEB;
+  margin-bottom: 12px;
 }
-.wd-flag.critical { background: #FEE2E2; border-color: #EF4444; }
-.wd-flag-icon { font-size: 14px; flex-shrink: 0; margin-top: 2px; }
-.wd-flag p { margin: 0; font-size: 13px; color: var(--text-dark); line-height: 1.5; }
+.wd-flag.critical { background: #FEF2F2; border-color: #EF4444; }
+.wd-flag-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-weight: 600;
+  width: fit-content;
+}
+.wd-flag.warning  .wd-flag-tag { background: #F59E0B; color: #fff; }
+.wd-flag.critical .wd-flag-tag { background: #EF4444; color: #fff; }
+.wd-flag-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin: 0;
+  line-height: 1.4;
+}
+.wd-flag-body {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.wd-flag-evidence {
+  font-size: 11px;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+  margin: 0;
+}
 
 /* Print */
 @media print {

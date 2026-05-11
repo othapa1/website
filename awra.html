@@ -427,32 +427,105 @@
       var highRisk = Array.isArray(q7) && (q7.includes('pii') || q7.includes('financial') || q7.includes('hr'));
 
       if (q5 === '0') {
-        flags.push({ level: 'critical', text: 'No tenant data isolation: users can access records they shouldn\'t. This is a production blocker for any multi-tenant system before you automate workflows that touch user data.' });
+        flags.push({
+          level: 'critical',
+          title: 'No tenant data isolation',
+          body: 'All users can access all content in the system. For any multi-user or multi-tenant deployment, this is a hard production blocker — automating workflows that touch user data on top of this architecture will expose records across users at scale.',
+          evidence: 'Q05 → "No controls in place — all users can reach all content"'
+        });
       } else if (q5 === '20' && highRisk) {
-        flags.push({ level: 'critical', text: 'Prompt-based access control with sensitive data: your system handles PII, financial, or HR data but relies on the model to enforce access boundaries — a common source of data leakage under adversarial conditions.' });
+        flags.push({
+          level: 'critical',
+          title: 'Access control relies on the model, not the system',
+          body: 'Your system handles PII, financial, or HR data but enforces access boundaries via system prompt. Model-level controls fail under adversarial inputs and cannot be audited or reliably tested — a known path to data leakage in regulated environments.',
+          evidence: 'Q05 → "Rely on model to respect system prompt" + sensitive data confirmed in scope (Q07)'
+        });
       }
 
       if (q6 === '0' && highRisk) {
-        flags.push({ level: 'critical', text: 'No prompt injection testing with sensitive data in scope: users could manipulate the system into returning restricted records or bypassing access controls.' });
+        flags.push({
+          level: 'critical',
+          title: 'No prompt injection testing with sensitive data in scope',
+          body: 'Your system accepts external user inputs and processes sensitive data, but has never been tested against prompt injection. Users familiar with these techniques can manipulate the system into returning restricted records, bypassing controls, or executing unintended actions.',
+          evidence: 'Q06 → "No — and the system accepts external inputs we don\'t fully control"'
+        });
       }
 
       var q8v = (q8 && q8 !== '__unsure__') ? parseInt(q8) : (q8 === '__unsure__' ? 30 : null);
       var q9v = (q9 && q9 !== '__unsure__') ? parseInt(q9) : (q9 === '__unsure__' ? 30 : null);
       if (q8v !== null && q9v !== null && q8v <= 20 && q9v <= 30) {
-        flags.push({ level: 'warning', text: 'Cost model not validated: no per-task cost attribution combined with unmodeled scale economics. Shipping automated workflows without this in place routinely causes budget overruns once volume grows.' });
+        flags.push({
+          level: 'warning',
+          title: 'Cost model not validated for production scale',
+          body: 'No per-task cost attribution combined with unmodeled scale economics means your cost structure is unknown until it becomes an incident. Teams that ship workflow automation without this routinely face budget overruns the first time volume grows unexpectedly.',
+          evidence: 'Q08 + Q09 → no per-task attribution, scale economics not modeled'
+        });
       }
 
       if (q11 === '0') {
-        flags.push({ level: 'critical', text: 'No failure handling: wrong outputs pass through undetected. Automating workflows without a fallback mechanism transfers failure risk downstream — to customers, not to systems you control.' });
+        flags.push({
+          level: 'critical',
+          title: 'No failure handling — wrong outputs pass through undetected',
+          body: 'When the system produces a wrong or low-confidence answer, nothing catches it before it reaches the next step. Automation without fallbacks moves failure downstream — into customer-facing outputs, compliance records, or dependent workflows — rather than containing it where it can be corrected.',
+          evidence: 'Q11 → "We don\'t have a mechanism for this yet"'
+        });
       }
 
       var q1v = (q1 && q1 !== '__unsure__') ? parseInt(q1) : null;
       var q2v = (q2 && q2 !== '__unsure__') ? parseInt(q2) : null;
       if (q1v !== null && q2v !== null && q1v <= 35 && q2v <= 35) {
-        flags.push({ level: 'warning', text: 'Automation Theater risk: the workflows you\'re targeting have high variability and low error detection. Automating them may shift cost from one place to another without recovering it.' });
+        flags.push({
+          level: 'warning',
+          title: 'Automation Theater risk',
+          body: 'The workflows you\'re targeting have high variability and errors are caught slowly — meaning incorrect automated outputs may circulate for days before anyone notices. Automation here risks shifting cost from manual work to manual error correction, with an output nobody fully trusts.',
+          evidence: 'Q01 → high variability + Q02 → slow error detection'
+        });
       }
 
       return flags;
+    }
+
+    function getPillarRationale(pillar) {
+      var a = state.answers;
+      if (pillar === 'process') {
+        var q1v = (a.q1 && a.q1 !== '__unsure__') ? parseInt(a.q1) : null;
+        var q2v = (a.q2 && a.q2 !== '__unsure__') ? parseInt(a.q2) : null;
+        if (q1v !== null && q1v <= 35 && q2v !== null && q2v <= 35) return 'High variability combined with slow error detection — automation risk is high without first reducing process variance.';
+        if (q1v !== null && q1v <= 35) return 'High variability in target workflows reduces automation leverage and increases the blast radius of incorrect outputs.';
+        if (q2v !== null && q2v <= 35) return 'Errors are caught slowly, which amplifies the impact of any incorrect automated output before correction is possible.';
+        if (q1v !== null && q1v >= 75 && q2v !== null && q2v >= 70) return 'Workflows are consistent and errors are caught quickly — strong candidates for full automation.';
+        return 'Some process consistency exists; validate fit on specific target workflows before committing to a build.';
+      }
+      if (pillar === 'security') {
+        var q5v = a.q5;
+        var q6v = a.q6;
+        var q7v = Array.isArray(a.q7) ? a.q7 : [];
+        var hr = q7v.includes('pii') || q7v.includes('financial') || q7v.includes('hr');
+        if (q5v === '0') return 'No access controls in place — a hard production blocker for any system that handles user or tenant data.';
+        if (q5v === '20' && hr) return 'Sensitive data in scope with model-level access enforcement only — insufficient; prompt-based controls are not auditable and fail under adversarial inputs.';
+        if (q6v === '0' && hr) return 'No injection testing with sensitive data in scope — a known attack surface for systems that accept external user input.';
+        if (q5v === '100' && q6v === '100') return 'Access controls enforced at query time and adversarially tested — production-grade security posture.';
+        return 'Partial controls in place; edge cases and adversarial inputs have not been formally validated.';
+      }
+      if (pillar === 'tokenomics') {
+        var q8v = (a.q8 && a.q8 !== '__unsure__') ? parseInt(a.q8) : null;
+        var q9v = (a.q9 && a.q9 !== '__unsure__') ? parseInt(a.q9) : null;
+        if (q8v !== null && q8v <= 5) return 'No cost tracking at all — the cost structure is entirely opaque and budget overruns will surface as incidents, not metrics.';
+        if (q8v !== null && q8v <= 20) return 'Overall spend is tracked but no per-task attribution — cost drivers are invisible at the workflow level.';
+        if (q9v !== null && q9v <= 30) return 'Scale economics have not been modeled — unit economics at 10× volume are unknown.';
+        if (q8v !== null && q8v >= 100 && q9v !== null && q9v >= 100) return 'Per-task cost attribution and validated scale economics — cost is predictable and controllable.';
+        return 'Partial cost visibility; model routing and token budgets should be locked before scaling.';
+      }
+      if (pillar === 'reliability') {
+        var q11v = a.q11;
+        var q12v = a.q12;
+        if (q11v === '0' && q12v === '0') return 'No failure handling and no observability — failures reach downstream systems undetected and system degradation is invisible.';
+        if (q11v === '0') return 'No failure handling — incorrect outputs reach downstream systems or users with no interception or correction mechanism.';
+        if (q12v === '0') return 'No observability — system degradation is invisible until it surfaces as a downstream complaint or data failure.';
+        if (q11v === '100' && q12v === '100') return 'Failure handling with human review routing and active alerting — production-grade reliability posture.';
+        return 'Partial reliability controls in place; failure modes should be formally mapped before scale.';
+      }
+      return '';
     }
 
     function getNarrative(score, role) {
@@ -703,20 +776,33 @@
         return '#1E4E7A';
       }
 
+      var BASELINE = 75;
       var pillarHTML = Object.keys(pillarScores).map(function(k) {
         var v = pillarScores[k];
+        var gap = v - BASELINE;
+        var gapClass = gap >= 0 ? 'positive' : 'negative';
+        var gapStr = (gap >= 0 ? '+' : '') + gap + ' vs baseline';
+        var rationale = getPillarRationale(k);
         return '<div class="wd-pillar-row">' +
-          '<span class="wd-pillar-name">' + pillarLabels[k] + '</span>' +
-          '<div class="wd-pillar-track"><div class="wd-pillar-fill" style="width:' + v + '%; background:' + barColor(v) + ';"></div></div>' +
-          '<span class="wd-pillar-score">' + v + '</span>' +
+          '<div class="wd-pillar-row-top">' +
+            '<span class="wd-pillar-name">' + pillarLabels[k] + '</span>' +
+            '<div class="wd-pillar-track"><div class="wd-pillar-fill" style="width:' + v + '%; background:' + barColor(v) + ';"></div></div>' +
+            '<div class="wd-pillar-score-group">' +
+              '<span class="wd-pillar-score">' + v + '</span>' +
+              '<span class="wd-pillar-gap ' + gapClass + '">' + gapStr + '</span>' +
+            '</div>' +
+          '</div>' +
+          (rationale ? '<p class="wd-pillar-rationale">' + rationale + '</p>' : '') +
         '</div>';
       }).join('');
 
       var flagsHTML = flags.length
         ? '<h4 style="margin:24px 0 12px;">Flags</h4>' + flags.map(function(f) {
             return '<div class="wd-flag ' + f.level + '">' +
-              '<span class="wd-flag-icon">' + (f.level === 'critical' ? '⚠' : '◆') + '</span>' +
-              '<p>' + f.text + '</p>' +
+              '<span class="wd-flag-tag">' + f.level.toUpperCase() + '</span>' +
+              '<p class="wd-flag-title">' + f.title + '</p>' +
+              '<p class="wd-flag-body">' + f.body + '</p>' +
+              '<p class="wd-flag-evidence">EVIDENCE · ' + f.evidence + '</p>' +
             '</div>';
           }).join('')
         : '<p style="color:var(--text-faint); font-size:14px; margin-top:20px;">No critical flags detected.</p>';
@@ -773,9 +859,10 @@
           '<div class="wd-dividend-amount">' + fmtCurrency(dividend.annualDollars) + '/yr</div>' +
           '<p class="wd-dividend-sub">' + dividend.hoursPerWeek + ' hours/week recoverable across selected workflows</p>' +
           '<p style="font-size:12px; color:var(--text-faint); margin-top:8px; margin-bottom:0;">At 70% realisation rate. Assumes process fit score holds at current level.</p>' +
+          (score < 60 ? '<p style="font-size:12px; color:#DC2626; font-weight:500; margin-top:10px; margin-bottom:0;">⚠ With a Readiness Score of ' + score + '/100, automating these workflows without addressing the flags below risks transferring cost rather than removing it.</p>' : '') +
         '</div>' +
 
-        '<p style="color:var(--text-muted); margin-bottom:24px; font-size:15px; line-height:1.6;">' + narrative + '</p>' +
+        '<div class="wd-narrative"><p>' + narrative + '</p></div>' +
 
         '<h4 style="margin-bottom:16px;">Pillar Breakdown</h4>' +
         pillarHTML +
