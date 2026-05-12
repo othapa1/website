@@ -1,7 +1,8 @@
 fastapi
 uvicorn[standard]
-weasyprint
 pydantic
 jinja2
+weasyprint
+fpdf2
 pytest
 httpx

@@ -175,6 +175,9 @@
   (function() {
 
     // ── API ───────────────────────────────────────────────────────
+    // Production: set window.AWRA_API_URL to your deployed backend URL
+    // e.g. add before this script: <script>window.AWRA_API_URL='https://awra-api.vercel.app';</script>
+    // Local dev: backend runs at http://localhost:8001
     var AWRA_API = (window.AWRA_API_URL || 'http://localhost:8001');
 
     // ── QUESTIONS ─────────────────────────────────────────────────
