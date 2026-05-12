@@ -101,9 +101,7 @@ h3 {
 /* ── Composite score + tier ─────────────────────────────────────────────── */
 
 .composite-row {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
+  display: block;
   margin-bottom: 20px;
 }
 
