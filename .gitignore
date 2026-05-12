@@ -1,0 +1,18 @@
+# Next.js
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Environment (secrets only — .env.local is tracked as it holds no secrets)
+.env*.local
+!.env.local
+
+# Python
+awra-api/.venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
