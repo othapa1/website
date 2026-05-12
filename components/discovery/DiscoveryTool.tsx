@@ -511,11 +511,24 @@ export default function DiscoveryTool() {
 
   const sendToCRM = (r: AwraResult) => {
     const cs = r.construct_scores || {}
+    const ct = r.construct_tiers || {}
+    const ps = r.pillar_scores || {}
     const div = r.efficiency_dividend || {}
     const top = r.findings || []
+    const str = r.top_strength || {}
+    const contra = r.contradictions || []
     const score = r.composite_score || 0
 
-    const topFindingSummary = top.map(f => `[${f.severity_label}] ${f.title}`).join('; ')
+    const findingFields: Record<string, string> = {}
+    top.forEach((f, i) => {
+      findingFields[`finding_${i + 1}`] =
+        `[${f.severity_label}·${f.severity_score}] ${f.title} | Evidence: ${f.evidence} | Impact: ${f.consequence} | Validate: ${f.validation_step}`
+    })
+
+    const contraFields: Record<string, string> = {}
+    contra.forEach((c, i) => {
+      contraFields[`contradiction_${i + 1}`] = `${c.title} — ${c.body}`
+    })
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -526,17 +539,26 @@ export default function DiscoveryTool() {
         from_name: intake.name || 'LotusNex AWRA',
         name: intake.name, email: intake.email, replyto: intake.email,
         company: intake.company, role: intake.role, interest: intake.primary_interest,
+        completed_at: new Date().toISOString(),
         awra_stage: r.stage, composite_score: `${score}/100`, composite_tier: r.composite_tier,
         automation_leverage: cs.automation_leverage, production_risk: cs.production_risk,
         economic_confidence: cs.economic_confidence, evidence_confidence: cs.evidence_confidence,
-        quadrant: r.quadrant?.id,
+        automation_leverage_tier: ct.automation_leverage, production_risk_tier: ct.production_risk,
+        economic_confidence_tier: ct.economic_confidence, evidence_confidence_tier: ct.evidence_confidence,
+        quadrant: r.quadrant?.id, quadrant_label: r.quadrant?.label, quadrant_body: r.quadrant?.body,
         segment: r.segment,
+        pillar_process: ps.process, pillar_security: ps.security,
+        pillar_tokenomics: ps.tokenomics, pillar_reliability: ps.reliability,
         dividend_conservative: fmtCurrency(div.conservative || 0),
         dividend_expected: fmtCurrency(div.expected || 0),
         dividend_optimistic: fmtCurrency(div.optimistic || 0),
         dividend_hrs_per_week: div.hours_per_week_recovered,
+        dividend_caveat: div.caveat,
+        top_strength: str.label ? `${str.label} (${str.score}) — ${str.description}` : 'None',
+        ...findingFields,
+        contradiction_count: r.contradiction_count,
+        ...contraFields,
         q4_leverage_multiplier: r.q4_leverage_multiplier, q7_impact_multiplier: r.q7_impact_multiplier,
-        top_findings: topFindingSummary || 'None', contradictions: r.contradiction_count,
         scoring_model_version: r.scoring_model_version, botcheck: false,
       }),
     }).catch(() => {})
