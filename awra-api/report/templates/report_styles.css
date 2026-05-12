@@ -1,0 +1,627 @@
+/* ── AWRA Report Styles — WeasyPrint PDF ─────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  color: #1a1a2e;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+/* ── Page layout ─────────────────────────────────────────────────────────── */
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font-size: 8pt;
+    color: #888;
+  }
+}
+
+.page {
+  page-break-after: always;
+}
+
+.page:last-child {
+  page-break-after: avoid;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.report-header .brand {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #6c63ff;
+  letter-spacing: 0.04em;
+}
+
+.report-header .meta {
+  font-size: 8pt;
+  color: #666;
+  text-align: right;
+}
+
+.report-header .meta strong {
+  color: #1a1a2e;
+}
+
+/* ── Page title ─────────────────────────────────────────────────────────── */
+
+h1 {
+  font-size: 18pt;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 13pt;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e0e0ef;
+}
+
+h3 {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.page-label {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #6c63ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+/* ── Composite score + tier ─────────────────────────────────────────────── */
+
+.composite-row {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.composite-score {
+  font-size: 42pt;
+  font-weight: 700;
+  color: #6c63ff;
+  line-height: 1;
+}
+
+.composite-label {
+  font-size: 10pt;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.composite-tier {
+  display: inline-block;
+  font-size: 9pt;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: #f0eeff;
+  color: #6c63ff;
+}
+
+.stage-badge {
+  display: inline-block;
+  font-size: 8pt;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  margin-left: 8px;
+  text-transform: capitalize;
+}
+
+/* ── Construct cards ─────────────────────────────────────────────────────── */
+
+.construct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.construct-card {
+  border: 1px solid #e0e0ef;
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fafafe;
+}
+
+.construct-card .label {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #6c63ff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.construct-card .score {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.1;
+}
+
+.construct-card .tier {
+  font-size: 8pt;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* ── Quadrant card ───────────────────────────────────────────────────────── */
+
+.quadrant-card {
+  border-left: 4px solid #6c63ff;
+  background: #f5f3ff;
+  padding: 12px 14px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.quadrant-card .q-label {
+  font-size: 10pt;
+  font-weight: 700;
+  color: #4a43b5;
+  margin-bottom: 4px;
+}
+
+.quadrant-card .q-body {
+  font-size: 9pt;
+  color: #444;
+}
+
+/* ── Dividend range ──────────────────────────────────────────────────────── */
+
+.dividend-range {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dividend-col {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #e0e0ef;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+
+.dividend-col.expected {
+  border-color: #6c63ff;
+  background: #f5f3ff;
+}
+
+.dividend-col .d-label {
+  font-size: 8pt;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.dividend-col .d-value {
+  font-size: 14pt;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.dividend-col.expected .d-value {
+  color: #6c63ff;
+}
+
+.dividend-col .d-sub {
+  font-size: 8pt;
+  color: #888;
+}
+
+.dividend-caveat {
+  font-size: 8pt;
+  color: #888;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* ── Severity badges ─────────────────────────────────────────────────────── */
+
+.severity-badge {
+  display: inline-block;
+  font-size: 8pt;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+
+.severity-badge.critical  { background: #fde8e8; color: #c62828; }
+.severity-badge.high      { background: #fff3e0; color: #e65100; }
+.severity-badge.moderate  { background: #fffde7; color: #f57f17; }
+.severity-badge.low       { background: #e8f5e9; color: #2e7d32; }
+.severity-badge.note      { background: #f5f5f5; color: #555; }
+
+/* ── Finding cards ───────────────────────────────────────────────────────── */
+
+.finding-card {
+  border: 1px solid #e8e8f4;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  page-break-inside: avoid;
+}
+
+.finding-card .f-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.finding-card .f-title {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.finding-card .f-evidence {
+  font-size: 9pt;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.finding-card .f-meta {
+  font-size: 8.5pt;
+  color: #777;
+}
+
+.finding-card .f-meta strong {
+  color: #444;
+}
+
+/* ── Evidence table ──────────────────────────────────────────────────────── */
+
+table.evidence-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+}
+
+table.evidence-matrix th {
+  background: #f0eeff;
+  color: #4a43b5;
+  font-weight: 600;
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 2px solid #d0c8ff;
+}
+
+table.evidence-matrix td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f8;
+  vertical-align: top;
+}
+
+table.evidence-matrix tr:nth-child(even) td {
+  background: #fafafe;
+}
+
+/* ── Strength card ───────────────────────────────────────────────────────── */
+
+.strength-card {
+  background: #e8faf0;
+  border: 1px solid #a5d6b7;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.strength-card .s-label {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #2e7d32;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.strength-card .s-title {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.strength-card .s-score {
+  font-size: 9pt;
+  color: #2e7d32;
+}
+
+.strength-card .s-desc {
+  font-size: 9pt;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* ── Reflection prompts ──────────────────────────────────────────────────── */
+
+.reflection-prompt {
+  border-left: 3px solid #ffb300;
+  background: #fffbea;
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  page-break-inside: avoid;
+}
+
+.reflection-prompt .rp-title {
+  font-size: 9.5pt;
+  font-weight: 600;
+  color: #5d4037;
+  margin-bottom: 4px;
+}
+
+.reflection-prompt .rp-body {
+  font-size: 9pt;
+  color: #444;
+}
+
+/* ── Roadmap ─────────────────────────────────────────────────────────────── */
+
+.roadmap-phase {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+}
+
+.phase-number {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9pt;
+  font-weight: 700;
+}
+
+.phase-content .phase-title {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 3px;
+}
+
+.phase-content .phase-desc {
+  font-size: 9pt;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.phase-content .phase-actions {
+  list-style: none;
+  padding: 0;
+}
+
+.phase-content .phase-actions li {
+  font-size: 8.5pt;
+  color: #555;
+  padding: 1px 0 1px 12px;
+  position: relative;
+}
+
+.phase-content .phase-actions li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #6c63ff;
+}
+
+/* ── CTA ─────────────────────────────────────────────────────────────────── */
+
+.cta-card {
+  background: linear-gradient(135deg, #6c63ff 0%, #4a43b5 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.cta-card h2 {
+  font-size: 14pt;
+  color: white;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.cta-card .cta-body {
+  font-size: 10pt;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 16px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #6c63ff;
+  font-weight: 700;
+  font-size: 10pt;
+  padding: 8px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.cta-url {
+  font-size: 8pt;
+  color: rgba(255,255,255,0.7);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Risk radar (SVG placeholder) ───────────────────────────────────────── */
+
+.radar-container {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.radar-svg {
+  flex-shrink: 0;
+}
+
+.pillar-breakdown {
+  flex: 1;
+}
+
+.pillar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pillar-label {
+  font-size: 9pt;
+  font-weight: 600;
+  width: 130px;
+  flex-shrink: 0;
+  color: #444;
+}
+
+.pillar-bar-bg {
+  flex: 1;
+  height: 10px;
+  background: #eeeeee;
+  border-radius: 5px;
+  position: relative;
+}
+
+.pillar-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: #6c63ff;
+}
+
+.pillar-bar-baseline {
+  position: absolute;
+  top: -2px;
+  width: 2px;
+  height: 14px;
+  background: #ff6b6b;
+}
+
+.pillar-score-text {
+  font-size: 9pt;
+  font-weight: 600;
+  width: 36px;
+  text-align: right;
+  color: #1a1a2e;
+}
+
+.pillar-gap-text {
+  font-size: 8pt;
+  width: 36px;
+  text-align: left;
+}
+
+.pillar-gap-text.positive { color: #2e7d32; }
+.pillar-gap-text.negative { color: #c62828; }
+
+/* ── Appendix — evidence chain ───────────────────────────────────────────── */
+
+.evidence-chain-item {
+  border: 1px solid #f0f0f8;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  page-break-inside: avoid;
+}
+
+.ec-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ec-qid {
+  font-size: 8pt;
+  font-weight: 700;
+  color: #6c63ff;
+  text-transform: uppercase;
+  background: #f0eeff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ec-wording {
+  font-size: 9pt;
+  color: #444;
+  font-style: italic;
+}
+
+.ec-answer {
+  font-size: 9pt;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.ec-evidence {
+  font-size: 8.5pt;
+  color: #555;
+}
+
+/* ── Utilities ───────────────────────────────────────────────────────────── */
+
+.text-muted { color: #888; font-size: 8.5pt; }
+.mb-8  { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+
+.pill {
+  display: inline-block;
+  font-size: 7.5pt;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 8px;
+  background: #f0f0f8;
+  color: #555;
+}
+
+hr.divider {
+  border: none;
+  border-top: 1px solid #e8e8f4;
+  margin: 14px 0;
+}

@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Agent Orchestration Systems • LotusNex</title>
-  <meta name="description" content="Production-grade agent architectures: tool boundaries, permissioning, approvals, evaluation harnesses, and operability." />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <title>Workflow Automation • LotusNex</title>
+  <meta name="description" content="Process automation and agent orchestration systems built for production — with defined tool boundaries, approval layers, evaluation harnesses, and operational ownership." />
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/solutions-agentic.html" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Workflow Automation • LotusNex" />
+  <meta property="og:description" content="Process automation and agent orchestration systems built for production — with defined tool boundaries, approval layers, evaluation harnesses, and operational ownership." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Workflow Automation • LotusNex" />
+  <meta name="twitter:description" content="Process automation and agent orchestration systems built for production — with defined tool boundaries, approval layers, evaluation harnesses, and operational ownership." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
 </head>
 
 <body>
@@ -19,64 +31,110 @@
         <a class="active" href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta" href="contact.html">Request an Architecture Review →</a>
+        <a class="cta" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Engineering discipline</p>
-        <h1>Agent Orchestration Systems</h1>
+        <p class="eyebrow">Process automation + agent orchestration</p>
+        <h1>Workflow Automation</h1>
         <p class="lede">
-          Agentic systems fail in production when execution boundaries are undefined.
+          Most teams know which workflows are eating their team's time. The harder question is whether those workflows are actually ready to automate — and whether the architecture is ready to carry them.
         </p>
-        <p>We design agent orchestration as a controlled system — with explicit tool access, approval layers, and deterministic failure handling.</p>
+        <p>We build two types of automation systems: document-level process pipelines for rule-bounded, high-volume workflows, and agent orchestration systems for multi-step decisions that need defined boundaries and human approval gates.</p>
       </div>
     </section>
 
-    <section class="section" style="padding: 32px 0;">
+    <!-- PROCESS AUTOMATION -->
+    <section class="section" id="process-automation">
       <div class="container">
-        <div class="pov">
-          <h3>Agents are not autonomous loops. They are bounded systems operating within defined permissions, risk thresholds, and observable execution paths.</h3>
+        <div class="pov" style="margin-bottom: 28px;">
+          <h3>Process automation: eliminate the manual loop, not the human.</h3>
+          <p style="margin-bottom:0;">Document processing, data entry, report generation — workflows where the same structured work repeats at volume. Automation works here when the process is rule-bounded, errors are detectable, and humans stay in the loop for exceptions.</p>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 20px;">
+          <div class="card">
+            <h3>What we build</h3>
+            <ul>
+              <li>Document intake pipelines with format normalization</li>
+              <li>LLM extraction with per-field confidence scoring</li>
+              <li>Human review routing for low-confidence outputs</li>
+              <li>Write pipelines with dry-run mode and rollback on validation failure</li>
+              <li>End-to-end audit trail from intake to system write</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Production properties</h3>
+            <ul>
+              <li>Validation layer catches format drift before extraction failures propagate</li>
+              <li>Human review queue with SLA visibility and exception reporting</li>
+              <li>Cost telemetry per document type with budget controls</li>
+              <li>Evaluation harness against held-out document samples</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="work-tease-outcome">
+          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
+          5× processing throughput. Manual entry eliminated for the three highest-volume document types. ~38 hours/week of transcription work recovered within 60 days of go-live.
         </div>
       </div>
     </section>
 
-    <section class="section" style="padding: 32px 0;">
-      <div class="container grid-2">
-        <div class="card">
-          <h2>What we build</h2>
-          <ul>
-            <li>Orchestration loops with explicit failure-mode design</li>
-            <li>Tool integrations with least-privilege permissions</li>
-            <li>Human approval layers and escalation paths</li>
-            <li>Deterministic fallbacks for safety and predictability</li>
-          </ul>
+    <!-- AGENT ORCHESTRATION -->
+    <section class="section" id="agent-orchestration" style="border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="pov" style="margin-bottom: 28px;">
+          <h3>Agent orchestration: agents are bounded systems, not autonomous loops.</h3>
+          <p style="margin-bottom:0;">Support triage, operations handoffs, approval routing, research pipelines — workflows where agents handle routine decisions and humans approve what matters. They fail in production when tool access is unbounded and failure modes are undefined.</p>
         </div>
 
-        <div class="card">
-          <h2>Production properties</h2>
-          <ul>
-            <li>Full traceability through tool-call logs and execution spans</li>
-            <li>Evaluation via test sets and regression validation</li>
-            <li>Cost visibility with telemetry and usage controls</li>
-            <li>Clear operational ownership with runbooks and handoff</li>
-          </ul>
+        <div class="grid-2" style="margin-bottom: 20px;">
+          <div class="card">
+            <h3>What we build</h3>
+            <ul>
+              <li>Orchestration loops with explicit tool boundary definitions</li>
+              <li>Least-privilege tool access and permission scoping</li>
+              <li>Risk-tiered approval flow: auto-execute, human-in-loop, hard-stop</li>
+              <li>Deterministic fallbacks — no task degrades silently</li>
+              <li>Tool-call logging and execution trace spans</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Production properties</h3>
+            <ul>
+              <li>Full auditability through tool-call logs and execution traces</li>
+              <li>Evaluation test set covering edge cases and adversarial inputs</li>
+              <li>Per-workflow cost telemetry with token budgets</li>
+              <li>Escalation path with notification and override mechanics</li>
+              <li>Regression checks integrated into CI pipeline</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="work-tease-outcome">
+          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
+          25+ hours/week reclaimed from manual research tasks. Operating cost within 8% of projected budget at 90 days. Full team ownership at handoff with no post-launch support required.
         </div>
       </div>
     </section>
 
-    <section class="section" style="padding: 32px 0;">
+    <!-- WITHOUT THIS -->
+    <section class="section" style="padding-top: 0;">
       <div class="container">
         <div class="card">
-          <h2>Without this architecture</h2>
+          <h3>Without this architecture</h3>
           <ul>
-            <li>Agents operate beyond intended boundaries</li>
-            <li>Failures degrade silently instead of stopping deterministically</li>
-            <li>Costs become unpredictable under real usage</li>
-            <li>Teams lose visibility into system behavior</li>
+            <li>Automation runs on workflows that aren't actually process-fit — cost shifts rather than gets removed</li>
+            <li>Agents operate beyond intended boundaries when tool access isn't explicitly scoped</li>
+            <li>Failures degrade silently rather than stopping deterministically</li>
+            <li>Costs become unpredictable under real usage volume</li>
+            <li>No visibility into whether the system is producing correct outputs</li>
           </ul>
         </div>
       </div>
@@ -84,14 +142,16 @@
 
     <section class="section cta-band">
       <div class="container">
-        <h2>If your agent workflows are already in production, the question is not whether they work — but how they fail under real conditions.</h2>
-        <p class="lede">We can map tool boundaries, approvals, and evaluation strategy to your operational constraints. You'll leave with a clear picture of where your system will fail in production — and how to fix it.</p>
-        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <h2>Find out which workflows are ready — before you commit to a build.</h2>
+        <p class="lede">The Workflow Discovery identifies which processes have the right characteristics for automation and where the architecture needs hardening first. 12 questions. Results immediately.</p>
+        <p class="sublede">No commitment required. Findings are confidential.</p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+          <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
+          <a class="button" href="work.html#data-entry">See a process automation pattern →</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -104,7 +164,9 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">

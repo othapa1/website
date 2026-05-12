@@ -5,8 +5,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Home • LotusNex</title>
-  <meta name="description" content="LotusNex builds production AI systems for seed-to-Series C B2B SaaS companies — whether you're shipping your first AI feature, hardening a prototype, or scaling across a growing product." />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <meta name="description" content="LotusNex helps growing businesses automate the right workflows and build AI that runs reliably in production. Process-first. Architecture-first." />
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Home • LotusNex" />
+  <meta property="og:description" content="LotusNex helps growing businesses automate the right workflows and build AI that runs reliably in production. Process-first. Architecture-first." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Home • LotusNex" />
+  <meta name="twitter:description" content="LotusNex helps growing businesses automate the right workflows and build AI that runs reliably in production. Process-first. Architecture-first." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
+  <!-- Analytics (Plausible) — uncomment after creating account at plausible.io/sites -->
+  <!-- <script defer data-domain="lotusnex.com" src="https://plausible.io/js/script.js"></script> -->
 </head>
 
 <body>
@@ -21,7 +38,7 @@
         <a href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta" href="contact.html">Request an Architecture Review →</a>
+        <a class="cta" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
@@ -31,15 +48,15 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">AI Engineering Studio for B2B SaaS</p>
-        <h1>We build AI systems that work in production — not just in demos.</h1>
+        <p class="eyebrow">AI Engineering Studio</p>
+        <h1>We help growing businesses automate the right workflows — and build the AI to run them in production.</h1>
         <p class="lede">
-          LotusNex designs and builds production AI systems for B2B SaaS teams — whether you're introducing AI into your product, stabilizing systems under real load, or scaling AI across your platform. Architecture-first. Built for the team that inherits it.
+          LotusNex helps operations and engineering leaders identify which repetitive processes are worth automating — and builds the production AI systems to run them safely. Process-first. Architecture-first. Built to operate — by your team or ours.
         </p>
-        <p class="audience-signal">B2B SaaS · Production systems · Regulated environments</p>
+        <p class="audience-signal">Workflow automation · Production systems · Regulated environments</p>
 
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Request an Architecture Review →</a>
+          <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
           <a class="button" href="#how-we-work">See how we work →</a>
         </div>
       </div>
@@ -52,9 +69,9 @@
 
         <div class="grid-2">
           <div class="card">
-            <h3>You know AI should be part of your product. You're not sure how to start without building the wrong thing.</h3>
+            <h3>Your team is spending hours on work that shouldn't require a human.</h3>
             <p>
-              The pressure is real — from investors, from competitors, from your roadmap. The risk is equally real: starting with the wrong architecture means months of rebuilding. You need constraints defined and a design validated before writing a line of production code.
+              Support triage, document review, data re-entry across systems, report generation. You know some of these workflows should be automated. You're not sure which ones are actually ready — or whether your systems are built to take them on.
             </p>
           </div>
 
@@ -65,19 +82,6 @@
             </p>
           </div>
 
-          <div class="card">
-            <h3>Your team is arguing about whether to rebuild.</h3>
-            <p>
-              The prototype was fast to ship. Now it's load-bearing and nobody fully understands it. Fixes create new bugs. The architecture wasn't designed for production.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>You need to ship — but you can't afford to ship broken.</h3>
-            <p>
-              Investors want to see the AI working. Customers are already using it. The cost of a visible failure is higher than the cost of getting it right the first time.
-            </p>
-          </div>
         </div>
 
         <p class="section-transition">This is the moment we're built for.</p>
@@ -89,7 +93,21 @@
       <div class="container">
         <h2>Selected work</h2>
 
-        <div class="grid-2">
+        <div class="grid-3">
+          <div class="card">
+            <div class="work-tease-tags">
+              <span class="work-tease-tag">Process Automation</span>
+              <span class="work-tease-tag">Operations Workflow</span>
+              <span class="work-tease-tag">~8 weeks</span>
+            </div>
+            <h3>Automated document data-entry pipeline for a high-volume accounting firm</h3>
+            <div class="work-tease-outcome">
+              Manual transcription eliminated across three high-frequency document types. Team reallocated from data entry to review and advisory work.
+            </div>
+            <p style="font-size:0.85rem; font-weight:600; color:#0B2E4F; margin-top:10px;">5× throughput improvement on processed documents. ~38 hours/week of manual entry recovered within 60 days of go-live.</p>
+            <a href="work.html#data-entry">Read the architecture pattern →</a>
+          </div>
+
           <div class="card">
             <div class="work-tease-tags">
               <span class="work-tease-tag">Retrieval Infrastructure</span>
@@ -98,7 +116,7 @@
             </div>
             <h3>Permission-aware knowledge retrieval for a regulated SaaS platform</h3>
             <div class="work-tease-outcome">
-              Shipped to production with tenant isolation enforced at index query time. Zero cross-tenant data exposure under adversarial query testing. Retrieval audit trail aligned to compliance requirements.
+              Tenant isolation enforced at index query time. Zero cross-tenant exposure under adversarial testing. Retrieval audit trail aligned to compliance requirements.
             </div>
             <p style="font-size:0.85rem; font-weight:600; color:#0B2E4F; margin-top:10px;">Zero permission violations in 6 months of production use. Retrieval latency held under 380ms at p95 across 40,000+ indexed documents.</p>
             <a href="work.html#rag">Read the architecture pattern →</a>
@@ -108,98 +126,17 @@
             <div class="work-tease-tags">
               <span class="work-tease-tag">Agent Orchestration</span>
               <span class="work-tease-tag">B2B SaaS</span>
-              <span class="work-tease-tag">~12 weeks</span>
+              <span class="work-tease-tag">~10 weeks</span>
             </div>
-            <h3>Agentic workflow system with human approval gates for an operations team managing production processes.</h3>
+            <h3>Automated lead research and CRM enrichment system for a B2B SaaS sales team</h3>
             <div class="work-tease-outcome">
-              Built with deterministic fallbacks across all failure modes and full cost telemetry from day one.
+              Agent handles prospect research, ICP scoring, and CRM enrichment — with human review gates before outreach decisions.
             </div>
-            <p style="font-size:0.85rem; font-weight:600; color:#0B2E4F; margin-top:10px;">Operations team assumed full ownership by week 10 with no post-handoff support. Agent operating cost remained within 8% of projected budget at 90 days.</p>
-            <a href="work.html#agent">Read the architecture pattern →</a>
+            <p style="font-size:0.85rem; font-weight:600; color:#0B2E4F; margin-top:10px;">SDR team reclaimed 25+ hours/week on manual research. Lead data completeness improved from 43% to 94% at CRM entry.</p>
+            <a href="work.html#lead-gen">Read the architecture pattern →</a>
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- WHAT WE BUILD -->
-    <section class="section">
-      <div class="container">
-        <h2>What we build</h2>
-
-        <div class="grid-3">
-          <div class="card">
-            <p class="card-hook">Your agentic workflows need approval gates, audit trails, and defined failure modes — not just a loop that runs until it crashes.</p>
-            <h3>Agent Orchestration Systems</h3>
-            <ul>
-              <li>Tool integrations + permissioning</li>
-              <li>Human-in-the-loop approvals</li>
-              <li>Logging, evals, and cost controls</li>
-            </ul>
-            <a href="solutions-agentic.html">Explore agent orchestration →</a>
-          </div>
-
-          <div class="card">
-            <p class="card-hook">Your RAG implementation retrieves content. It doesn't enforce who should see what, or measure whether it's actually working.</p>
-            <h3>Retrieval Infrastructure</h3>
-            <ul>
-              <li>Ingestion + chunking + indexing</li>
-              <li>Permission-aware retrieval</li>
-              <li>Evaluation harness + regression checks</li>
-            </ul>
-            <a href="solutions-rag.html">Explore retrieval infrastructure →</a>
-          </div>
-
-          <div class="card">
-            <p class="card-hook">AI systems need the same CI/CD, observability, and reliability engineering as any other production software. Most don't have it.</p>
-            <h3>Platform & Reliability Engineering</h3>
-            <ul>
-              <li>Cloud & hybrid architectures</li>
-              <li>DevSecOps + CI/CD automation</li>
-              <li>Performance + scalability engineering</li>
-            </ul>
-            <a href="solutions-platform.html">Platform services →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIFFERENTIATION CALLOUT -->
-    <section class="section">
-      <div class="container">
-        <h2>How we're different.</h2>
-
-        <div class="grid-2">
-          <div>
-            <p>Freelancers prototype and leave. We architect, build, harden, and hand off — with runbooks and documentation your team can operate without us.</p>
-          </div>
-
-          <div>
-            <p>Agencies build to spec. We start with an architectural review — defining constraints, failure modes, and evaluation strategy before a single line of production code is written.</p>
-          </div>
-
-          <div>
-            <p>Consultancies advise. We build. You get a running, observable, tested system — not a strategy deck.</p>
-          </div>
-
-          <div>
-            <p>Hiring a senior AI engineer takes 3–6 months. We're in architecture review within a week. When the engagement ends, the system, the documentation, and the operational knowledge stay with your team.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- POV -->
-    <section class="section">
-      <div class="container">
-        <h2>Point of view</h2>
-        <div class="pov">
-          <h3>Production software fails when it's designed to demo, not to operate.</h3>
-          <p>
-            Whether it's an AI agent, a retrieval pipeline, or a custom integration — production systems have orchestration layers, failure modes, data contracts, and operational constraints. These must be engineered, tested, and monitored.
-          </p>
-        </div>
-        <p style="margin-top: 24px;"><a href="company.html#pov">Read our full engineering principles →</a></p>
       </div>
     </section>
 
@@ -208,71 +145,59 @@
       <div class="container">
         <h2>How we work</h2>
         <p class="lede">
-          Clear milestones, transparent communication, and a bias for shipping—with production constraints defined upfront.
+          Every engagement starts with process and architecture — defining what to automate, how it will fail, and what it takes to operate it before a line of production code is written.
         </p>
+
+        <div class="how-we-work-prestep">
+          <p class="eyebrow" style="margin-bottom: 6px;">Before you engage</p>
+          <p style="margin: 0;"><strong><a href="awra.html#start-audit" style="color: var(--navy-700);">Workflow Discovery</a></strong> — free, 12 questions, 1 business day. You get a Workflow Readiness Score and an Efficiency Dividend: the dollar case for which workflows to automate first.</p>
+        </div>
 
         <div class="steps">
           <div class="step">
-            <h3>1) Architecture Review</h3>
+            <p class="step-timeline">1–2 weeks</p>
+            <h3>1) Audit</h3>
             <ul>
-              <li>Threat model</li>
-              <li>Data access plan</li>
-              <li>Evaluation strategy</li>
+              <li>Target workflows mapped against production constraints</li>
+              <li>Evaluation criteria and success metrics agreed upfront</li>
+              <li>Failure modes defined before any code is written</li>
             </ul>
+            <p class="step-outcome">You get: a scoped build plan — or an honest "not yet."</p>
           </div>
 
           <div class="step">
+            <p class="step-timeline">4–8 weeks</p>
             <h3>2) Build</h3>
             <ul>
-              <li>Integrations</li>
-              <li>Retrieval pipeline</li>
-              <li>Agent orchestration</li>
+              <li>Agents, pipelines, and integrations built to spec</li>
+              <li>Evaluated against real data throughout — not just at the end</li>
+              <li>Milestone checkpoints with your team — no black-box delivery</li>
             </ul>
+            <p class="step-outcome">You get: a running system that holds up under real inputs.</p>
           </div>
 
           <div class="step">
-            <h3>3) Hardening & handoff</h3>
+            <p class="step-timeline">2 weeks + optional ongoing</p>
+            <h3>3) Harden & Own</h3>
             <ul>
-              <li>Observability</li>
-              <li>Guardrails + approvals</li>
-              <li>Runbooks + documentation</li>
+              <li>Observability and alerting live before go-live</li>
+              <li>Guardrails and approval flows validated</li>
+              <li>Runbooks written for the people who operate it</li>
             </ul>
+            <p class="step-outcome">You get: a system your team owns and can operate — or we stay involved on your terms.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- WHO WE ARE -->
-    <section class="section">
-      <div class="container">
-        <h2>Built by engineers, not consultants.</h2>
-        <p class="lede">Every engagement is led personally by the founder — architecture through handoff.</p>
-        <div style="display:flex; align-items:center; gap:16px; margin: 20px 0 16px;">
-          <img src="images/om-headshot.png" alt="Om Thapa" style="width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid #0B2E4F;flex-shrink:0;">
-          <div>
-            <strong>Om Thapa</strong> — Founder &amp; Lead Engineer<br>
-            <a href="https://www.linkedin.com/in/othapa" target="_blank" rel="noopener">LinkedIn →</a>
+        <div class="cta-band" style="margin-top: 32px; padding: 28px 32px; border-radius: var(--radius); border: 1px solid var(--border-light);">
+          <p style="margin:0 0 16px; font-size:16px; font-weight:600; color:var(--navy-900);">The first step is the Workflow Discovery.</p>
+          <p style="margin:0 0 20px; color:var(--text-muted); font-size:14px;">12 questions. Results immediately. Free — whether we work together or not.</p>
+          <div class="hero-actions" style="margin-top:0;">
+            <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
+            <a class="button" href="contact.html">Request a review →</a>
           </div>
+          <p style="font-size:13px; color:var(--text-faint); margin-top:16px; margin-bottom:0;">We work with 2–3 companies at a time. Current intake: open.</p>
         </div>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="section cta-band">
-      <div class="container">
-        <h2>Before you ship — know where your system will break.</h2>
-        <p class="lede">We begin every engagement with an Architecture Review — a focused assessment of your system's data boundaries, evaluation strategy, and operational risks.</p>
-        <p class="lede">You'll leave with a clear picture of where your system will fail in production — and how to fix it.</p>
-        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
-        </div>
-        <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
-          <h3>Not ready for an Architecture Review? Start here.</h3>
-          <p>Download our Production AI Checklist — 12 architectural questions your system should answer before it ships.</p>
-          <a class="button" href="Production_AI_Checklist.pdf" target="_blank" rel="noopener">Download the checklist →</a>
-        </div>
-        <p class="sublede" style="margin-top: 32px;">We work with 2–3 companies at a time to maintain depth of engagement. Current intake: open.</p>
       </div>
     </section>
 
@@ -288,7 +213,9 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
 

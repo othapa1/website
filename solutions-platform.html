@@ -4,8 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Platform & Reliability Engineering • LotusNex</title>
-  <meta name="description" content="Platform foundations for AI systems: CI/CD, observability, security, and reliability engineering for production deployments." />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <meta name="description" content="Platform foundations for AI workflow systems: observability, CI/CD, security controls, cost telemetry, and reliability engineering for production deployments." />
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/solutions-platform.html" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Platform & Reliability Engineering • LotusNex" />
+  <meta property="og:description" content="Platform foundations for AI workflow systems: observability, CI/CD, security controls, cost telemetry, and reliability engineering for production deployments." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Platform & Reliability Engineering • LotusNex" />
+  <meta name="twitter:description" content="Platform foundations for AI workflow systems: observability, CI/CD, security controls, cost telemetry, and reliability engineering for production deployments." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
 </head>
 
 <body>
@@ -19,64 +31,75 @@
         <a class="active" href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta" href="contact.html">Request an Architecture Review →</a>
+        <a class="cta" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Engineering discipline</p>
+        <p class="eyebrow">Platform & infrastructure</p>
         <h1>Platform &amp; Reliability Engineering</h1>
         <p class="lede">
-          AI systems fail when they are deployed without the infrastructure required to operate them.
+          The workflows you automate are only as durable as the platform running them. AI systems fail in production not at the model layer — but because the surrounding infrastructure was never built to carry them: no observability, no rollback, no cost controls.
         </p>
-        <p>We build the platform layer that makes AI systems observable, reliable, and maintainable in production.</p>
+        <p>We build the platform layer that makes AI workflow systems observable, operable, and maintainable — before the first production incident, not after.</p>
       </div>
     </section>
 
     <section class="section" style="padding: 32px 0;">
       <div class="container">
         <div class="pov">
-          <h3>AI systems are software systems. They require the same CI/CD, observability, security, and reliability patterns as any production service.</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding: 32px 0;">
-      <div class="container grid-2">
-        <div class="card">
-          <h2>What we build</h2>
-          <ul>
-            <li>Cloud and hybrid architectures for AI workloads</li>
-            <li>DevSecOps pipelines and CI/CD automation</li>
-            <li>Observability systems with tracing, logging, and alerting</li>
-            <li>Performance and scalability engineering</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>Production properties</h2>
-          <ul>
-            <li>End-to-end telemetry across model, pipeline, and integrations</li>
-            <li>Alerting and incident response readiness</li>
-            <li>Secure access controls and auditability</li>
-            <li>Systems designed for long-term maintainability</li>
-          </ul>
+          <h3>AI systems are software systems. They require the same CI/CD, observability, security, and reliability patterns as any production service — and most are deployed without them.</h3>
+          <p style="margin-bottom:0;">The first production incident is rarely a model failure. It's a deployment with no rollback capability, an alert that should have fired at hour two but fires at day four, or a cost spike that was always predictable with the right telemetry in place.</p>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding: 32px 0;">
       <div class="container">
+        <div class="grid-2" style="margin-bottom: 20px;">
+          <div class="card">
+            <h3>What we build</h3>
+            <ul>
+              <li>Full-stack observability with tracing, logging, and configured alerting</li>
+              <li>CI/CD pipelines with rollback capability and deployment safeguards</li>
+              <li>Cost telemetry with per-workflow attribution and budget controls</li>
+              <li>Security controls — access management, audit logging, least-privilege policies</li>
+              <li>Incident response runbooks and escalation paths delivered at go-live</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Production properties</h3>
+            <ul>
+              <li>Incidents surface in dashboards and alerts — not in customer complaints</li>
+              <li>Deployments don't break what's already running</li>
+              <li>Infrastructure spend is trackable and predictable before you scale</li>
+              <li>Access controls are auditable and aligned to compliance requirements</li>
+              <li>Systems designed for long-term maintainability by your team</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="work-tease-outcome">
+          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
+          Observability and alerting operational before go-live on every engagement. Zero unplanned cost overruns in production. Teams assume full operational ownership — runbooks, dashboards, and escalation paths delivered at handoff.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
         <div class="card">
-          <h2>Without this architecture</h2>
+          <h3>Without this architecture</h3>
           <ul>
-            <li>Systems fail without visibility or clear root cause</li>
-            <li>Deployments introduce instability</li>
-            <li>Costs grow without control</li>
-            <li>Teams rely on manual intervention to keep systems running</li>
+            <li>Systems fail without visibility or clear root cause — you find out when users do</li>
+            <li>Deployments introduce instability with no rollback path</li>
+            <li>AI spend grows without cost attribution to tell you why</li>
+            <li>Teams rely on manual intervention and tribal knowledge to keep systems running</li>
+            <li>Compliance exposure when access decisions can't be audited</li>
           </ul>
         </div>
       </div>
@@ -85,13 +108,15 @@
     <section class="section cta-band">
       <div class="container">
         <h2>If your AI system is difficult to operate, the issue is not the model — it's the platform.</h2>
-        <p class="lede">We can assess your deployment architecture, observability gaps, and operational risks. You'll leave with a clear picture of where your system will fail in production — and how to fix it.</p>
-        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <p class="lede">Start with the Workflow Discovery to surface reliability and observability gaps before your automated workflows depend on a system that wasn't built to carry them.</p>
+        <p class="sublede">No commitment required. Findings are confidential.</p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+          <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
+          <a class="button" href="contact.html">Request an Architecture Review →</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -104,7 +129,9 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">

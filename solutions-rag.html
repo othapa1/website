@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Retrieval Infrastructure • LotusNex</title>
-  <meta name="description" content="Permission-aware ingestion, indexing, retrieval, and evaluation-driven quality for knowledge systems." />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <title>Knowledge Retrieval • LotusNex</title>
+  <meta name="description" content="Permission-aware ingestion, indexing, retrieval, and evaluation-driven quality for knowledge systems that must enforce access boundaries in production." />
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/solutions-rag.html" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Knowledge Retrieval • LotusNex" />
+  <meta property="og:description" content="Permission-aware ingestion, indexing, retrieval, and evaluation-driven quality for knowledge systems that must enforce access boundaries in production." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Knowledge Retrieval • LotusNex" />
+  <meta name="twitter:description" content="Permission-aware ingestion, indexing, retrieval, and evaluation-driven quality for knowledge systems that must enforce access boundaries in production." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
 </head>
 
 <body>
@@ -19,20 +31,21 @@
         <a class="active" href="solutions.html">Solutions</a>
         <a href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta" href="contact.html">Request an Architecture Review →</a>
+        <a class="cta" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Engineering discipline</p>
-        <h1>Retrieval Infrastructure</h1>
+        <p class="eyebrow">Knowledge retrieval</p>
+        <h1>Knowledge Retrieval</h1>
         <p class="lede">
-          Retrieval systems fail when access control and evaluation are treated as afterthoughts.
+          Knowledge retrieval sits behind some of the highest-value workflow bottlenecks — support triage, document review, internal Q&amp;A. Systems fail in production not because retrieval is hard, but because access control and quality measurement are treated as afterthoughts.
         </p>
-        <p>We design retrieval as a permission-aware system — not just a vector search layer.</p>
+        <p>We design retrieval as a permission-aware system — not a vector search layer bolted onto a prompt.</p>
       </div>
     </section>
 
@@ -40,43 +53,50 @@
       <div class="container">
         <div class="pov">
           <h3>Retrieval is not just about relevance. It must enforce access boundaries, measure quality, and remain observable under real usage.</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding: 32px 0;">
-      <div class="container grid-2">
-        <div class="card">
-          <h2>What we build</h2>
-          <ul>
-            <li>Ingestion pipelines with structured metadata extraction</li>
-            <li>Chunking strategies aligned to document structure</li>
-            <li>Permission-aware retrieval integrated with identity systems</li>
-            <li>Evaluation harnesses with recall/precision tracking</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>Production properties</h2>
-          <ul>
-            <li>Tenant and role-based access enforced at query time</li>
-            <li>Measurable retrieval quality with regression validation</li>
-            <li>Monitoring for latency, drift, and failure modes</li>
-            <li>Auditability aligned with compliance requirements</li>
-          </ul>
+          <p style="margin-bottom:0;">The common failure mode: access control handled with post-retrieval filtering, retrieval quality guessed rather than measured, and no alerting when the system degrades. These gaps matter most in multi-tenant systems and regulated environments — exactly where retrieval systems are most valuable.</p>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding: 32px 0;">
       <div class="container">
+        <div class="grid-2" style="margin-bottom: 20px;">
+          <div class="card">
+            <h3>What we build</h3>
+            <ul>
+              <li>Ingestion pipelines with structured metadata and permission extraction at ingest time</li>
+              <li>Chunking strategies aligned to document structure and role-relevant boundaries</li>
+              <li>RBAC-aware retrieval integrated with identity systems — access enforced at query, not filtered after</li>
+              <li>Evaluation harnesses with recall/precision baselines and adversarial query regression</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Production properties</h3>
+            <ul>
+              <li>Tenant and role-based access enforced at query time — zero cross-tenant document exposure</li>
+              <li>Retrieval audit trail aligned to compliance and data access requirements</li>
+              <li>Monitoring for recall drift and latency across tenant partitions</li>
+              <li>Runbooks and ownership documentation delivered at handoff</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="work-tease-outcome">
+          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
+          Zero permission violations in 6 months of production use across a regulated multi-tenant platform. Retrieval latency held under 380ms at p95 across 40,000+ indexed documents. Internal team assumed full ownership at handoff.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
         <div class="card">
-          <h2>Without this architecture</h2>
+          <h3>Without this architecture</h3>
           <ul>
-            <li>Sensitive data exposure across tenants</li>
-            <li>Retrieval quality degrades without detection</li>
-            <li>No visibility into system performance</li>
-            <li>Inability to validate or improve results</li>
+            <li>Sensitive data exposed across tenants when access control relies on post-filtering</li>
+            <li>Retrieval quality degrades over time without recall baselines to detect it</li>
+            <li>No visibility into latency, drift, or failure modes at the retrieval layer</li>
+            <li>Compliance exposure when retrieval decisions can't be audited</li>
           </ul>
         </div>
       </div>
@@ -84,14 +104,16 @@
 
     <section class="section cta-band">
       <div class="container">
-        <h2>If your retrieval system is already in use, the risk is not retrieval — it's access control and correctness under real conditions.</h2>
-        <p class="lede">We can assess sources, permissions, and evaluation criteria before build decisions are made. You'll leave with a clear picture of where your system will fail in production — and how to fix it.</p>
-        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
+        <h2>If retrieval is already in use, the risk isn't retrieval — it's access control and correctness under real conditions.</h2>
+        <p class="lede">Start with the Workflow Discovery to identify which knowledge retrieval workflows are ready to automate — and where the architecture needs hardening before they carry production load.</p>
+        <p class="sublede">No commitment required. Findings are confidential.</p>
         <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
+          <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
+          <a class="button" href="work.html#rag">See a retrieval architecture pattern →</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -104,7 +126,9 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">

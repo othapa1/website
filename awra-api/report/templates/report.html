@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AWRA Report — {{ r.intake.company | default('Your Company') }}</title>
+  <link rel="stylesheet" href="report_styles.css">
+</head>
+<body>
+
+{# ─── Macro: page header ───────────────────────────────────────────────── #}
+{% macro page_header(company="", name="", stage="", version="") %}
+<div class="report-header">
+  <div class="brand">LotusNex · AWRA</div>
+  <div class="meta">
+    <strong>{{ company }}</strong><br>
+    Prepared for {{ name }}<br>
+    Stage: <span style="text-transform:capitalize;">{{ stage | replace('_',' ') }}</span><br>
+    Model {{ version }}
+  </div>
+</div>
+{% endmacro %}
+
+{# ─── Macro: severity badge ─────────────────────────────────────────────── #}
+{% macro severity_badge(label) %}
+<span class="severity-badge {{ label | lower }}">{{ label }}</span>
+{% endmacro %}
+
+{# ─── Variables ─────────────────────────────────────────────────────────── #}
+{% set company  = r.intake.company | default('Your Company') %}
+{% set name     = r.intake.name | default('Team') %}
+{% set stage    = r.stage | default('pilot') %}
+{% set version  = r.scoring_model_version | default('awra-1.0.0') %}
+{% set cs       = r.construct_scores %}
+{% set ct       = r.construct_tiers %}
+{% set ps       = r.pillar_scores %}
+{% set gaps     = r.pillar_gaps %}
+{% set div      = r.efficiency_dividend %}
+{% set q        = r.quadrant %}
+{% set findings = r.findings %}
+{% set strength = r.top_strength %}
+{% set contra   = r.contradictions %}
+{% set baseline = r.lotusnex_baseline %}
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 1 — EXECUTIVE SUMMARY
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+
+  <div class="page-label">AI Workflow Readiness Audit</div>
+  <h1>Executive Summary</h1>
+  <p class="text-muted mb-16">{{ company }} · Diagnostic completed {{ r.intake.date | default('') }}</p>
+
+  {# Composite score — above constructs #}
+  <div class="composite-row">
+    <span class="composite-score">{{ r.composite_score }}</span>
+    <div>
+      <div class="composite-label">Workflow Readiness Score</div>
+      <span class="composite-tier">{{ r.composite_tier }}</span>
+      <span class="stage-badge">{{ stage | replace('_',' ') }}</span>
+    </div>
+  </div>
+
+  {# Four construct cards #}
+  <div class="construct-grid">
+    <div class="construct-card">
+      <div class="label">Automation Leverage</div>
+      <div class="score">{{ cs.automation_leverage }}</div>
+      <div class="tier">{{ ct.automation_leverage }}</div>
+    </div>
+    <div class="construct-card">
+      <div class="label">Production Risk</div>
+      <div class="score">{{ cs.production_risk }}</div>
+      <div class="tier">{{ ct.production_risk }}</div>
+    </div>
+    <div class="construct-card">
+      <div class="label">Economic Confidence</div>
+      <div class="score">{{ cs.economic_confidence }}</div>
+      <div class="tier">{{ ct.economic_confidence }}</div>
+    </div>
+    <div class="construct-card">
+      <div class="label">Evidence Confidence</div>
+      <div class="score">{{ cs.evidence_confidence }}</div>
+      <div class="tier">{{ ct.evidence_confidence }}</div>
+    </div>
+  </div>
+
+  {# Quadrant #}
+  <div class="quadrant-card">
+    <div class="q-label">{{ q.label }}</div>
+    <div class="q-body">{{ q.body }}</div>
+  </div>
+
+  {# Efficiency dividend #}
+  <h3 class="mb-8">Efficiency Dividend Estimate</h3>
+  <div class="dividend-range">
+    <div class="dividend-col">
+      <div class="d-label">Conservative</div>
+      <div class="d-value">${{ "{:,}".format(div.conservative) }}</div>
+      <div class="d-sub">per year</div>
+    </div>
+    <div class="dividend-col expected">
+      <div class="d-label">Expected</div>
+      <div class="d-value">${{ "{:,}".format(div.expected) }}</div>
+      <div class="d-sub">{{ div.hours_per_week_recovered }} hrs/week recovered</div>
+    </div>
+    <div class="dividend-col">
+      <div class="d-label">Optimistic</div>
+      <div class="d-value">${{ "{:,}".format(div.optimistic) }}</div>
+      <div class="d-sub">per year</div>
+    </div>
+  </div>
+  <p class="dividend-caveat">{{ div.caveat }}</p>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 2 — EVIDENCE MATRIX
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 2</div>
+  <h2>Evidence Matrix</h2>
+  <p class="text-muted mb-16">What was reported, what it means, and what to verify.</p>
+
+  <table class="evidence-matrix">
+    <thead>
+      <tr>
+        <th style="width:22%">Input Answers</th>
+        <th style="width:16%">Derived Variable</th>
+        <th style="width:22%">Consequence</th>
+        <th style="width:12%">Severity</th>
+        <th style="width:28%">Validation Step</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in r.evidence_matrix %}
+      <tr>
+        <td>{{ row.input_answers }}</td>
+        <td>{{ row.derived_variable }}</td>
+        <td>{{ row.consequence }}</td>
+        <td>{{ severity_badge(row.severity_label) }} {{ row.severity_score }}</td>
+        <td>{{ row.validation_step }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 3 — RISK RADAR + PILLAR BREAKDOWN
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 3</div>
+  <h2>Pillar Breakdown vs LotusNex Production Baseline</h2>
+
+  <div class="radar-container">
+    {# SVG Radar — 4 axes: process, security, tokenomics, reliability #}
+    {% set pillars_svg = [
+      ("process",     ps.process,     baseline.process),
+      ("security",    ps.security,    baseline.security),
+      ("tokenomics",  ps.tokenomics,  baseline.tokenomics),
+      ("reliability", ps.reliability, baseline.reliability),
+    ] %}
+    {% set cx = 130 %}
+    {% set cy = 130 %}
+    {% set r_max = 100 %}
+
+    <svg class="radar-svg" width="260" height="260" viewBox="0 0 260 260">
+      {# Grid rings #}
+      {% for pct in [0.25, 0.5, 0.75, 1.0] %}
+        <circle cx="{{ cx }}" cy="{{ cy }}" r="{{ (r_max * pct)|int }}"
+                fill="none" stroke="#e0e0ef" stroke-width="1"/>
+      {% endfor %}
+
+      {# Axes — 4 directions: top, right, bottom, left #}
+      {% set axes = [
+        (0, -r_max, "Process"),
+        (r_max, 0, "Security"),
+        (0, r_max, "Tokenomics"),
+        (-r_max, 0, "Reliability"),
+      ] %}
+      {% for dx, dy, alabel in axes %}
+        <line x1="{{ cx }}" y1="{{ cy }}" x2="{{ cx + dx }}" y2="{{ cy + dy }}"
+              stroke="#d0d0e8" stroke-width="1"/>
+        <text x="{{ cx + dx * 1.15 }}" y="{{ cy + dy * 1.15 }}"
+              text-anchor="middle" font-size="8" fill="#666">{{ alabel }}</text>
+      {% endfor %}
+
+      {# Baseline polygon (red dashed) #}
+      {% set bp = [
+        (cx, cy - baseline.process),
+        (cx + baseline.security, cy),
+        (cx, cy + baseline.tokenomics),
+        (cx - baseline.reliability, cy),
+      ] %}
+      <polygon points="{% for x,y in bp %}{{ x }},{{ y }} {% endfor %}"
+               fill="rgba(255,107,107,0.08)" stroke="#ff6b6b"
+               stroke-width="1.5" stroke-dasharray="4,2"/>
+
+      {# Score polygon (purple solid) #}
+      {% set sp = [
+        (cx, cy - ps.process),
+        (cx + ps.security, cy),
+        (cx, cy + ps.tokenomics),
+        (cx - ps.reliability, cy),
+      ] %}
+      <polygon points="{% for x,y in sp %}{{ x }},{{ y }} {% endfor %}"
+               fill="rgba(108,99,255,0.20)" stroke="#6c63ff" stroke-width="2"/>
+
+      {# Dots on score polygon #}
+      {% for x,y in sp %}
+        <circle cx="{{ x }}" cy="{{ y }}" r="4" fill="#6c63ff"/>
+      {% endfor %}
+
+      {# Legend #}
+      <rect x="10" y="232" width="10" height="4" fill="#6c63ff" opacity="0.5"/>
+      <text x="24" y="237" font-size="7" fill="#555">Your score</text>
+      <line x1="80" y1="234" x2="90" y2="234" stroke="#ff6b6b"
+            stroke-width="1.5" stroke-dasharray="4,2"/>
+      <text x="94" y="237" font-size="7" fill="#555">LotusNex Baseline</text>
+    </svg>
+
+    <div class="pillar-breakdown">
+      {% for pillar_key, score, base_score in pillars_svg %}
+      {% set gap = score - base_score %}
+      <div class="pillar-row">
+        <div class="pillar-label">{{ pillar_key | capitalize }}</div>
+        <div class="pillar-bar-bg">
+          <div class="pillar-bar-fill" style="width:{{ score }}%"></div>
+          <div class="pillar-bar-baseline" style="left:{{ base_score }}%"></div>
+        </div>
+        <div class="pillar-score-text">{{ score }}</div>
+        <div class="pillar-gap-text {{ 'positive' if gap >= 0 else 'negative' }}">
+          {{ '+' if gap >= 0 else '' }}{{ gap }}
+        </div>
+      </div>
+      {% endfor %}
+      <p class="text-muted" style="margin-top:12px; font-size:7.5pt;">
+        Red line = LotusNex Production Baseline. Gap shows your score vs baseline.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 4 — TOP FINDINGS
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 4</div>
+  <h2>Top Findings</h2>
+  <p class="text-muted mb-16">Prioritised by severity score. All scores on a 0–100 scale.</p>
+
+  {% for f in findings %}
+  <div class="finding-card">
+    <div class="f-header">
+      {{ severity_badge(f.severity_label) }}
+      <span class="f-title">{{ f.title }}</span>
+      <span class="pill">{{ f.severity_score }}</span>
+    </div>
+    <p class="f-evidence">{{ f.evidence }}</p>
+    <p class="f-meta"><strong>Impact:</strong> {{ f.consequence }}</p>
+    <p class="f-meta"><strong>Validate:</strong> {{ f.validation_step }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 5 — TOP STRENGTH + REFLECTION PROMPTS
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 5</div>
+  <h2>Top Strength</h2>
+
+  <div class="strength-card mb-24">
+    <div class="s-label">Highest Scoring Pillar</div>
+    <div class="s-title">{{ strength.label }} — {{ strength.score }}</div>
+    <div class="s-desc">{{ strength.description }}</div>
+  </div>
+
+  <h2>Reflection Prompts</h2>
+  <p class="text-muted mb-16">
+    {% if contra %}
+      {{ contra | length }} pattern{{ 's' if contra | length > 1 else '' }} detected that warrant a second look before moving forward.
+    {% else %}
+      No contradictions detected. Your answers are internally consistent.
+    {% endif %}
+  </p>
+
+  {% for c in contra %}
+  <div class="reflection-prompt">
+    <div class="rp-title">{{ c.title }}</div>
+    <div class="rp-body">{{ c.body }}</div>
+  </div>
+  {% else %}
+  <p class="text-muted">✓ No contradictions detected in this diagnostic session.</p>
+  {% endfor %}
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 6 — EFFICIENCY DIVIDEND DETAIL
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 6</div>
+  <h2>Efficiency Dividend — Detail</h2>
+
+  <div class="dividend-range mb-16">
+    <div class="dividend-col">
+      <div class="d-label">Conservative (50%)</div>
+      <div class="d-value">${{ "{:,}".format(div.conservative) }}</div>
+      <div class="d-sub">per year</div>
+    </div>
+    <div class="dividend-col expected">
+      <div class="d-label">Expected (70%)</div>
+      <div class="d-value">${{ "{:,}".format(div.expected) }}</div>
+      <div class="d-sub">{{ div.hours_per_week_recovered }} hrs/week recovered</div>
+    </div>
+    <div class="dividend-col">
+      <div class="d-label">Optimistic (85%)</div>
+      <div class="d-value">${{ "{:,}".format(div.optimistic) }}</div>
+      <div class="d-sub">per year</div>
+    </div>
+  </div>
+
+  <h3 class="mb-8">Assumptions</h3>
+  <ul style="padding-left:16px; font-size:9pt; color:#555; margin-bottom:14px;">
+    {% for a in div.assumptions %}
+    <li style="margin-bottom:4px;">{{ a }}</li>
+    {% endfor %}
+  </ul>
+
+  <p class="dividend-caveat">{{ div.caveat }}</p>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 7 — RECOMMENDED ROADMAP
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 7</div>
+  <h2>Recommended Roadmap</h2>
+  <p class="text-muted mb-16">
+    Stage-specific sequence for moving from current readiness to production confidence.
+  </p>
+
+  {% for phase in r.roadmap %}
+  <div class="roadmap-phase">
+    <div class="phase-number">{{ loop.index }}</div>
+    <div class="phase-content">
+      <div class="phase-title">{{ phase.title }}</div>
+      <div class="phase-desc">{{ phase.description }}</div>
+      {% if phase.actions %}
+      <ul class="phase-actions">
+        {% for action in phase.actions %}
+        <li>{{ action }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   PAGE 8 — DISCOVERY CALL CTA
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Page 8</div>
+
+  <div class="cta-card">
+    <h2>{{ r.cta.heading }}</h2>
+    <p class="cta-body">{{ r.cta.body }}</p>
+    <a class="cta-button" href="{{ r.cta.url }}">{{ r.cta.button_label }}</a>
+    <p class="cta-url">{{ r.cta.url }}</p>
+  </div>
+
+  <div style="margin-top:28px; font-size:8pt; color:#888; text-align:center;">
+    <p>AWRA Scoring Model {{ version }} · LotusNex · lotusnex.com</p>
+    <p style="margin-top:4px;">
+      All scores and estimates are directional. No industry benchmarks or calibrated probabilities are implied.
+      Every finding is traceable to a specific question answer — see the Evidence Chain appendix.
+    </p>
+  </div>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════════════════════════
+   APPENDIX — PER-QUESTION EVIDENCE CHAIN
+   ═══════════════════════════════════════════════════════════════════════════ #}
+<div class="page">
+  {{ page_header(company, name, stage, version) }}
+  <div class="page-label">Appendix</div>
+  <h2>Per-Question Evidence Chain</h2>
+  <p class="text-muted mb-16">
+    Every question answered, what was selected, and how it is interpreted.
+  </p>
+
+  {% for item in r.evidence_chain %}
+  <div class="evidence-chain-item">
+    <div class="ec-header">
+      <span class="ec-qid">{{ item.question_id | upper }}</span>
+      <span class="ec-wording">{{ item.question_wording }}</span>
+    </div>
+    <div class="ec-answer">
+      → {{ item.answer_label }}
+      {% if item.score is not none %}<span class="text-muted">(score: {{ item.score }})</span>{% endif %}
+      {% if item.is_not_sure %}<span class="pill" style="background:#fff3e0;color:#e65100;">Not Sure</span>{% endif %}
+      {% if item.is_not_yet_implemented %}<span class="pill" style="background:#fde8e8;color:#c62828;">Not Yet Implemented</span>{% endif %}
+    </div>
+    {% if item.evidence %}
+    <div class="ec-evidence">{{ item.evidence }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>

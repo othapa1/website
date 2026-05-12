@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Work • LotusNex</title>
   <meta name="description" content="Representative engineering patterns in production AI systems, retrieval infrastructure, platform modernization, and DevSecOps delivery." />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <style>
     /* Vignette card — extends base .card with structured metadata layout */
     .vignette {
@@ -128,6 +128,23 @@
       }
     }
   </style>
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://lotusnex.com/work.html" />
+  <meta property="og:site_name"   content="LotusNex" />
+  <meta property="og:title"       content="Work • LotusNex" />
+  <meta property="og:description" content="Representative engineering patterns in production AI systems, retrieval infrastructure, platform modernization, and DevSecOps delivery." />
+  <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Work • LotusNex" />
+  <meta name="twitter:description" content="Representative engineering patterns in production AI systems, retrieval infrastructure, platform modernization, and DevSecOps delivery." />
+  <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
+  <!-- Analytics (Plausible) — uncomment after creating account at plausible.io/sites -->
+  <!-- <script defer data-domain="lotusnex.com" src="https://plausible.io/js/script.js"></script> -->
 </head>
 
 <body>
@@ -141,7 +158,7 @@
         <a href="solutions.html">Solutions</a>
         <a class="active" href="work.html">Work</a>
         <a href="company.html">Company</a>
-        <a class="cta" href="contact.html">Request an Architecture Review →</a>
+        <a class="cta" href="awra.html#start-audit">Start the Discovery →</a>
       </nav>
     </div>
   </header>
@@ -150,7 +167,7 @@
 
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Production AI systems engineering</p>
+        <p class="eyebrow">Workflow automation + production AI engineering</p>
         <h1>Representative delivery patterns</h1>
         <p class="lede">
           Described at the architecture level. Client details are not disclosed. Each pattern reflects a real system — scoped, built, hardened, and handed off in production environments.
@@ -160,6 +177,50 @@
 
     <section class="section">
       <div class="container vignette-grid">
+
+        <!-- VIGNETTE 0: Data entry automation -->
+        <div class="vignette" id="data-entry">
+          <div class="vignette-header">
+            <div class="vignette-tags">
+              <span class="vtag discipline">Process Automation</span>
+              <span class="vtag">Operations Workflow</span>
+              <span class="vtag">~8 weeks</span>
+            </div>
+            <h2>Automated document data-entry pipeline for a high-volume accounting firm</h2>
+          </div>
+
+          <p class="vignette-context">
+            A professional services firm processing high volumes of client financial documents faced a persistent manual bottleneck. Staff were transcribing structured data from incoming documents — invoices, statements, and tax filings — into internal systems by hand. The work was repetitive and rule-bounded, but error-prone and scaling with headcount rather than revenue. The goal was to automate extraction and entry end-to-end, with validation gates before any data reached the system of record.
+          </p>
+
+          <hr class="vignette-divider" />
+
+          <div class="vignette-details">
+            <div class="vignette-detail-block">
+              <h4>Architecture approach</h4>
+              <ul>
+                <li>Document intake pipeline with format normalization across PDF, scanned, and digital-native inputs</li>
+                <li>Structured extraction with schema-grounded LLM output and per-field confidence scoring</li>
+                <li>Human review routing for low-confidence extractions — clear UI for review, approval, and correction</li>
+                <li>Write pipeline with dry-run mode, diff preview, and rollback on validation failure</li>
+              </ul>
+            </div>
+            <div class="vignette-detail-block">
+              <h4>Production properties</h4>
+              <ul>
+                <li>End-to-end audit trail from document receipt to system write</li>
+                <li>Validation layer catches format drift before extraction failures propagate</li>
+                <li>Human review queue with SLA visibility and exception reporting</li>
+                <li>Cost telemetry per document type with budget controls and alert thresholds</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vignette-outcome">
+            <strong>Delivery outcome</strong>
+            Processing throughput increased 5× at 60 days. Manual entry eliminated for the three highest-volume document types. Operations staff reallocated from transcription to exception handling and advisory work. ~38 hours/week recovered within 60 days of go-live.
+          </div>
+        </div>
 
         <!-- VIGNETTE 1: Permissioned RAG -->
         <div class="vignette" id="rag">
@@ -250,19 +311,58 @@
         </div>
 
 
+        <!-- VIGNETTE 3: Lead generation system -->
+        <div class="vignette" id="lead-gen">
+          <div class="vignette-header">
+            <div class="vignette-tags">
+              <span class="vtag discipline">Agent Orchestration</span>
+              <span class="vtag">B2B SaaS</span>
+              <span class="vtag">~10 weeks</span>
+            </div>
+            <h2>Automated lead research and CRM enrichment system for a B2B SaaS sales team</h2>
+          </div>
+
+          <p class="vignette-context">
+            A B2B SaaS sales team was spending significant SDR time on manual prospect research — ICP qualification, company enrichment, contact data entry, and CRM hygiene. The research loop was repetitive but judgment-dependent: some enrichment could be fully automated, but outreach decisions required human review. The goal was an agent system that automated the research and enrichment loop while keeping humans in control of outreach actions.
+          </p>
+
+          <hr class="vignette-divider" />
+
+          <div class="vignette-details">
+            <div class="vignette-detail-block">
+              <h4>Architecture approach</h4>
+              <ul>
+                <li>Orchestration loop covering prospect discovery, enrichment from multiple data sources, and ICP scoring</li>
+                <li>Tool integrations with research APIs, enrichment providers, and CRM write endpoints — all with least-privilege permissions</li>
+                <li>Human approval gate before CRM write and before outreach action triggers</li>
+                <li>Completeness and confidence scoring with graceful degradation when external sources fail</li>
+              </ul>
+            </div>
+            <div class="vignette-detail-block">
+              <h4>Production properties</h4>
+              <ul>
+                <li>All enrichment actions logged with source attribution for auditability</li>
+                <li>Idempotent CRM writes with duplicate detection and merge conflict handling</li>
+                <li>Per-prospect and per-source cost telemetry with budget controls</li>
+                <li>Runbooks for common failure modes — API downtime, low-confidence bulk batches, CRM rate limits</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vignette-outcome">
+            <strong>Delivery outcome</strong>
+            SDR team reclaimed 25+ hours/week on manual research tasks. Lead data completeness at CRM entry improved from 43% to 94%. System operated within projected cost at 90 days with no post-handoff support required.
+          </div>
+        </div>
+
       </div>
 
-      
+
     </section>
 
-    <section class="section cta-band">
+    <section class="section">
       <div class="container">
-        <h2>Discuss a delivery pattern</h2>
-        <p class="lede">If one of these patterns maps to what you're building — or you have a different architecture problem — we can review your constraints and give you a clear picture of where your system will fail in production.</p>
-        <p class="sublede">No commitment required. You'll leave with a clear architectural assessment — whether we work together or not.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start with an Architecture Review →</a>
-        </div>
+        <p style="font-size:15px; color:var(--text-muted);">If one of these patterns maps to what you're building — <a href="awra.html#start-audit" style="color:var(--navy-700);">Start the Discovery →</a> or <a href="contact.html" style="color:var(--navy-700);">request a review →</a></p>
       </div>
     </section>
 
@@ -278,7 +378,9 @@
         <span>·</span>
         <a href="mailto:contact@lotusnex.com">contact@lotusnex.com</a>
         <span>·</span>
-        <a href="contact.html">Request an Architecture Review →</a>
+        <a href="awra.html#start-audit">Start the Discovery →</a>
+        <span>·</span>
+        <a href="contact.html">Architecture Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">
