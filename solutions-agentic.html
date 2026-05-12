@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Workflow Automation • LotusNex</title>
-  <meta name="description" content="Process automation and agent orchestration systems built for production — with defined tool boundaries, approval layers, evaluation harnesses, and operational ownership." />
+  <title>Agent Orchestration • LotusNex</title>
+  <meta name="description" content="LotusNex builds agent orchestration systems for production — defined tool boundaries, risk-tiered approval gates, deterministic failure handling, and full auditability." />
   <link rel="stylesheet" href="styles.css?v=3" />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="logo.png" />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://lotusnex.com/solutions-agentic.html" />
   <meta property="og:site_name"   content="LotusNex" />
-  <meta property="og:title"       content="Workflow Automation • LotusNex" />
-  <meta property="og:description" content="Process automation and agent orchestration systems built for production — with defined tool boundaries, approval layers, evaluation harnesses, and operational ownership." />
+  <meta property="og:title"       content="Agent Orchestration • LotusNex" />
+  <meta property="og:description" content="LotusNex builds agent orchestration systems for production — defined tool boundaries, risk-tiered approval gates, deterministic failure handling, and full auditability." />
   <meta property="og:image"       content="https://lotusnex.com/og-image.png" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Workflow Automation • LotusNex" />
-  <meta name="twitter:description" content="Process automation and agent orchestration systems built for production — with defined tool boundaries, approval layers, evaluation harnesses, and operational ownership." />
+  <meta name="twitter:title"       content="Agent Orchestration • LotusNex" />
+  <meta name="twitter:description" content="LotusNex builds agent orchestration systems for production — defined tool boundaries, risk-tiered approval gates, deterministic failure handling, and full auditability." />
   <meta name="twitter:image"       content="https://lotusnex.com/og-image.png" />
 </head>
 
@@ -40,58 +40,20 @@
 
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Process automation + agent orchestration</p>
-        <h1>Workflow Automation</h1>
+        <p class="eyebrow">Agent orchestration systems</p>
+        <h1>Agents are bounded systems. Not autonomous loops.</h1>
         <p class="lede">
-          Most teams know which workflows are eating their team's time. The harder question is whether those workflows are actually ready to automate — and whether the architecture is ready to carry them.
+          Support triage, operations handoffs, approval routing, research pipelines — workflows where agents handle routine decisions and humans approve what matters. They fail in production when tool access is unbounded and failure modes are undefined.
         </p>
-        <p>We build two types of automation systems: document-level process pipelines for rule-bounded, high-volume workflows, and agent orchestration systems for multi-step decisions that need defined boundaries and human approval gates.</p>
+        <p>The difference between an agent that works in a demo and one that holds up in production is architecture — explicit tool boundaries, deterministic fallbacks, and a human escalation path that actually fires when it needs to.</p>
       </div>
     </section>
 
-    <!-- PROCESS AUTOMATION -->
-    <section class="section" id="process-automation">
+    <section class="section" id="agent-orchestration">
       <div class="container">
         <div class="pov" style="margin-bottom: 28px;">
-          <h3>Process automation: eliminate the manual loop, not the human.</h3>
-          <p style="margin-bottom:0;">Document processing, data entry, report generation — workflows where the same structured work repeats at volume. Automation works here when the process is rule-bounded, errors are detectable, and humans stay in the loop for exceptions.</p>
-        </div>
-
-        <div class="grid-2" style="margin-bottom: 20px;">
-          <div class="card">
-            <h3>What we build</h3>
-            <ul>
-              <li>Document intake pipelines with format normalization</li>
-              <li>LLM extraction with per-field confidence scoring</li>
-              <li>Human review routing for low-confidence outputs</li>
-              <li>Write pipelines with dry-run mode and rollback on validation failure</li>
-              <li>End-to-end audit trail from intake to system write</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Production properties</h3>
-            <ul>
-              <li>Validation layer catches format drift before extraction failures propagate</li>
-              <li>Human review queue with SLA visibility and exception reporting</li>
-              <li>Cost telemetry per document type with budget controls</li>
-              <li>Evaluation harness against held-out document samples</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="work-tease-outcome">
-          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
-          5× processing throughput. Manual entry eliminated for the three highest-volume document types. ~38 hours/week of transcription work recovered within 60 days of go-live.
-        </div>
-      </div>
-    </section>
-
-    <!-- AGENT ORCHESTRATION -->
-    <section class="section" id="agent-orchestration" style="border-top: 1px solid var(--border-light);">
-      <div class="container">
-        <div class="pov" style="margin-bottom: 28px;">
-          <h3>Agent orchestration: agents are bounded systems, not autonomous loops.</h3>
-          <p style="margin-bottom:0;">Support triage, operations handoffs, approval routing, research pipelines — workflows where agents handle routine decisions and humans approve what matters. They fail in production when tool access is unbounded and failure modes are undefined.</p>
+          <h3>Most agent failures are architecture failures, not model failures.</h3>
+          <p style="margin-bottom:0;">When an agent goes off-script, it's usually because tool permissions were too broad, failure modes weren't defined, or there was no human override path. We define those boundaries before anything goes to production — so incidents surface as alerts, not customer complaints.</p>
         </div>
 
         <div class="grid-2" style="margin-bottom: 20px;">
@@ -124,17 +86,16 @@
       </div>
     </section>
 
-    <!-- WITHOUT THIS -->
     <section class="section" style="padding-top: 0;">
       <div class="container">
         <div class="card">
           <h3>Without this architecture</h3>
           <ul>
-            <li>Automation runs on workflows that aren't actually process-fit — cost shifts rather than gets removed</li>
             <li>Agents operate beyond intended boundaries when tool access isn't explicitly scoped</li>
             <li>Failures degrade silently rather than stopping deterministically</li>
-            <li>Costs become unpredictable under real usage volume</li>
-            <li>No visibility into whether the system is producing correct outputs</li>
+            <li>No human override path means edge cases become incidents before anyone can intervene</li>
+            <li>Costs become unpredictable under real usage volume without per-workflow telemetry</li>
+            <li>No audit trail means you can't trace a bad output back to the decision that caused it</li>
           </ul>
         </div>
       </div>
@@ -142,12 +103,12 @@
 
     <section class="section cta-band">
       <div class="container">
-        <h2>Find out which workflows are ready — before you commit to a build.</h2>
-        <p class="lede">The Workflow Discovery identifies which processes have the right characteristics for automation and where the architecture needs hardening first. 12 questions. Results immediately.</p>
+        <h2>Find out if your workflow is ready for agent orchestration.</h2>
+        <p class="lede">The Workflow Discovery identifies which multi-step processes have the right characteristics for agent automation and where the architecture needs hardening first. 12 questions. Results immediately.</p>
         <p class="sublede">No commitment required. Findings are confidential.</p>
         <div class="hero-actions">
           <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
-          <a class="button" href="work.html#data-entry">See a process automation pattern →</a>
+          <a class="button" href="contact.html">Request an architecture review →</a>
         </div>
       </div>
     </section>
