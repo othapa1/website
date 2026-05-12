@@ -1,4 +1,4 @@
-<!-- UPDATED: nav updated (Public Sector removed, CTA button text updated); CTA button text updated to "Request an Architecture Review →"; "What production-grade means" grid added from index.html; footer updated (CTA link text updated) -->
+<!-- UPDATED: nav updated (Public Sector removed, CTA button text updated); CTA button text updated to "Request a Review →"; "What production-grade means" grid added from index.html; footer updated (CTA link text updated) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Solutions • LotusNex</title>
   <meta name="description" content="LotusNex builds workflow automation systems and production AI — agent orchestration, retrieval infrastructure, and platform & reliability engineering." />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="logo.png" />
@@ -45,7 +45,7 @@
   <main>
     <section class="hero hero-compact">
       <div class="container">
-        <p class="eyebrow">Workflow automation + production AI engineering</p>
+        <p class="eyebrow">What we build</p>
         <h1>What we build</h1>
         <p class="lede">
           We identify which workflows are worth automating, then build the AI systems to run them — with security, evaluation, observability, and ownership built in from the start.
@@ -60,8 +60,9 @@
         </div>
       </div>
       <div class="container">
-        <p class="lede" style="max-width: 64ch; margin-bottom: 32px;">Four capabilities. Which one you need depends on where you are — automating a manual process for the first time, or hardening AI that's already in production.</p>
+        <p class="lede" style="max-width: 64ch; margin-bottom: 32px;">Six capabilities. Start with an audit if you're not sure what to build — or go straight to the service that matches where you are.</p>
         <div class="grid-2">
+          <!-- 1. Process Automation — strongest concrete outcome, leads with proof -->
           <div class="card">
             <p class="card-hook">Your team runs the same workflow every day — manually. That's recoverable time, but only if the automation is built on a process that's actually ready to carry it.</p>
             <h3>Process Automation</h3>
@@ -70,10 +71,11 @@
               <li><strong>Human review routing for edge cases</strong> — people handle exceptions, the system handles the rest</li>
               <li><strong>End-to-end audit trail</strong> — the process is compliance-ready from day one</li>
             </ul>
-            <div class="work-tease-outcome" style="margin-top: 14px;">5× throughput · ~38 hrs/week recovered within 60 days</div>
-            <a href="solutions-agentic.html" style="margin-top: 14px; display: inline-block;">Explore process automation →</a>
+            <div class="work-tease-outcome" style="margin-top: 14px;">No silent extraction failures · Every edge case routed to human review · Audit trail from intake to write</div>
+            <a href="solutions-process.html" style="margin-top: 14px; display: inline-block;">Explore process automation →</a>
           </div>
 
+          <!-- 2. Agent Orchestration — natural next step after automation -->
           <div class="card">
             <p class="card-hook">Whether you're building your first automated workflow or fixing one already failing in production — agent systems need defined boundaries, approval gates, and a plan for when they fail.</p>
             <h3>Agent Orchestration Systems</h3>
@@ -82,10 +84,11 @@
               <li><strong>Deterministic failure handling</strong> — no task degrades silently into a bad output</li>
               <li><strong>Per-workflow cost telemetry</strong> — token spend is predictable before you scale</li>
             </ul>
-            <div class="work-tease-outcome" style="margin-top: 14px;">Operating cost within 8% of budget at 90 days · Full team ownership by week 10</div>
+            <div class="work-tease-outcome" style="margin-top: 14px;">No task degrades silently · Every decision is auditable · Your team owns it at handoff</div>
             <a href="solutions-agentic.html" style="margin-top: 14px; display: inline-block;">Explore agent orchestration →</a>
           </div>
 
+          <!-- 3. Knowledge Retrieval — specific, high-value for document-heavy orgs -->
           <div class="card">
             <p class="card-hook">If your team is searching for answers across documents and systems — whether you've built something or are just starting — retrieval needs to be accurate, permission-aware, and measurable.</p>
             <h3>Knowledge Retrieval</h3>
@@ -94,10 +97,24 @@
               <li><strong>Evaluation harnesses with recall baselines</strong> — retrieval quality is measurable, not guesswork</li>
               <li><strong>Structured ingestion and chunking</strong> — answers come from the right source, not just the most recent</li>
             </ul>
-            <div class="work-tease-outcome" style="margin-top: 14px;">Zero permission violations in 6 months · p95 latency under 380ms across 40K+ documents</div>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Zero cross-tenant exposure by design · Quality measurable, not assumed · Degradation surfaces before users notice</div>
             <a href="solutions-rag.html" style="margin-top: 14px; display: inline-block;">Explore knowledge retrieval →</a>
           </div>
 
+          <!-- 4. Security & Hardening — addresses "but is it safe?" after seeing the build services -->
+          <div class="card" id="security-hardening">
+            <p class="card-hook">Your AWRA score flagged security gaps. Or you already know your AI handles sensitive data and no one has ever tested what happens when a user tries to break it.</p>
+            <h3>AI Security & Hardening</h3>
+            <ul>
+              <li><strong>Adversarial testing & prompt injection red-teaming</strong> — we attempt to break your system before someone else does</li>
+              <li><strong>Access control audit at the query layer</strong> — enforce who can reach what, at retrieval time, not via model instructions</li>
+              <li><strong>Data sensitivity review</strong> — map PII, regulated, and customer data flows through your AI stack and close the gaps</li>
+            </ul>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Structured findings report · Prioritised remediation plan · Retesting included</div>
+            <a href="contact.html" style="margin-top: 14px; display: inline-block;">Request a security review →</a>
+          </div>
+
+          <!-- 5. Platform & Reliability — completes "safe and durable" message -->
           <div class="card" id="platform">
             <p class="card-hook">The workflows you automate are only as reliable as the platform running them. Without the right foundation, the first production incident becomes the last time users trust it.</p>
             <h3>Platform & Reliability Engineering</h3>
@@ -106,18 +123,25 @@
               <li><strong>CI/CD pipelines with rollback capability</strong> — deployments don't break what's already running</li>
               <li><strong>Cost telemetry and budget controls</strong> — infrastructure spend is trackable and predictable</li>
             </ul>
-            <div class="work-tease-outcome" style="margin-top: 14px;">Operational from day one · No unplanned cost overruns in production</div>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Incidents in dashboards, not complaints · Spend predictable before you scale · No dependency on us to keep it running</div>
             <a href="solutions-platform.html" style="margin-top: 14px; display: inline-block;">Explore platform & reliability →</a>
+          </div>
+
+          <!-- 6. AI Readiness Audit — lowest-friction entry point, safety net for hesitant prospects -->
+          <div class="card" id="ai-audit">
+            <p class="card-hook">Not sure which service you need — or whether you're ready to build at all? An audit gives you a structured answer, a prioritised set of findings, and a clear path forward before you commit to anything.</p>
+            <h3>AI Readiness Audit</h3>
+            <ul>
+              <li><strong>AI Audit Lite</strong> — one workflow, one system. Covers process fit, architecture gaps, and data readiness. Delivered in two weeks. Includes a findings report and a prioritised action list.</li>
+              <li><strong>AI Audit Full</strong> — your full workflow portfolio or a complex multi-system build. Covers all four readiness constructs: automation leverage, production risk, economic confidence, and evidence quality. Delivered in two weeks. Includes an architecture decision record, full findings report, and a phased build roadmap.</li>
+            </ul>
+            <div class="work-tease-outcome" style="margin-top: 14px;">Named deliverable · Fixed scope · No open-ended retainer</div>
+            <a href="contact.html" style="margin-top: 14px; display: inline-block;">Book an audit →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <p style="font-size:15px; color:var(--text-muted);">If one of these fits — <a href="awra.html#start-audit" style="color:var(--navy-700);">Start the Discovery →</a> or <a href="contact.html" style="color:var(--navy-700);">request a review →</a></p>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -132,7 +156,7 @@
         <span>·</span>
         <a href="awra.html#start-audit">Start the Discovery →</a>
         <span>·</span>
-        <a href="contact.html">Architecture Review →</a>
+        <a href="contact.html">Request a Review →</a>
       </div>
     </div>
     <div class="container footer-bottom">
