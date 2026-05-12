@@ -317,6 +317,23 @@ interface CtaBlock {
   button_label?: string
 }
 
+interface RoadmapPhase {
+  phase?: string
+  title?: string
+  description?: string
+  actions?: string[]
+}
+
+interface EvidenceItem {
+  question_id?: string
+  question_wording?: string
+  answer_label?: string
+  score?: number
+  evidence?: string
+  consequence?: string
+  validation_step?: string
+}
+
 interface AwraResult {
   composite_score?: number
   composite_tier?: string
@@ -336,6 +353,8 @@ interface AwraResult {
   cta?: CtaBlock
   q4_leverage_multiplier?: number
   q7_impact_multiplier?: number
+  roadmap?: RoadmapPhase[]
+  evidence_chain?: EvidenceItem[]
 }
 
 // ── HELPERS ───────────────────────────────────────────────────────────────
@@ -530,6 +549,18 @@ export default function DiscoveryTool() {
       contraFields[`contradiction_${i + 1}`] = `${c.title} — ${c.body}`
     })
 
+    const roadmapFields: Record<string, string> = {}
+    ;(r.roadmap || []).forEach((p, i) => {
+      const actions = p.actions?.length ? ` | Actions: ${p.actions.join('; ')}` : ''
+      roadmapFields[`roadmap_phase_${i + 1}`] = `${p.phase} — ${p.title}: ${p.description}${actions}`
+    })
+
+    const evidenceFields: Record<string, string> = {}
+    ;(r.evidence_chain || []).forEach((e, i) => {
+      evidenceFields[`evidence_${e.question_id || i + 1}`] =
+        `[${e.answer_label}] score: ${e.score} | ${e.evidence} | Impact: ${e.consequence} | Validate: ${e.validation_step}`
+    })
+
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -558,6 +589,8 @@ export default function DiscoveryTool() {
         ...findingFields,
         contradiction_count: r.contradiction_count,
         ...contraFields,
+        ...roadmapFields,
+        ...evidenceFields,
         q4_leverage_multiplier: r.q4_leverage_multiplier, q7_impact_multiplier: r.q7_impact_multiplier,
         scoring_model_version: r.scoring_model_version, botcheck: false,
       }),
