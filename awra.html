@@ -829,7 +829,7 @@
           '<h3 style="margin-bottom:8px;">' + (cta.heading || 'Get a walkthrough of your results.') + '</h3>' +
           '<p style="color:var(--text-muted); font-size:14px; max-width:44ch; margin:0 auto 20px;">' + (cta.body || '') + '</p>' +
           '<div class="hero-actions" style="justify-content:center;">' +
-            '<a class="button primary" href="contact.html">' + (cta.button_label || 'Book the Review →') + '</a>' +
+            '<a class="button primary" href="' + (cta.url || 'https://lotusnex.com/contact.html') + '" target="_blank" rel="noopener">' + (cta.button_label || 'Book the Review →') + '</a>' +
             '<button id="wd-btn-save-report" class="button">Save Report (PDF)</button>' +
           '</div>' +
           '<p style="font-size:13px; color:var(--text-faint); margin-top:16px;">Results are confidential. <a href="mailto:contact@lotusnex.com" style="color:var(--navy-700);">contact@lotusnex.com</a></p>' +
