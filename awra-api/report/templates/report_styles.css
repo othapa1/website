@@ -116,6 +116,7 @@ h3 {
 .composite-label {
   font-size: 10pt;
   color: #555;
+  margin-bottom: 6px;
 }
 
 .composite-tier {
