@@ -928,6 +928,196 @@ li{
   margin: 0;
 }
 
+/* ── AWRA Phase 1: new result classes ────────────────────────────────────── */
+
+/* Loading spinner */
+.wd-loading { text-align: center; padding: 60px 0; }
+.wd-spinner {
+  display: inline-block;
+  width: 36px; height: 36px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--navy-700);
+  border-radius: 50%;
+  animation: wd-spin 0.8s linear infinite;
+}
+@keyframes wd-spin { to { transform: rotate(360deg); } }
+
+/* Construct grid — 2×2 */
+.wd-construct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.wd-construct-card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 14px;
+  background: #fafafe;
+}
+.wd-construct-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--navy-700);
+  margin-bottom: 6px;
+}
+.wd-construct-score {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: 1.1;
+}
+.wd-construct-tier {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* Quadrant card */
+.wd-quadrant-card {
+  border-left: 4px solid var(--navy-700);
+  background: var(--blue-soft);
+  padding: 14px 16px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+.wd-quadrant-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy-800);
+  margin-bottom: 5px;
+}
+.wd-quadrant-body {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Dividend range */
+.wd-dividend-range {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.wd-dividend-col {
+  flex: 1;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+.wd-dividend-col.expected {
+  border-color: var(--navy-700);
+  background: var(--blue-soft);
+}
+.wd-d-label  { font-size: 11px; color: var(--text-faint); margin-bottom: 4px; }
+.wd-d-value  { font-size: 18px; font-weight: 700; color: var(--navy-900); }
+.wd-dividend-col.expected .wd-d-value { color: var(--navy-700); }
+.wd-d-sub    { font-size: 11px; color: var(--text-faint); margin-top: 3px; }
+.wd-dividend-caveat {
+  font-size: 12px;
+  color: var(--text-faint);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Finding cards */
+.wd-finding-card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.wd-finding-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.wd-severity-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+.wd-severity-badge.critical  { background: #fde8e8; color: #c62828; }
+.wd-severity-badge.high      { background: #fff3e0; color: #e65100; }
+.wd-severity-badge.moderate  { background: #fffde7; color: #f57f17; }
+.wd-severity-badge.low       { background: #e8f5e9; color: #2e7d32; }
+.wd-severity-badge.note      { background: #f5f5f5; color: #555; }
+.wd-finding-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-900);
+}
+.wd-finding-evidence {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.wd-finding-meta {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: 2px 0 0;
+}
+.wd-finding-meta strong { color: var(--text-muted); }
+
+/* Strength card */
+.wd-strength-card {
+  background: #e8faf0;
+  border: 1px solid #a5d6b7;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 4px;
+}
+.wd-strength-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+.wd-strength-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b5e20;
+}
+.wd-strength-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Reflection prompts */
+.wd-reflection-prompt {
+  border-left: 3px solid #f59e0b;
+  background: #fffbea;
+  padding: 12px 14px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.wd-reflection-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #5d4037;
+  margin-bottom: 4px;
+}
+.wd-reflection-body {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
 /* Print */
 @media print {
   .site-header, .site-footer, .wd-print-hide { display: none !important; }
