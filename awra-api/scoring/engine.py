@@ -53,7 +53,9 @@ def calculate_awra_result(session: dict) -> dict:
 
     Returns a complete AwraResult dict.
     """
-    stage             = session.get("stage", "pilot")
+    stage             = session.get("stage") or "pilot"   # normalise "" → "pilot"
+    if stage not in ("pre_ai", "pilot", "production"):
+        stage = "pilot"
     intake            = session.get("intake", {})
     raw_answers       = session.get("answers", [])
     calculator_inputs = session.get("calculator_inputs") or session.get("calculatorInputs") or {}
