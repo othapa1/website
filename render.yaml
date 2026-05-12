@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: awra-api
+    runtime: docker
+    dockerfilePath: ./awra-api/Dockerfile
+    dockerContext: ./awra-api
+    plan: starter
+    envVars:
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health

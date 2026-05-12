@@ -21,10 +21,12 @@ from jinja2 import Environment, FileSystemLoader
 
 TEMPLATE_DIR = Path(__file__).parent / "templates"
 
-# Chrome / Chromium candidate paths (macOS first, then Linux)
+# Chrome / Chromium candidate paths (macOS first, then Linux/Docker)
 _CHROME_CANDIDATES = [
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    "/usr/bin/chromium",          # Debian/Ubuntu apt package (Docker)
+    "/usr/bin/chromium-browser",  # Some Debian variants
     "google-chrome-stable",
     "google-chrome",
     "chromium-browser",
@@ -85,6 +87,7 @@ def _via_chrome(html_string: str) -> bytes:
                 "--headless=new",
                 "--disable-gpu",
                 "--no-sandbox",
+                "--disable-dev-shm-usage",        # required in Docker (limited /dev/shm)
                 "--run-all-compositor-stages-before-draw",
                 "--print-to-pdf-no-header",       # suppress Chrome's URL/date header
                 f"--print-to-pdf={pdf_path}",
