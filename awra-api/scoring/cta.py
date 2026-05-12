@@ -14,6 +14,7 @@ def get_cta(segment: str) -> dict:
     return {
         "heading":      copy["heading"],
         "body":         copy["body"],
-        "button_label": copy.get("button_label") or copy.get("button", "Book the Review"),
+        "button_label": copy.get("button_label") or copy.get("button", "Book the Review →"),
+        "url":          copy.get("url", "https://lotusnex.com/contact.html"),
         "segment":      segment,
     }

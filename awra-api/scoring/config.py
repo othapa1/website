@@ -207,21 +207,25 @@ CTA_COPY = {
         "heading": "These findings need an architect, not a deck.",
         "body":    "Your results show production-critical gaps that compound the longer they run. A 30-minute engineer-to-engineer review covers your specific flags — no pitch, no generic roadmap.",
         "button":  "Request the Architecture Review →",
+        "url":     "https://lotusnex.com/contact.html",
     },
     "B_MEDIUM_URGENCY": {
         "heading": "The value case is real. The gaps are closeable.",
         "body":    "Your Efficiency Dividend is within reach, but a few architectural decisions will determine whether the automation creates leverage or creates new problems. Let's walk through them.",
         "button":  "Book a 30-Minute Review →",
+        "url":     "https://lotusnex.com/contact.html",
     },
     "C_WORKFLOW_DISCOVERY": {
         "heading": "Clarify the process before committing to a build.",
         "body":    "Your results suggest the workflows need scoping before architecture decisions are made. A process discovery session maps which workflows are genuinely ready — and which would be automation theater.",
         "button":  "Start a Process Discovery →",
+        "url":     "https://lotusnex.com/contact.html",
     },
     "D_NURTURE": {
         "heading": "Get a walkthrough of your results.",
         "body":    "A 30-minute review of your Workflow Readiness Score and Efficiency Dividend — specific to your answers, not a generic overview.",
         "button":  "Request a Results Walkthrough →",
+        "url":     "https://lotusnex.com/contact.html",
     },
 }
 

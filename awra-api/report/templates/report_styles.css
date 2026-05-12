@@ -477,6 +477,14 @@ table.evidence-matrix tr:nth-child(even) td {
   font-size: 10pt;
   padding: 8px 24px;
   border-radius: 20px;
+  text-decoration: none;
+}
+
+.cta-url {
+  font-size: 8pt;
+  color: rgba(255,255,255,0.7);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
 }
 
 /* ── Risk radar (SVG placeholder) ───────────────────────────────────────── */
