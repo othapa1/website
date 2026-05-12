@@ -230,10 +230,10 @@
         },
         type: 'radio',
         options: [
-          { id: 'significant_hours', label: 'More than half — the same information gets entered in 2+ systems routinely' },
-          { id: 'daily',             label: 'A significant portion — this happens daily for our team' },
-          { id: 'occasional',        label: 'Occasionally — maybe a few times per week' },
-          { id: 'minimal',           label: 'Rarely — most workflows are contained in a single system' },
+          { id: 'more_than_half', label: 'More than half — the same information gets entered in 2+ systems routinely' },
+          { id: 'significant',    label: 'A significant portion — this happens daily for our team' },
+          { id: 'occasionally',   label: 'Occasionally — maybe a few times per week' },
+          { id: 'rarely',         label: 'Rarely — most workflows are contained in a single system' },
           { id: 'not_sure',          label: 'Not sure', unsure: true }
         ]
       },
@@ -278,7 +278,7 @@
           { id: 'mostly_filtered',  label: 'Mostly — we filter results, but haven\'t tested edge cases formally' },
           { id: 'system_prompt',    label: 'We rely on the model to respect the context set in the system prompt' },
           { id: 'no_controls',      label: 'No controls in place — all users can reach all content' },
-          { id: 'not_applicable',   label: 'Not applicable — single-tenant or no AI in production yet', nyi: true }
+          { id: 'not_applicable',   label: 'Not applicable — single-tenant or no AI in production yet', unsure: true }
         ]
       },
       {
@@ -295,7 +295,7 @@
           { id: 'informal_mitigations', label: 'We\'ve thought about it and have some informal mitigations' },
           { id: 'on_the_list',          label: 'No — it\'s on our list but we haven\'t gotten to it' },
           { id: 'no_external_inputs',   label: 'No — and the system accepts external inputs we don\'t fully control' },
-          { id: 'not_applicable',       label: 'Not applicable — no external users interact with the system', nyi: true }
+          { id: 'not_applicable',       label: 'Not applicable — no external users interact with the system', unsure: true }
         ]
       },
       {
