@@ -86,7 +86,7 @@ a:focus{
 }
 
 .section{
-  padding: var(--pad-lg) 0;
+  padding: 40px 0;
 }
 
 /* Header */
@@ -171,15 +171,15 @@ a:focus{
 
 /* Hero */
 .hero{
-  padding: 10px 0 32px 0;
+  padding: 36px 0 32px 0;
 }
 
 .hero-compact{
-  padding: 60px 0 24px 0;
+  padding: 36px 0 24px 0;
 }
 
 .hero-compact + .section{
-  padding-top: 11px;
+  padding-top: 16px;
 }
 
 .eyebrow{
@@ -376,6 +376,7 @@ li{
   background: var(--blue-soft);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
+  padding: 0;
 }
 
 .cta-band .container{
@@ -1145,7 +1146,7 @@ li{
     gap: 14px;
   }
   .site-nav{ gap: 12px; flex-wrap: wrap; }
-  .site-nav a.cta{ font-size: 13px; padding: 8px 14px; }
+  .site-nav a.cta{ display: none; }
   .grid-2{ grid-template-columns: 1fr; }
   .form-grid{ grid-template-columns: 1fr; }
   .footer-slim{ gap: 14px; }
