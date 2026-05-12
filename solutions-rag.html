@@ -41,19 +41,19 @@
     <section class="hero hero-compact">
       <div class="container">
         <p class="eyebrow">Knowledge retrieval</p>
-        <h1>Knowledge Retrieval</h1>
+        <h1>Not a vector search layer bolted onto a prompt.</h1>
         <p class="lede">
-          Knowledge retrieval sits behind some of the highest-value workflow bottlenecks — support triage, document review, internal Q&amp;A. Systems fail in production not because retrieval is hard, but because access control and quality measurement are treated as afterthoughts.
+          If retrieval is already in use, the risk isn't retrieval — it's access control and correctness under real conditions. Systems fail in production not because retrieval is hard, but because access boundaries and quality measurement are treated as afterthoughts.
         </p>
-        <p>We design retrieval as a permission-aware system — not a vector search layer bolted onto a prompt.</p>
+        <p>We design retrieval as a permission-aware system from the start — access enforced at query time, quality measured continuously, degradation surfaced before users notice it.</p>
       </div>
     </section>
 
     <section class="section" style="padding: 32px 0;">
       <div class="container">
         <div class="pov">
-          <h3>Retrieval is not just about relevance. It must enforce access boundaries, measure quality, and remain observable under real usage.</h3>
-          <p style="margin-bottom:0;">The common failure mode: access control handled with post-retrieval filtering, retrieval quality guessed rather than measured, and no alerting when the system degrades. These gaps matter most in multi-tenant systems and regulated environments — exactly where retrieval systems are most valuable.</p>
+          <h3>The common failure mode isn't bad retrieval. It's invisible retrieval.</h3>
+          <p style="margin-bottom:0;">Access control handled with post-retrieval filtering. Retrieval quality guessed rather than measured. No alerting when the system degrades. These gaps matter most in multi-tenant systems and regulated environments — exactly where retrieval systems are most valuable and most exposed.</p>
         </div>
       </div>
     </section>
@@ -81,9 +81,20 @@
           </div>
         </div>
 
-        <div class="work-tease-outcome">
-          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
-          Zero permission violations in 6 months of production use across a regulated multi-tenant platform. Retrieval latency held under 380ms at p95 across 40,000+ indexed documents. Internal team assumed full ownership at handoff.
+        <div class="pov" style="margin-top: 28px;">
+          <h3>What this architecture guarantees — by design.</h3>
+          <p style="margin-bottom: 12px;">These aren't outcome projections. They're properties of how the system is built:</p>
+          <ul style="margin-bottom: 0;">
+            <li><strong>Zero cross-tenant document exposure</strong> — access is enforced at the query layer against your identity system, not filtered after retrieval where gaps can slip through</li>
+            <li><strong>Retrieval quality is measurable, not assumed</strong> — evaluation harnesses with recall and precision baselines mean you know when the system degrades, not just when users complain</li>
+            <li><strong>Latency is observable under real load</strong> — monitoring across tenant partitions surfaces p95 drift before it becomes a support issue</li>
+            <li><strong>Your team owns it at handoff</strong> — runbooks, ownership documentation, and regression checks in CI mean no dependency on us to keep it running</li>
+          </ul>
+        </div>
+
+        <div class="pov" style="margin-top: 16px;">
+          <h3>Your ROI depends on your knowledge workflows, not ours.</h3>
+          <p style="margin-bottom: 0;">The business case for retrieval is driven by how much time your team spends searching for answers that should already be findable — support triage, document review, internal Q&amp;A. The Workflow Discovery maps that time, scores your data readiness, and produces your specific <strong>Efficiency Dividend</strong>. <a href="awra.html#start-audit" style="color:var(--navy-700); font-weight:500;">Calculate yours →</a></p>
         </div>
       </div>
     </section>
@@ -104,8 +115,8 @@
 
     <section class="section cta-band">
       <div class="container">
-        <h2>If retrieval is already in use, the risk isn't retrieval — it's access control and correctness under real conditions.</h2>
-        <p class="lede">Start with the Workflow Discovery to identify which knowledge retrieval workflows are ready to automate — and where the architecture needs hardening before they carry production load.</p>
+        <h2>Find out if your knowledge workflows are ready — and where the architecture needs hardening first.</h2>
+        <p class="lede">The Workflow Discovery scores your data readiness, access control maturity, and retrieval quality posture across your existing workflows. 12 questions. Results immediately.</p>
         <p class="sublede">No commitment required. Findings are confidential.</p>
         <div class="hero-actions">
           <a class="button primary" href="awra.html#start-audit">Start the Discovery →</a>
