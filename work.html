@@ -168,9 +168,9 @@
     <section class="hero hero-compact">
       <div class="container">
         <p class="eyebrow">Workflow automation + production AI engineering</p>
-        <h1>Representative delivery patterns</h1>
+        <h1>Delivery patterns</h1>
         <p class="lede">
-          Described at the architecture level. Client details are not disclosed. Each pattern reflects a real system — scoped, built, hardened, and handed off in production environments.
+          Described at the architecture level. Client details are not disclosed. Each pattern reflects a real system — scoped, built, hardened, and handed off in production.
         </p>
       </div>
     </section>
@@ -190,7 +190,7 @@
           </div>
 
           <p class="vignette-context">
-            A professional services firm processing high volumes of client financial documents faced a persistent manual bottleneck. Staff were transcribing structured data from incoming documents — invoices, statements, and tax filings — into internal systems by hand. The work was repetitive and rule-bounded, but error-prone and scaling with headcount rather than revenue. The goal was to automate extraction and entry end-to-end, with validation gates before any data reached the system of record.
+            A professional services firm processing high volumes of client financial documents faced a persistent manual bottleneck. Staff were transcribing structured data from incoming documents — invoices, statements, and tax filings — into internal systems by hand. The work was repetitive and rule-bounded, but error-prone and scaling with headcount rather than revenue. An architecture review confirmed process fit and data readiness before any build commitment. The goal was to automate extraction and entry end-to-end, with validation gates before any data reached the system of record.
           </p>
 
           <hr class="vignette-divider" />
@@ -218,7 +218,7 @@
 
           <div class="vignette-outcome">
             <strong>Delivery outcome</strong>
-            Processing throughput increased 5× at 60 days. Manual entry eliminated for the three highest-volume document types. Operations staff reallocated from transcription to exception handling and advisory work. ~38 hours/week recovered within 60 days of go-live.
+            Pipeline shipped to production with extraction validated against a held-out document sample and the human review queue operational from day one. The validation layer caught format drift across three document variants before any failures reached the system of record. Operations staff reallocated from manual transcription to exception handling and advisory work.
           </div>
         </div>
 
@@ -234,7 +234,7 @@
           </div>
 
           <p class="vignette-context">
-            A B2B SaaS platform serving regulated-industry clients needed internal knowledge retrieval exposed to end users across multiple tenants. The challenge was not retrieval quality — it was enforcing access control at retrieval time. Documents carried role and tenant-level permissions that a standard RAG implementation would not respect. Post-filtering was insufficient: it couldn't prevent cross-tenant context from influencing generated responses. The system had to enforce boundaries at the index query layer, before any content reached the model.
+            A B2B SaaS platform serving regulated-industry clients needed internal knowledge retrieval exposed to end users across multiple tenants. The client came with an existing retrieval prototype. An architecture review identified access control at the query layer — not retrieval quality — as the critical production risk before go-live. Documents carried role and tenant-level permissions that a standard RAG implementation would not respect. Post-filtering was insufficient: it couldn't prevent cross-tenant context from influencing generated responses. The system had to enforce boundaries at the index query layer, before any content reached the model.
           </p>
 
           <hr class="vignette-divider" />
@@ -278,7 +278,7 @@
           </div>
 
           <p class="vignette-context">
-            An operations team managing high-volume, multi-step workflows across several internal tools wanted to automate a class of repetitive decisions — while retaining human review for actions above a defined risk threshold. The challenge was not the automation itself but defining the boundary: what the agent could execute autonomously, what required approval, and what had to fail deterministically rather than degrade silently.
+            An operations team managing high-volume, multi-step workflows across several internal tools wanted to automate a class of repetitive decisions — while retaining human review for actions above a defined risk threshold. A workflow discovery scoped the automation boundary before architecture work began — defining what the agent could execute autonomously, what required approval, and what had to fail deterministically rather than degrade silently.
           </p>
 
           <hr class="vignette-divider" />
@@ -323,7 +323,7 @@
           </div>
 
           <p class="vignette-context">
-            A B2B SaaS sales team was spending significant SDR time on manual prospect research — ICP qualification, company enrichment, contact data entry, and CRM hygiene. The research loop was repetitive but judgment-dependent: some enrichment could be fully automated, but outreach decisions required human review. The goal was an agent system that automated the research and enrichment loop while keeping humans in control of outreach actions.
+            A B2B SaaS sales team was spending significant SDR time on manual prospect research — ICP qualification, company enrichment, contact data entry, and CRM hygiene. An architecture review scoped the research and enrichment loop before build began, defining what the agent could automate fully versus what required human approval before any CRM write or outreach trigger. The research loop was repetitive but judgment-dependent: some enrichment could be fully automated, but outreach decisions required human review.
           </p>
 
           <hr class="vignette-divider" />
@@ -351,7 +351,95 @@
 
           <div class="vignette-outcome">
             <strong>Delivery outcome</strong>
-            SDR team reclaimed 25+ hours/week on manual research tasks. Lead data completeness at CRM entry improved from 43% to 94%. System operated within projected cost at 90 days with no post-handoff support required.
+            System deployed with CRM write gates validated against a live prospect sample and cost telemetry active from day one. Source attribution logging confirmed enrichment provenance on every record. Sales team trained on review procedures, confidence thresholds, and override paths. No post-handoff support required.
+          </div>
+        </div>
+
+        <!-- VIGNETTE 4: Platform & Reliability -->
+        <div class="vignette" id="platform-reliability">
+          <div class="vignette-header">
+            <div class="vignette-tags">
+              <span class="vtag discipline">Platform & Reliability</span>
+              <span class="vtag">B2B SaaS</span>
+              <span class="vtag">~6 weeks</span>
+            </div>
+            <h2>Production observability and deployment infrastructure for an AI system with no visibility</h2>
+          </div>
+
+          <p class="vignette-context">
+            A team had shipped an AI-powered feature to production but had no alerting, no per-workflow cost visibility, and a deployment process that required manual steps with no rollback capability. The first time quality degraded, it was reported by a customer — not surfaced by the system. An architecture review confirmed the gap: the AI system was live but the operational infrastructure that should have surrounded it from day one was absent.
+          </p>
+
+          <hr class="vignette-divider" />
+
+          <div class="vignette-details">
+            <div class="vignette-detail-block">
+              <h4>Architecture approach</h4>
+              <ul>
+                <li>Full-stack observability with structured logging, distributed traces, and per-workflow latency and error-rate dashboards</li>
+                <li>Alerting on model response quality signals, token spend anomalies, and downstream system failures — with runbooks attached to each alert</li>
+                <li>CI/CD pipeline with automated regression checks against a held-out evaluation set and one-command rollback capability</li>
+                <li>Per-workflow cost telemetry with budget alert thresholds before spend reaches critical levels</li>
+              </ul>
+            </div>
+            <div class="vignette-detail-block">
+              <h4>Production properties</h4>
+              <ul>
+                <li>Incidents surface in dashboards with runbooks — not in customer reports</li>
+                <li>Deployments are automated, regression-tested, and reversible</li>
+                <li>Per-workflow spend is visible and bounded before scale</li>
+                <li>Team owns the full operational stack at handoff with no external dependency</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vignette-outcome">
+            <strong>Delivery outcome</strong>
+            Observability infrastructure operational in the first week. First degradation alert fired and was resolved internally before any user reported an issue. Deployment pipeline adopted by the team with automated regression checks running on every merge. Cost telemetry active across all workflows with budget controls in place.
+          </div>
+        </div>
+
+        <!-- VIGNETTE 5: AI Security & Hardening -->
+        <div class="vignette" id="security-hardening">
+          <div class="vignette-header">
+            <div class="vignette-tags">
+              <span class="vtag discipline">AI Security & Hardening</span>
+              <span class="vtag">B2B SaaS</span>
+              <span class="vtag">~4 weeks</span>
+            </div>
+            <h2>Adversarial testing and access control hardening for a multi-tenant AI system</h2>
+          </div>
+
+          <p class="vignette-context">
+            A team had built an AI assistant handling customer and internal data across multiple tenants. The system had never been tested adversarially — no prompt injection testing, no cross-tenant access validation, no review of how data sensitivity was handled at the retrieval layer. A Workflow Discovery assessment surfaced critical and high-severity security findings. The engagement scope was to test, document, and close the gaps before the system was exposed to a broader user base.
+          </p>
+
+          <hr class="vignette-divider" />
+
+          <div class="vignette-details">
+            <div class="vignette-detail-block">
+              <h4>Architecture approach</h4>
+              <ul>
+                <li>Adversarial test suite covering direct prompt injection, instruction override attempts, and indirect injection via retrieved documents</li>
+                <li>Access control review at the query layer — validating that tenant boundaries held under adversarial retrieval queries, not just standard usage</li>
+                <li>Data sensitivity mapping — tracing PII, financial, and customer data flows through the AI stack to identify unguarded exposure points</li>
+                <li>Remediation implementation for all critical findings with regression tests to prevent recurrence</li>
+              </ul>
+            </div>
+            <div class="vignette-detail-block">
+              <h4>Production properties</h4>
+              <ul>
+                <li>All critical and high-severity findings resolved and verified via retesting before broader rollout</li>
+                <li>Adversarial test suite integrated into CI pipeline for ongoing regression</li>
+                <li>Access control validated at query time — not via model instructions that can be overridden</li>
+                <li>Findings report and remediation log delivered as part of handoff documentation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vignette-outcome">
+            <strong>Delivery outcome</strong>
+            All critical findings closed before broader user exposure. Remediation verified via retesting across the full adversarial suite. Findings report used internally to align stakeholders on ongoing security posture. Adversarial test suite adopted into the team's CI pipeline.
           </div>
         </div>
 
