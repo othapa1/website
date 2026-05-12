@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bullseye
 
 # ── System deps: Chromium for headless PDF generation ─────────────────────────
 RUN apt-get update && apt-get install -y --no-install-recommends \
