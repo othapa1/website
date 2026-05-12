@@ -52,6 +52,16 @@
   <h1>Executive Summary</h1>
   <p class="text-muted mb-16">{{ company }} · Diagnostic completed {{ r.intake.date | default('') }}</p>
 
+  {# Composite score — above constructs #}
+  <div class="composite-row">
+    <span class="composite-score">{{ r.composite_score }}</span>
+    <div>
+      <div class="composite-label">Workflow Readiness Score</div>
+      <span class="composite-tier">{{ r.composite_tier }}</span>
+      <span class="stage-badge">{{ stage | replace('_',' ') }}</span>
+    </div>
+  </div>
+
   {# Four construct cards #}
   <div class="construct-grid">
     <div class="construct-card">
@@ -73,16 +83,6 @@
       <div class="label">Evidence Confidence</div>
       <div class="score">{{ cs.evidence_confidence }}</div>
       <div class="tier">{{ ct.evidence_confidence }}</div>
-    </div>
-  </div>
-
-  {# Composite score — below constructs, matching web result screen #}
-  <div class="composite-row">
-    <span class="composite-score">{{ r.composite_score }}</span>
-    <div>
-      <div class="composite-label">Workflow Readiness Score</div>
-      <span class="composite-tier">{{ r.composite_tier }}</span>
-      <span class="stage-badge">{{ stage | replace('_',' ') }}</span>
     </div>
   </div>
 
