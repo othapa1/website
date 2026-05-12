@@ -576,8 +576,21 @@
       document.getElementById('wd-counter').textContent = 'Almost done';
       document.getElementById('wd-progress').style.width = '92%';
 
-      var q4ans = state.answers['q4'] || [];
-      var wfMap = { documents: 'document processing', 'data-entry': 'data entry', support: 'support triage', reporting: 'report generation', knowledge: 'knowledge retrieval' };
+      var q4ans = (state.answers['q4'] && state.answers['q4'].selected) || [];
+      var wfMap = {
+        document_processing:         'document processing',
+        data_entry_duplicate_entry:  'data entry',
+        support_ticket_triage:       'support triage',
+        report_generation:           'report generation',
+        internal_knowledge_retrieval:'knowledge retrieval',
+        compliance_evidence:         'compliance evidence',
+        sales_cs_handoffs:           'sales & CS handoffs',
+        qa_test_generation:          'QA & test generation',
+        incident_summarization:      'incident summarization',
+        invoice_ap_ar:               'invoice / AP-AR',
+        onboarding_offboarding:      'onboarding & offboarding',
+        meeting_notes:               'meeting notes'
+      };
       var wfList = q4ans.filter(function(v) { return v !== 'other' && wfMap[v]; }).map(function(v) { return wfMap[v]; });
       var wfStr = wfList.length ? wfList.join(', ') : 'your target workflows';
 
