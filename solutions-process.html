@@ -78,9 +78,20 @@
           </div>
         </div>
 
-        <div class="work-tease-outcome">
-          <strong style="font-size:11px; font-family:ui-monospace,'Cascadia Code','Source Code Pro',monospace; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:6px;">Representative outcome</strong>
-          5× processing throughput. Manual entry eliminated for the three highest-volume document types. ~38 hours/week of transcription work recovered within 60 days of go-live.
+        <div class="pov" style="margin-top: 28px;">
+          <h3>What this architecture guarantees — by design.</h3>
+          <p style="margin-bottom: 12px;">These aren't outcome projections. They're properties of how the system is built:</p>
+          <ul style="margin-bottom: 0;">
+            <li><strong>No extraction failure goes undetected</strong> — the validation layer catches format drift and confidence drops before they reach downstream systems</li>
+            <li><strong>Every low-confidence output routes to human review</strong> — exceptions don't fall through; they queue with SLA visibility</li>
+            <li><strong>Full audit trail from intake to write</strong> — every decision is traceable, every output is attributable</li>
+            <li><strong>Cost is predictable before you scale</strong> — per-document telemetry means you know the unit economics before volume grows</li>
+          </ul>
+        </div>
+
+        <div class="pov" style="margin-top: 16px;">
+          <h3>Your ROI depends on your workflow, not ours.</h3>
+          <p style="margin-bottom: 0;">The return on process automation is a function of three variables: how many hours the workflow consumes today, how rule-bounded the process actually is, and what percentage of that time can shift from execution to review. The Workflow Discovery measures all three and produces your specific <strong>Efficiency Dividend</strong> — a conservative-to-optimistic range based on your team size, hours, and process characteristics. <a href="awra.html#start-audit" style="color:var(--navy-700); font-weight:500;">Calculate yours →</a></p>
         </div>
       </div>
     </section>
